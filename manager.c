@@ -17,32 +17,17 @@
 //			IMPLEMENTING FUNCTIONS          					//
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
 
-
-/// <summary>
-/// Create a new manager
-/// </summary>
-/// <param name="vat"></param>
-/// <param name="name"></param>
-/// <param name="local"></param>
-/// <param name="mail"></param>
-/// <returns>Manager*</returns>
-Manager* CreateManager(int vat, char name[], char local[], char mail[])
+Manager* CreateManager(int vat, char name[], char location[], char mail[])
 {
     Manager* newManager = (Manager*)malloc(sizeof(Manager));
     newManager->vat = vat;
     strcpy(newManager->name, name);
-    strcpy(newManager->local, local);
+    strcpy(newManager->location, location);
     strcpy(newManager->mail, mail);
     newManager->next = NULL;
     return newManager;
 }
 
-/// <summary>
-/// Insert Manager into List
-/// </summary>
-/// <param name="managers"></param>
-/// <param name="newManager"></param>
-/// <returns>Manager*</returns>
 Manager* InsertManagerOrdered(Manager* managers, Manager* newManager)
 {
     if (ManagerExists(managers, newManager->vat)) return managers;
@@ -65,12 +50,6 @@ Manager* InsertManagerOrdered(Manager* managers, Manager* newManager)
     return managers;
 }
 
-/// <summary>
-/// Validates existing of Manager by it's VAT
-/// </summary>
-/// <param name="managers"></param>
-/// <param name="vat"></param>
-/// <returns>bool</returns>
 bool ManagerExists(Manager* managers, int vat)
 {
     if (managers == NULL) return false;
@@ -85,10 +64,6 @@ bool ManagerExists(Manager* managers, int vat)
     return false;
 }
 
-/// <summary>
-/// Show list of Managers in memory
-/// </summary>
-/// <param name="managers"></param>
 void ShowManagersList(Manager* managers)
 {
     Manager* aux = managers;
@@ -99,30 +74,19 @@ void ShowManagersList(Manager* managers)
     }
 }
 
-/// <summary>
-/// Prints data from a Manager
-/// </summary>
-/// <param name="manager"></param>
-void MostraManager(Manager* manager)
+void ShowManager(Manager* manager)
 {
     if (manager != NULL)
     {
-        printf("-------CLIENT DATA-------");
+        printf("-------CLIENT DATA-------\n");
         printf("VAT: %d\n", manager->vat);
         printf("Name: %s\n", manager->name);
-        printf("Local: %s\n", manager->local);
+        printf("location: %s\n", manager->location);
         printf("Mail: %s\n", manager->mail);
     }
 }
 
-/// <summary>
-/// Modify Manager Name
-/// </summary>
-/// <param name="managers"></param>
-/// <param name="vat"></param>
-/// <param name="newName"></param>
-/// <returns>Manageres</returns>
-Manager* AlteraManager(Manager* managers, int vat, char* newName)
+Manager* ModifyManagerName(Manager* managers, int vat, char* newName)
 {
     Manager* aux = SearchManager(managers, vat);
     if (aux != NULL)
@@ -132,12 +96,6 @@ Manager* AlteraManager(Manager* managers, int vat, char* newName)
     return managers;
 }
 
-/// <summary>
-/// Search a Manager
-/// </summary>
-/// <param name="managers"></param>
-/// <param name="vat"></param>
-/// <returns>Manager*|Null</returns>
 Manager* SearchManager(Manager* managers, int vat)
 {
     if (managers == NULL) return NULL;
@@ -154,12 +112,6 @@ Manager* SearchManager(Manager* managers, int vat)
     }
 }
 
-/// <summary>
-/// Remove a Manager
-/// </summary>
-/// <param name="managers"></param>
-/// <param name="vat"></param>
-/// <returns>Manager*</returns>
 Manager* RemoveManager(Manager* managers, int vat)
 {
     if (managers == NULL) return NULL;
@@ -186,12 +138,6 @@ Manager* RemoveManager(Manager* managers, int vat)
     return managers;
 }
 
-/// <summary>
-/// Saving Managers List to .bin file
-/// </summary>
-/// <param name="fileName"></param>
-/// <param name="managers"></param>
-/// <returns>bool</returns>
 bool SaveManagersToBin(char* fileName, Manager* managers)
 {
     FILE* file;
@@ -205,7 +151,7 @@ bool SaveManagersToBin(char* fileName, Manager* managers)
     {
         auxManager.vat = aux->vat;
         strcpy(auxManager.name, aux->name);
-        strcpy(auxManager.local, aux->local);
+        strcpy(auxManager.location, aux->location);
         strcpy(auxManager.mail, aux->mail);
         fwrite(&auxManager, sizeof(Manager), 1, file);
         aux = aux->next;
@@ -214,11 +160,6 @@ bool SaveManagersToBin(char* fileName, Manager* managers)
     return true;
 }
 
-/// <summary>
-/// Read Managers from .bin file to List
-/// </summary>
-/// <param name="fileName"></param>
-/// <returns>Manager*</returns>
 Manager* ReadManagersFromBin(char* fileName)
 {
     FILE* file;
@@ -230,18 +171,13 @@ Manager* ReadManagersFromBin(char* fileName)
     Manager auxManager;
     while (fread(&auxManager, sizeof(Manager), 1, file))
     {
-        aux = CreateManager(auxManager.vat, auxManager.name, auxManager.local, auxManager.mail);
+        aux = CreateManager(auxManager.vat, auxManager.name, auxManager.location, auxManager.mail);
         managers = InsertManagerOrdered(managers, aux);
     }
     fclose(file);
     return managers;
 }
 
-/// <summary>
-/// Free Clients list from memory
-/// </summary>
-/// <param name="managers"></param>
-/// <returns>bool</returns>
 bool DestroyManagersList(Manager** managers)
 {
     if (managers != NULL) {

@@ -1,14 +1,8 @@
-//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
-//           INSTITUTO POLITECNICO DO CAVADO E DO AVE			//
-//                          2022/2023							//
-//             ENGENHARIA DE SISTEMAS INFORMATICOS				//
-//                 ESTRUTURA DADOS AVANCADAS					//
-//																//
-//         [  Bruno Fernandes - a18576@alunos.ipca.pt  ]		//
-//                                                              //
-//         Client Functions Implementation from client.h        //
-//                                                              //
-//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
+/**
+ * @file client.c
+ * @author Bruno Fernandes - a18576@alunos.ipca.pt
+ * @brief Client functions implementation from client.h
+ */
 
 // Import Libraries
 #include "client.h"
@@ -17,32 +11,17 @@
 //			IMPLEMENTING FUNCTIONS          					//
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
 
-
-/// <summary>
-/// Create a new Client
-/// </summary>
-/// <param name="vat"></param>
-/// <param name="name"></param>
-/// <param name="local"></param>
-/// <param name="balance"></param>
-/// <returns>Client*</returns>
-Client* CreateClient(int vat, char name[], char local[], float balance)
+Client* CreateClient(int vat, char name[], char location[], float balance)
 {
     Client* newClient = (Client*)malloc(sizeof(Client));
     newClient->vat = vat;
     strcpy(newClient->name, name);
-    strcpy(newClient->local, local);
+    strcpy(newClient->location, location);
     newClient->balance = balance;
     newClient->next = NULL;
     return newClient;
 }
 
-/// <summary>
-/// Insert Client into List
-/// </summary>
-/// <param name="clients"></param>
-/// <param name="newClient"></param>
-/// <returns>Client*</returns>
 Client* InsertClientOrdered(Client* clients, Client* newClient)
 {
     if (ClientExists(clients, newClient->vat)) return clients;
@@ -65,12 +44,6 @@ Client* InsertClientOrdered(Client* clients, Client* newClient)
     return clients;
 }
 
-/// <summary>
-/// Validates existing of Client by it's VAT
-/// </summary>
-/// <param name="clients"></param>
-/// <param name="vat"></param>
-/// <returns>bool</returns>
 bool ClientExists(Client* clients, int vat)
 {
     if (clients == NULL) return false;
@@ -85,10 +58,6 @@ bool ClientExists(Client* clients, int vat)
     return false;
 }
 
-/// <summary>
-/// Show list of Clients in memory
-/// </summary>
-/// <param name="clients"></param>
 void ShowClientsList(Client* clients)
 {
     Client* aux = clients;
@@ -99,29 +68,18 @@ void ShowClientsList(Client* clients)
     }
 }
 
-/// <summary>
-/// Prints data from a Client
-/// </summary>
-/// <param name="client"></param>
 void ShowClient(Client* client)
 {
     if (client != NULL)
     {
-        printf("-------CLIENT DATA-------");
+        printf("-------CLIENT DATA-------\n");
         printf("VAT: %d\n", client->vat);
         printf("Name: %s\n", client->name);
-        printf("Local: %s\n", client->local);
+        printf("location: %s\n", client->location);
         printf("Balance: %.2f €\n", client->balance);
     }
 }
 
-/// <summary>
-/// Modify Client Name
-/// </summary>
-/// <param name="clients"></param>
-/// <param name="vat"></param>
-/// <param name="newName"></param>
-/// <returns>Client*</returns>
 Client* ModifyClientName(Client* clients, int vat, char* newName) {
     Client* aux = SearchClient(clients, vat);
     if (aux != NULL)
@@ -131,13 +89,7 @@ Client* ModifyClientName(Client* clients, int vat, char* newName) {
     return clients;
 }
 
-/// <summary>
-/// Search a Client
-/// </summary>
-/// <param name="clients"></param>
-/// <param name="vat"></param>
-/// <returns>Client*|Null</returns>
-Client* ProcuraClient(Client* clients, int vat)
+Client* SearchClient(Client* clients, int vat)
 {
     if (clients == NULL) return NULL;
     else
@@ -153,12 +105,6 @@ Client* ProcuraClient(Client* clients, int vat)
     }
 }
 
-/// <summary>
-/// Remove a client from the List
-/// </summary>
-/// <param name="clients"></param>
-/// <param name="vat"></param>
-/// <returns>Client*</returns>
 Client* RemoveClient(Client* clients, int vat)
 {
     if (clients == NULL) return NULL;
@@ -185,12 +131,6 @@ Client* RemoveClient(Client* clients, int vat)
     return clients;
 }
 
-/// <summary>
-/// Saving Clients List to .bin file
-/// </summary>
-/// <param name="fileName"></param>
-/// <param name="clients"></param>
-/// <returns>bool</returns>
 bool SaveClientToBin(char* fileName, Client* clients)
 {
     FILE* file;
@@ -204,7 +144,7 @@ bool SaveClientToBin(char* fileName, Client* clients)
     {
         auxClient.vat = aux->vat;
         strcpy(auxClient.name, aux->name);
-        strcpy(auxClient.local, aux->local);
+        strcpy(auxClient.location, aux->location);
         auxClient.balance = aux->balance;
         fwrite(&auxClient, sizeof(Client), 1, file);
         aux = aux->next;
@@ -213,11 +153,6 @@ bool SaveClientToBin(char* fileName, Client* clients)
     return true;
 }
 
-/// <summary>
-/// Read Clients from .bin file to List
-/// </summary>
-/// <param name="fileName"></param>
-/// <returns>Client*</returns>
 Client* ReadClientFromBin(char* fileName)
 {
     FILE* file;
@@ -229,18 +164,13 @@ Client* ReadClientFromBin(char* fileName)
     Client auxClient;
     while (fread(&auxClient, sizeof(Client), 1, file))
     {
-        aux = CreateClient(auxClient.vat, auxClient.name, auxClient.local, auxClient.balance);
+        aux = CreateClient(auxClient.vat, auxClient.name, auxClient.location, auxClient.balance);
         clients = InsertClientOrdered(clients, aux);
     }
     fclose(file);
     return clients;
 }
 
-/// <summary>
-/// Free Clients list from memory
-/// </summary>
-/// <param name="clients"></param>
-/// <returns>bool</returns>
 bool DestroyClientsList(Client** clients)
 {
     if (clients != NULL)
