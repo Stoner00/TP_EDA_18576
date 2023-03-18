@@ -19,7 +19,7 @@
 
 
 /// <summary>
-/// Create a new Client with VAT (unique), name, local and balance
+/// Create a new Client
 /// </summary>
 /// <param name="vat"></param>
 /// <param name="name"></param>
@@ -191,7 +191,7 @@ Client* RemoveClient(Client* clients, int vat)
 /// <param name="fileName"></param>
 /// <param name="clients"></param>
 /// <returns>bool</returns>
-bool SaveClientTToBin(char* fileName, Client* clients)
+bool SaveClientToBin(char* fileName, Client* clients)
 {
     FILE* file;
 
@@ -214,11 +214,11 @@ bool SaveClientTToBin(char* fileName, Client* clients)
 }
 
 /// <summary>
-/// Read Clients from Bin to List
+/// Read Clients from .bin file to List
 /// </summary>
 /// <param name="fileName"></param>
 /// <returns>Client*</returns>
-Client* LeClientBinario(char* fileName)
+Client* ReadClientFromBin(char* fileName)
 {
     FILE* file;
     Client* clients = NULL;
