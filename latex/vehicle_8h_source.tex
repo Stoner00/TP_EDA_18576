@@ -1,0 +1,78 @@
+\hypertarget{vehicle_8h_source}{}\doxysection{vehicle.\+h}
+\mbox{\hyperlink{vehicle_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ Disable\ security\ warnings}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#pragma\ warning\ (disable:\ 4996)}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ Import\ Libraries}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <stdbool.h>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <string.h>}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{comment}{//Configure\ char\ size}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#define\ locationSize\ 40}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#define\ typeSize\ 15}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{comment}{//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ STRUCT\ DECLARATION\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ //}}
+\DoxyCodeLine{00023\ \textcolor{comment}{//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#pragma\ region\ VehicleStruct}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00030\ \textcolor{keyword}{typedef}\ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_vehicle}{Vehicle}}\ \{}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_vehicle_a7421a7a2d98b4ec6dfabd1041261aa03}{id}};}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{struct_vehicle_af959582c6ffbc9343c397db05419bd77}{type}}[\mbox{\hyperlink{vehicle_8h_a020109429e259477a16f8191a651a21b}{typeSize}}];}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{struct_vehicle_aea860b3c7b454653fda9054bca943c97}{location}}[\mbox{\hyperlink{vehicle_8h_a40ec03e31fd0eda63d13807500db49aa}{locationSize}}];}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_vehicle_a643e6d5ab06b7462bbd3ce1663ab3506}{battery}};}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{struct_vehicle_ac3fbb1ea49ec2bf2dcfff5b0d895d47a}{cost}};}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_vehicle_ac4e5f4db46f19e3bfa3acfbc5d03a6f1}{rented}};}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_client}{Client}}*\ \mbox{\hyperlink{struct_vehicle_ac6b97b01d56f56b156da15a93e795785}{rentedTo}};}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_vehicle}{Vehicle}}*\ \mbox{\hyperlink{struct_vehicle_ac98cbd43f2d0186f9a14c8146bbba5d4}{next}};}
+\DoxyCodeLine{00039\ \}\ \mbox{\hyperlink{struct_vehicle}{Vehicle}};}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#pragma\ endregion}}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \textcolor{comment}{//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//}}
+\DoxyCodeLine{00044\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ FUNCTIONS\ DECLARATION\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ //}}
+\DoxyCodeLine{00045\ \textcolor{comment}{//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//}}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \textcolor{preprocessor}{\#pragma\ region\ VehicleFunctions}}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00058\ \mbox{\hyperlink{struct_vehicle}{Vehicle}}*\ \mbox{\hyperlink{vehicle_8h_ac700354dfabd747c418e92bb4531d433}{CreateVehicle}}(\textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id},\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{struct_vehicle_af959582c6ffbc9343c397db05419bd77}{type}}[],\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{struct_vehicle_aea860b3c7b454653fda9054bca943c97}{location}}[],\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_vehicle_a643e6d5ab06b7462bbd3ce1663ab3506}{battery}},\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{struct_vehicle_ac3fbb1ea49ec2bf2dcfff5b0d895d47a}{cost}});}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00066\ \mbox{\hyperlink{struct_vehicle}{Vehicle}}*\ \mbox{\hyperlink{vehicle_8h_a762f4dcb127283c3f5764b67cbd73ef7}{InsertVehicleOrdered}}(\mbox{\hyperlink{struct_vehicle}{Vehicle}}*\ vehicles,\ \mbox{\hyperlink{struct_vehicle}{Vehicle}}*\ newVehicle);}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00074\ \mbox{\hyperlink{struct_vehicle}{Vehicle}}*\ \mbox{\hyperlink{vehicle_8h_a8c6b4b423147de570220fbf9c7023287}{InsertVehicleSortedByBatteryDesc}}(\mbox{\hyperlink{struct_vehicle}{Vehicle}}*\ vehicles,\ \mbox{\hyperlink{struct_vehicle}{Vehicle}}*\ newVehicle);}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00083\ \mbox{\hyperlink{struct_vehicle}{Vehicle}}*\ \mbox{\hyperlink{vehicle_8h_a48c71858f8141b936b92eb87368cc424}{ModifyVehicleBattery}}(\mbox{\hyperlink{struct_vehicle}{Vehicle}}*\ vehicles,\ \textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_vehicle_a643e6d5ab06b7462bbd3ce1663ab3506}{battery}});}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00090\ \mbox{\hyperlink{struct_vehicle}{Vehicle}}*\ \mbox{\hyperlink{vehicle_8h_a4fc7569016020657f0d9987bfb06b5c9}{ReadVehicleFromBinSortedByBatteryDesc}}(\textcolor{keywordtype}{char}*\ fileName);}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00097\ \mbox{\hyperlink{struct_vehicle}{Vehicle}}*\ \mbox{\hyperlink{vehicle_8h_a4af4ab957604e5fd718a479462ef45db}{ReadVehiclesFromBin}}(\textcolor{keywordtype}{char}*\ fileName);}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00105\ \mbox{\hyperlink{struct_vehicle}{Vehicle}}*\ \mbox{\hyperlink{vehicle_8h_afae943245a9ba48cd4e260302ef608a8}{RemoveVehicle}}(\mbox{\hyperlink{struct_vehicle}{Vehicle}}*\ vehicles,\ \textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id});}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00113\ \mbox{\hyperlink{struct_vehicle}{Vehicle}}*\ \mbox{\hyperlink{vehicle_8h_a1fb12565ddd7ecf3cf46a2ec3af10ba0}{SearchVehicle}}(\mbox{\hyperlink{struct_vehicle}{Vehicle}}*\ vehicles,\ \textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id});}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00120\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{vehicle_8h_a0232920be3cf49a9154cff70a1116f84}{DestroyVehiclesList}}(\mbox{\hyperlink{struct_vehicle}{Vehicle}}**\ vehicles);}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00128\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{vehicle_8h_a6da7aa08be3b3d8092ceaca22aa32dbc}{RentVehicle}}(\mbox{\hyperlink{struct_vehicle}{Vehicle}}*\ vehicles,\ \textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id});}
+\DoxyCodeLine{00129\ }
+\DoxyCodeLine{00136\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{vehicle_8h_ae58878f3ad2b45b8e6792712a4a1c08b}{SaveVehiclesToBin}}(\textcolor{keywordtype}{char}*\ fileName,\ \mbox{\hyperlink{struct_vehicle}{Vehicle}}*\ vehicles);}
+\DoxyCodeLine{00137\ }
+\DoxyCodeLine{00144\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{vehicle_8h_a001646d036b1572bbc64269f86123ecd}{ShowVehiclesByLocation}}(\mbox{\hyperlink{struct_vehicle}{Vehicle}}\ *vehicles,\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{struct_vehicle_aea860b3c7b454653fda9054bca943c97}{location}});}
+\DoxyCodeLine{00145\ }
+\DoxyCodeLine{00152\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{vehicle_8h_a8119f7a51b7c0c76b9c8614aba4cfffd}{UnrentVehicle}}(\mbox{\hyperlink{struct_vehicle}{Vehicle}}*\ vehicles,\ \textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id});}
+\DoxyCodeLine{00153\ }
+\DoxyCodeLine{00160\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{vehicle_8h_a59f6150e695811e820ab2c18e258d6e4}{VehicleExists}}(\mbox{\hyperlink{struct_vehicle}{Vehicle}}*\ vehicles,\ \textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id});}
+\DoxyCodeLine{00161\ }
+\DoxyCodeLine{00166\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{vehicle_8h_a76943ef6c7af52cd1dba793f21f1f7ad}{ShowVehicle}}(\mbox{\hyperlink{struct_vehicle}{Vehicle}}*\ vehicle);}
+\DoxyCodeLine{00167\ }
+\DoxyCodeLine{00172\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{vehicle_8h_a209c8e97345431ca625eec3860105275}{ShowVehiclesList}}(\mbox{\hyperlink{struct_vehicle}{Vehicle}}*\ vehicles);}
+\DoxyCodeLine{00173\ }
+\DoxyCodeLine{00174\ \textcolor{preprocessor}{\#pragma\ endregion}}
+
+\end{DoxyCode}
