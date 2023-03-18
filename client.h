@@ -30,11 +30,11 @@
 
 #pragma region ClientStruct
 typedef struct Client {
-    int vat;                                // Unique identifier for Client
-    char name[nameSyze];                 // Client name
-    char local[localSize];         // Client Address
-    float balance;                            // Client Balance
-    struct Client* next;                   // Next Client Pointer
+    int vat;
+    char name[nameSyze];
+    char local[localSize];
+    float balance;
+    struct Client* next;
 } Client;
 #pragma endregion
 
