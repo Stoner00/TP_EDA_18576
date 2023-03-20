@@ -37,8 +37,8 @@ bool \mbox{\hyperlink{vehicle_8c_a0232920be3cf49a9154cff70a1116f84}{Destroy\+Veh
 \begin{DoxyCompactList}\small\item\em Insert a vehicle into a list sorted by descending battery. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{vehicle_8c_a6da7aa08be3b3d8092ceaca22aa32dbc}{Rent\+Vehicle}} (\mbox{\hyperlink{struct_vehicle}{Vehicle}} $\ast$vehicles, int id)
 \begin{DoxyCompactList}\small\item\em Rent a vehicle. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{vehicle_8c_a8119f7a51b7c0c76b9c8614aba4cfffd}{Unrent\+Vehicle}} (\mbox{\hyperlink{struct_vehicle}{Vehicle}} $\ast$vehicles, int id)
-\begin{DoxyCompactList}\small\item\em Unrent a vehicle. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{vehicle_8c_af7d6df8d05ba70101743af9252c62641}{Unlease\+Vehicle}} (\mbox{\hyperlink{struct_vehicle}{Vehicle}} $\ast$vehicles, int id)
+\begin{DoxyCompactList}\small\item\em Unlease a vehicle. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{vehicle_8c_a001646d036b1572bbc64269f86123ecd}{Show\+Vehicles\+By\+Location}} (\mbox{\hyperlink{struct_vehicle}{Vehicle}} $\ast$vehicles, char $\ast$location)
 \begin{DoxyCompactList}\small\item\em Show vehicles of a given location. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
@@ -315,25 +315,25 @@ Show a list of Vehicles in memory.
 {\em vehicles} & List of vehicles \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{vehicle_8c_a8119f7a51b7c0c76b9c8614aba4cfffd}\label{vehicle_8c_a8119f7a51b7c0c76b9c8614aba4cfffd}} 
-\index{vehicle.c@{vehicle.c}!UnrentVehicle@{UnrentVehicle}}
-\index{UnrentVehicle@{UnrentVehicle}!vehicle.c@{vehicle.c}}
-\doxysubsubsection{\texorpdfstring{UnrentVehicle()}{UnrentVehicle()}}
-{\footnotesize\ttfamily bool Unrent\+Vehicle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vehicle}{Vehicle}} $\ast$}]{vehicles,  }\item[{int}]{id }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{vehicle_8c_af7d6df8d05ba70101743af9252c62641}\label{vehicle_8c_af7d6df8d05ba70101743af9252c62641}} 
+\index{vehicle.c@{vehicle.c}!UnleaseVehicle@{UnleaseVehicle}}
+\index{UnleaseVehicle@{UnleaseVehicle}!vehicle.c@{vehicle.c}}
+\doxysubsubsection{\texorpdfstring{UnleaseVehicle()}{UnleaseVehicle()}}
+{\footnotesize\ttfamily bool Unlease\+Vehicle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vehicle}{Vehicle}} $\ast$}]{vehicles,  }\item[{int}]{id }\end{DoxyParamCaption})}
 
 
 
-Unrent a vehicle. 
+Unlease a vehicle. 
 
 
 \begin{DoxyParams}{Parameters}
 {\em vehicles} & List of vehicles \\
 \hline
-{\em id} & \mbox{\hyperlink{struct_vehicle}{Vehicle}} ID to unrent \\
+{\em id} & \mbox{\hyperlink{struct_vehicle}{Vehicle}} ID to Unlease \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-bool True if the vehicle was unrented, false otherwise 
+bool True if the vehicle was Unleaseed, false otherwise 
 \end{DoxyReturn}
 \mbox{\Hypertarget{vehicle_8c_a59f6150e695811e820ab2c18e258d6e4}\label{vehicle_8c_a59f6150e695811e820ab2c18e258d6e4}} 
 \index{vehicle.c@{vehicle.c}!VehicleExists@{VehicleExists}}

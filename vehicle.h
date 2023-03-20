@@ -144,12 +144,12 @@ bool SaveVehiclesToBin(char* fileName, Vehicle* vehicles);
 bool ShowVehiclesByLocation(Vehicle *vehicles, char* location);
 
 /**
- * @brief Unrent a vehicle
+ * @brief Unlease a vehicle
  * @param vehicles List of vehicles
- * @param id Vehicle ID to unrent
- * @return bool True if the vehicle was unrented, false otherwise
+ * @param id Vehicle ID to Unlease
+ * @return bool True if the vehicle was Unleaseed, false otherwise
  */
-bool UnrentVehicle(Vehicle* vehicles, int id);
+bool UnleaseVehicle(Vehicle* vehicles, int id);
 
 /**
  * @brief Check if a vehicle with the given ID exists in the list
