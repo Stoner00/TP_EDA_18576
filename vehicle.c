@@ -212,7 +212,6 @@ Vehicle* ReadVehicleFromBinSortedByBatteryDesc(char* fileName)
     Vehicle* aux;
 
     if ((file = fopen(fileName, "rb")) == NULL) return NULL;
-    //l� registos no file
     Vehicle auxVehicle;
     while (fread(&auxVehicle, sizeof(Vehicle), 1, file)) {
         aux = CreateVehicle(auxVehicle.id, auxVehicle.type, auxVehicle.location, auxVehicle.battery, auxVehicle.cost);
@@ -268,7 +267,7 @@ bool RentVehicle(Vehicle* vehicles, int id) {
     }
 }
 
-bool UnrentVehicle(Vehicle* vehicles, int id) {
+bool UnleaseVehicle(Vehicle* vehicles, int id) {
 
     if (vehicles == NULL) return false;
     else
