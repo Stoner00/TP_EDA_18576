@@ -28,7 +28,7 @@ Client* InsertClientOrdered(Client* clients, Client* newClient)
 
     if (clients == NULL || strcmp(newClient->name, clients->name) < 0) {
         newClient->next = clients;
-        clients = newClient; //Insere no in�cio
+        clients = newClient; //Insert in first
     }
     else
     {
@@ -38,7 +38,7 @@ Client* InsertClientOrdered(Client* clients, Client* newClient)
             auxAnt = aux;
             aux = aux->next;
         }
-        auxAnt->next = newClient; //Insere no meio ou fim
+        auxAnt->next = newClient;
         newClient->next = aux;
     }
     return clients;
