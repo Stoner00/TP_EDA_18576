@@ -79,12 +79,12 @@ void ShowVehicle(Vehicle* vehicle)
 {
     if (vehicle != NULL)
     {
-        printf("-------CLIENT DATA-------\n");
+        printf("-------VEHICLE DATA-------\n");
         printf("ID: %d\n", vehicle->id);
         printf("Type: %s\n", vehicle->type);
         printf("Location: %s\n", vehicle->location);
         printf("Battery: %d%%\n", vehicle->battery);
-        printf("Cost: %.2fE\n", vehicle->cost);
+        printf("Cost per hour: %.2f\n", vehicle->cost);
         if (vehicle->rented)
         {
             printf("Rented\n");
@@ -173,7 +173,7 @@ bool SaveVehiclesToBin(char* fileName, Vehicle* vehicles)
     return true;
 }
 
-Vehicle* ReadVehicleFromBin(char* fileName)
+Vehicle* ReadVehiclesFromBin(char* fileName)
 {
     FILE* file;
     Vehicle* vehicles = NULL;
@@ -205,7 +205,7 @@ bool DestroyVehiclesList(Vehicle** vehicles)
     return false;
 }
 
-Vehicle* ReadVehicleFromBinSortedByBatteryDesc(char* fileName)
+Vehicle* ReadVehiclesFromBinSortedByBatteryDesc(char* fileName)
 {
     FILE* file;
     Vehicle* vehicles = NULL;

@@ -76,7 +76,7 @@ void ShowClient(Client* client)
         printf("VAT: %d\n", client->vat);
         printf("Name: %s\n", client->name);
         printf("location: %s\n", client->location);
-        printf("Balance: %.2f €\n", client->balance);
+        printf("Balance: %.2f\n", client->balance);
     }
 }
 

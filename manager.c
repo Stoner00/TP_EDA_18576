@@ -78,10 +78,10 @@ void ShowManager(Manager* manager)
 {
     if (manager != NULL)
     {
-        printf("-------CLIENT DATA-------\n");
+        printf("-------MANAGER DATA-------\n");
         printf("VAT: %d\n", manager->vat);
         printf("Name: %s\n", manager->name);
-        printf("location: %s\n", manager->location);
+        printf("Location: %s\n", manager->location);
         printf("Mail: %s\n", manager->mail);
     }
 }
