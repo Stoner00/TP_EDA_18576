@@ -87,7 +87,7 @@ Vehicle* ModifyVehicleBattery(Vehicle* vehicles, int id, int battery);
  * @param fileName Name of the binary file
  * @return Vehicle* List of vehicles read and sorted by battery
  */
-Vehicle* ReadVehicleFromBinSortedByBatteryDesc(char* fileName);
+Vehicle* ReadVehiclesFromBinSortedByBatteryDesc(char* fileName);
 
 /**
  * @brief Read Vehicles from a binary file to a list
@@ -147,7 +147,7 @@ bool ShowVehiclesByLocation(Vehicle *vehicles, char* location);
  * @brief Unlease a vehicle
  * @param vehicles List of vehicles
  * @param id Vehicle ID to Unlease
- * @return bool True if the vehicle was Unleaseed, false otherwise
+ * @return bool True if the vehicle was Unleased, false otherwise
  */
 bool UnleaseVehicle(Vehicle* vehicles, int id);
 

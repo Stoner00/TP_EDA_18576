@@ -108,14 +108,15 @@ Functions</h2></td></tr>
 <tr class="memitem:ae58878f3ad2b45b8e6792712a4a1c08b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vehicle_8c.html#ae58878f3ad2b45b8e6792712a4a1c08b">SaveVehiclesToBin</a> (char *fileName, <a class="el" href="struct_vehicle.html">Vehicle</a> *vehicles)</td></tr>
 <tr class="memdesc:ae58878f3ad2b45b8e6792712a4a1c08b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Save Vehicles to a binary file.  <br /></td></tr>
 <tr class="separator:ae58878f3ad2b45b8e6792712a4a1c08b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2ca74376baf1097594e4876450be7616"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_vehicle.html">Vehicle</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vehicle_8c.html#a2ca74376baf1097594e4876450be7616">ReadVehicleFromBin</a> (char *fileName)</td></tr>
-<tr class="separator:a2ca74376baf1097594e4876450be7616"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4af4ab957604e5fd718a479462ef45db"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_vehicle.html">Vehicle</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vehicle_8c.html#a4af4ab957604e5fd718a479462ef45db">ReadVehiclesFromBin</a> (char *fileName)</td></tr>
+<tr class="memdesc:a4af4ab957604e5fd718a479462ef45db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read Vehicles from a binary file to a list.  <br /></td></tr>
+<tr class="separator:a4af4ab957604e5fd718a479462ef45db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0232920be3cf49a9154cff70a1116f84"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vehicle_8c.html#a0232920be3cf49a9154cff70a1116f84">DestroyVehiclesList</a> (<a class="el" href="struct_vehicle.html">Vehicle</a> **vehicles)</td></tr>
 <tr class="memdesc:a0232920be3cf49a9154cff70a1116f84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Free vehicles list from memory.  <br /></td></tr>
 <tr class="separator:a0232920be3cf49a9154cff70a1116f84"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4fc7569016020657f0d9987bfb06b5c9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_vehicle.html">Vehicle</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vehicle_8c.html#a4fc7569016020657f0d9987bfb06b5c9">ReadVehicleFromBinSortedByBatteryDesc</a> (char *fileName)</td></tr>
-<tr class="memdesc:a4fc7569016020657f0d9987bfb06b5c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read vehicles from a binary file and sort them by battery level.  <br /></td></tr>
-<tr class="separator:a4fc7569016020657f0d9987bfb06b5c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2b6088c7b249593484ea2cad0ff10fb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_vehicle.html">Vehicle</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vehicle_8c.html#aa2b6088c7b249593484ea2cad0ff10fb">ReadVehiclesFromBinSortedByBatteryDesc</a> (char *fileName)</td></tr>
+<tr class="memdesc:aa2b6088c7b249593484ea2cad0ff10fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read vehicles from a binary file and sort them by battery level.  <br /></td></tr>
+<tr class="separator:aa2b6088c7b249593484ea2cad0ff10fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8c6b4b423147de570220fbf9c7023287"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_vehicle.html">Vehicle</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vehicle_8c.html#a8c6b4b423147de570220fbf9c7023287">InsertVehicleSortedByBatteryDesc</a> (<a class="el" href="struct_vehicle.html">Vehicle</a> *vehicles, <a class="el" href="struct_vehicle.html">Vehicle</a> *newVehicle)</td></tr>
 <tr class="memdesc:a8c6b4b423147de570220fbf9c7023287"><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert a vehicle into a list sorted by descending battery.  <br /></td></tr>
 <tr class="separator:a8c6b4b423147de570220fbf9c7023287"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -341,14 +342,14 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a2ca74376baf1097594e4876450be7616" name="a2ca74376baf1097594e4876450be7616"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2ca74376baf1097594e4876450be7616">&#9670;&#160;</a></span>ReadVehicleFromBin()</h2>
+<a id="a4af4ab957604e5fd718a479462ef45db" name="a4af4ab957604e5fd718a479462ef45db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4af4ab957604e5fd718a479462ef45db">&#9670;&#160;</a></span>ReadVehiclesFromBin()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="struct_vehicle.html">Vehicle</a> * ReadVehicleFromBin </td>
+          <td class="memname"><a class="el" href="struct_vehicle.html">Vehicle</a> * ReadVehiclesFromBin </td>
           <td>(</td>
           <td class="paramtype">char *&#160;</td>
           <td class="paramname"><em>fileName</em></td><td>)</td>
@@ -357,16 +358,25 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Read Vehicles from a binary file to a list. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fileName</td><td>Name of the file to read from </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Vehicle* List of vehicles read from the file </dd></dl>
+
 </div>
 </div>
-<a id="a4fc7569016020657f0d9987bfb06b5c9" name="a4fc7569016020657f0d9987bfb06b5c9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4fc7569016020657f0d9987bfb06b5c9">&#9670;&#160;</a></span>ReadVehicleFromBinSortedByBatteryDesc()</h2>
+<a id="aa2b6088c7b249593484ea2cad0ff10fb" name="aa2b6088c7b249593484ea2cad0ff10fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2b6088c7b249593484ea2cad0ff10fb">&#9670;&#160;</a></span>ReadVehiclesFromBinSortedByBatteryDesc()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="struct_vehicle.html">Vehicle</a> * ReadVehicleFromBinSortedByBatteryDesc </td>
+          <td class="memname"><a class="el" href="struct_vehicle.html">Vehicle</a> * ReadVehiclesFromBinSortedByBatteryDesc </td>
           <td>(</td>
           <td class="paramtype">char *&#160;</td>
           <td class="paramname"><em>fileName</em></td><td>)</td>
@@ -662,7 +672,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>bool True if the vehicle was Unleaseed, false otherwise </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>bool True if the vehicle was Unleased, false otherwise </dd></dl>
 
 </div>
 </div>

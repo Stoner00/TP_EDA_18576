@@ -37,7 +37,7 @@ typedef struct \mbox{\hyperlink{struct_vehicle}{Vehicle}} \mbox{\hyperlink{vehic
 \begin{DoxyCompactList}\small\item\em Insert a vehicle into a list sorted by descending battery. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{struct_vehicle}{Vehicle}} $\ast$ \mbox{\hyperlink{vehicle_8h_a48c71858f8141b936b92eb87368cc424}{Modify\+Vehicle\+Battery}} (\mbox{\hyperlink{struct_vehicle}{Vehicle}} $\ast$vehicles, int id, int battery)
 \begin{DoxyCompactList}\small\item\em Modify the battery value of a vehicle. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{struct_vehicle}{Vehicle}} $\ast$ \mbox{\hyperlink{vehicle_8h_a4fc7569016020657f0d9987bfb06b5c9}{Read\+Vehicle\+From\+Bin\+Sorted\+By\+Battery\+Desc}} (char $\ast$file\+Name)
+\mbox{\hyperlink{struct_vehicle}{Vehicle}} $\ast$ \mbox{\hyperlink{vehicle_8h_aa2b6088c7b249593484ea2cad0ff10fb}{Read\+Vehicles\+From\+Bin\+Sorted\+By\+Battery\+Desc}} (char $\ast$file\+Name)
 \begin{DoxyCompactList}\small\item\em Read vehicles from a binary file and sort them by battery level. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{struct_vehicle}{Vehicle}} $\ast$ \mbox{\hyperlink{vehicle_8h_a4af4ab957604e5fd718a479462ef45db}{Read\+Vehicles\+From\+Bin}} (char $\ast$file\+Name)
 \begin{DoxyCompactList}\small\item\em Read Vehicles from a binary file to a list. \end{DoxyCompactList}\item 
@@ -206,24 +206,6 @@ Modify the battery value of a vehicle.
 \begin{DoxyReturn}{Returns}
 Vehicle$\ast$ Updated list of vehicles 
 \end{DoxyReturn}
-\mbox{\Hypertarget{vehicle_8h_a4fc7569016020657f0d9987bfb06b5c9}\label{vehicle_8h_a4fc7569016020657f0d9987bfb06b5c9}} 
-\index{vehicle.h@{vehicle.h}!ReadVehicleFromBinSortedByBatteryDesc@{ReadVehicleFromBinSortedByBatteryDesc}}
-\index{ReadVehicleFromBinSortedByBatteryDesc@{ReadVehicleFromBinSortedByBatteryDesc}!vehicle.h@{vehicle.h}}
-\doxysubsubsection{\texorpdfstring{ReadVehicleFromBinSortedByBatteryDesc()}{ReadVehicleFromBinSortedByBatteryDesc()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{struct_vehicle}{Vehicle}} $\ast$ Read\+Vehicle\+From\+Bin\+Sorted\+By\+Battery\+Desc (\begin{DoxyParamCaption}\item[{char $\ast$}]{file\+Name }\end{DoxyParamCaption})}
-
-
-
-Read vehicles from a binary file and sort them by battery level. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em file\+Name} & Name of the binary file \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-Vehicle$\ast$ List of vehicles read and sorted by battery 
-\end{DoxyReturn}
 \mbox{\Hypertarget{vehicle_8h_a4af4ab957604e5fd718a479462ef45db}\label{vehicle_8h_a4af4ab957604e5fd718a479462ef45db}} 
 \index{vehicle.h@{vehicle.h}!ReadVehiclesFromBin@{ReadVehiclesFromBin}}
 \index{ReadVehiclesFromBin@{ReadVehiclesFromBin}!vehicle.h@{vehicle.h}}
@@ -241,6 +223,24 @@ Read Vehicles from a binary file to a list.
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 Vehicle$\ast$ List of vehicles read from the file 
+\end{DoxyReturn}
+\mbox{\Hypertarget{vehicle_8h_aa2b6088c7b249593484ea2cad0ff10fb}\label{vehicle_8h_aa2b6088c7b249593484ea2cad0ff10fb}} 
+\index{vehicle.h@{vehicle.h}!ReadVehiclesFromBinSortedByBatteryDesc@{ReadVehiclesFromBinSortedByBatteryDesc}}
+\index{ReadVehiclesFromBinSortedByBatteryDesc@{ReadVehiclesFromBinSortedByBatteryDesc}!vehicle.h@{vehicle.h}}
+\doxysubsubsection{\texorpdfstring{ReadVehiclesFromBinSortedByBatteryDesc()}{ReadVehiclesFromBinSortedByBatteryDesc()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_vehicle}{Vehicle}} $\ast$ Read\+Vehicles\+From\+Bin\+Sorted\+By\+Battery\+Desc (\begin{DoxyParamCaption}\item[{char $\ast$}]{file\+Name }\end{DoxyParamCaption})}
+
+
+
+Read vehicles from a binary file and sort them by battery level. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Name} & Name of the binary file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vehicle$\ast$ List of vehicles read and sorted by battery 
 \end{DoxyReturn}
 \mbox{\Hypertarget{vehicle_8h_afae943245a9ba48cd4e260302ef608a8}\label{vehicle_8h_afae943245a9ba48cd4e260302ef608a8}} 
 \index{vehicle.h@{vehicle.h}!RemoveVehicle@{RemoveVehicle}}
@@ -390,7 +390,7 @@ Unlease a vehicle.
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-bool True if the vehicle was Unleaseed, false otherwise 
+bool True if the vehicle was Unleased, false otherwise 
 \end{DoxyReturn}
 \mbox{\Hypertarget{vehicle_8h_a59f6150e695811e820ab2c18e258d6e4}\label{vehicle_8h_a59f6150e695811e820ab2c18e258d6e4}} 
 \index{vehicle.h@{vehicle.h}!VehicleExists@{VehicleExists}}
