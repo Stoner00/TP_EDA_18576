@@ -1,14 +1,9 @@
-//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
-//           INSTITUTO POLITECNICO DO CAVADO E DO AVE			//
-//                          2022/2023							//
-//             ENGENHARIA DE SISTEMAS INFORMATICOS				//
-//                 ESTRUTURA DADOS AVANCADAS					//
-//																//
-//         [  Bruno Fernandes - a18576@alunos.ipca.pt  ]		//
-//                                                              //
-//       Client Header File: Functions and structs for client   //
-//                                                              //
-//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
+/**
+ * @file manager.c
+ * @author Bruno Fernandes - a18576@alunos.ipca.pt
+ * @brief Vehicle Functions File
+ * @date 2023-03-18
+ */
 
 // Import Libraries
 #include "manager.h"

@@ -17,7 +17,7 @@ struct \mbox{\hyperlink{struct_manager}{Manager}}
 \doxysubsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
-\#define \mbox{\hyperlink{manager_8h_a49fac7fe3ba584c953a60c609c3a6118}{name\+Syze}}~60
+\#define \mbox{\hyperlink{manager_8h_a2a0f365c6c1f202227d908ade2fed250}{name\+Size}}~60
 \item 
 \#define \mbox{\hyperlink{manager_8h_a40ec03e31fd0eda63d13807500db49aa}{location\+Size}}~40
 \item 
@@ -31,27 +31,27 @@ typedef struct \mbox{\hyperlink{struct_manager}{Manager}} \mbox{\hyperlink{manag
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{struct_manager}{Manager}} $\ast$ \mbox{\hyperlink{manager_8h_a4c9eb2f7c6442d26e70281bb10bbd52a}{Create\+Manager}} (int vat, char name\mbox{[}$\,$\mbox{]}, char location\mbox{[}$\,$\mbox{]}, char mail\mbox{[}$\,$\mbox{]})
+\mbox{\hyperlink{struct_manager}{Manager}} $\ast$ \mbox{\hyperlink{group___manager_functions_ga4c9eb2f7c6442d26e70281bb10bbd52a}{Create\+Manager}} (int vat, char name\mbox{[}$\,$\mbox{]}, char location\mbox{[}$\,$\mbox{]}, char mail\mbox{[}$\,$\mbox{]})
 \begin{DoxyCompactList}\small\item\em Create a new \mbox{\hyperlink{struct_manager}{Manager}}. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{struct_manager}{Manager}} $\ast$ \mbox{\hyperlink{manager_8h_a6ff35bf8f4f2e83268faf8bdb81c310b}{Insert\+Manager\+Ordered}} (\mbox{\hyperlink{struct_manager}{Manager}} $\ast$managers, \mbox{\hyperlink{struct_manager}{Manager}} $\ast$new\+Manager)
+\mbox{\hyperlink{struct_manager}{Manager}} $\ast$ \mbox{\hyperlink{group___manager_functions_ga6ff35bf8f4f2e83268faf8bdb81c310b}{Insert\+Manager\+Ordered}} (\mbox{\hyperlink{struct_manager}{Manager}} $\ast$managers, \mbox{\hyperlink{struct_manager}{Manager}} $\ast$new\+Manager)
 \begin{DoxyCompactList}\small\item\em Insert a manager into the list in an ordered manner by name. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{struct_manager}{Manager}} $\ast$ \mbox{\hyperlink{manager_8h_a056d34ea5f3ba3d00085f99f74b71a36}{Modify\+Manager\+Name}} (\mbox{\hyperlink{struct_manager}{Manager}} $\ast$managers, int vat, char new\+Name\mbox{[}$\,$\mbox{]})
+\mbox{\hyperlink{struct_manager}{Manager}} $\ast$ \mbox{\hyperlink{group___manager_functions_ga056d34ea5f3ba3d00085f99f74b71a36}{Modify\+Manager\+Name}} (\mbox{\hyperlink{struct_manager}{Manager}} $\ast$managers, int vat, char new\+Name\mbox{[}$\,$\mbox{]})
 \begin{DoxyCompactList}\small\item\em Modify the name of a manager. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{struct_manager}{Manager}} $\ast$ \mbox{\hyperlink{manager_8h_a237af49ec49a147fe2d9e3270bb0a1a9}{Read\+Managers\+From\+Bin}} (char $\ast$file\+Name)
+\mbox{\hyperlink{struct_manager}{Manager}} $\ast$ \mbox{\hyperlink{group___manager_functions_ga237af49ec49a147fe2d9e3270bb0a1a9}{Read\+Managers\+From\+Bin}} (char $\ast$file\+Name)
 \begin{DoxyCompactList}\small\item\em Read managers from a .bin file into a list. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{struct_manager}{Manager}} $\ast$ \mbox{\hyperlink{manager_8h_aa95119a3674336b9c8b379f71a0d25f8}{Remove\+Manager}} (\mbox{\hyperlink{struct_manager}{Manager}} $\ast$managers, int vat)
+\mbox{\hyperlink{struct_manager}{Manager}} $\ast$ \mbox{\hyperlink{group___manager_functions_gaa95119a3674336b9c8b379f71a0d25f8}{Remove\+Manager}} (\mbox{\hyperlink{struct_manager}{Manager}} $\ast$managers, int vat)
 \begin{DoxyCompactList}\small\item\em Remove a manager from the list. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{struct_manager}{Manager}} $\ast$ \mbox{\hyperlink{manager_8h_a6e609342801ef66c7deef0e0916cbdea}{Search\+Manager}} (\mbox{\hyperlink{struct_manager}{Manager}} $\ast$managers, int vat)
+\mbox{\hyperlink{struct_manager}{Manager}} $\ast$ \mbox{\hyperlink{group___manager_functions_ga6e609342801ef66c7deef0e0916cbdea}{Search\+Manager}} (\mbox{\hyperlink{struct_manager}{Manager}} $\ast$managers, int vat)
 \begin{DoxyCompactList}\small\item\em Search a manager by VAT number. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{manager_8h_abe53980e45407ca9f378b540b7e27342}{Destroy\+Managers\+List}} (\mbox{\hyperlink{struct_manager}{Manager}} $\ast$$\ast$managers)
+bool \mbox{\hyperlink{group___manager_functions_gabe53980e45407ca9f378b540b7e27342}{Destroy\+Managers\+List}} (\mbox{\hyperlink{struct_manager}{Manager}} $\ast$$\ast$managers)
 \begin{DoxyCompactList}\small\item\em Free managers list from memory. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{manager_8h_a51c0a1e4a87c79a588f53448b7ccf45f}{Manager\+Exists}} (\mbox{\hyperlink{struct_manager}{Manager}} $\ast$managers, int vat)
+bool \mbox{\hyperlink{group___manager_functions_ga51c0a1e4a87c79a588f53448b7ccf45f}{Manager\+Exists}} (\mbox{\hyperlink{struct_manager}{Manager}} $\ast$managers, int vat)
 \begin{DoxyCompactList}\small\item\em Check if a manager with a given VAT number exists in the list. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{manager_8h_a3249c8fe1d2d85e4b59453416890e6c6}{Save\+Managers\+To\+Bin}} (char $\ast$file\+Name, \mbox{\hyperlink{struct_manager}{Manager}} $\ast$managers)
+bool \mbox{\hyperlink{group___manager_functions_ga3249c8fe1d2d85e4b59453416890e6c6}{Save\+Managers\+To\+Bin}} (char $\ast$file\+Name, \mbox{\hyperlink{struct_manager}{Manager}} $\ast$managers)
 \begin{DoxyCompactList}\small\item\em Save the list of managers to a binary file. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{manager_8h_a64bf4a8f8dc78eb30df1d21730b14a93}{Show\+Manager}} (\mbox{\hyperlink{struct_manager}{Manager}} $\ast$manager)
+void \mbox{\hyperlink{group___manager_functions_ga64bf4a8f8dc78eb30df1d21730b14a93}{Show\+Manager}} (\mbox{\hyperlink{struct_manager}{Manager}} $\ast$manager)
 \begin{DoxyCompactList}\small\item\em Display the information of a single manager. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{manager_8h_a22d46a7639a2d0a7fb215bcc9860eaf9}{Show\+Managers\+List}} (\mbox{\hyperlink{struct_manager}{Manager}} $\ast$managers)
+void \mbox{\hyperlink{group___manager_functions_ga22d46a7639a2d0a7fb215bcc9860eaf9}{Show\+Managers\+List}} (\mbox{\hyperlink{struct_manager}{Manager}} $\ast$managers)
 \begin{DoxyCompactList}\small\item\em Display the information of all managers in a linked list. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -76,11 +76,11 @@ Bruno Fernandes -\/ \href{mailto:a18576@alunos.ipca.pt}{\texttt{ a18576@alunos.\
 \doxysubsubsection{\texorpdfstring{mailSize}{mailSize}}
 {\footnotesize\ttfamily \#define mail\+Size~70}
 
-\mbox{\Hypertarget{manager_8h_a49fac7fe3ba584c953a60c609c3a6118}\label{manager_8h_a49fac7fe3ba584c953a60c609c3a6118}} 
-\index{manager.h@{manager.h}!nameSyze@{nameSyze}}
-\index{nameSyze@{nameSyze}!manager.h@{manager.h}}
-\doxysubsubsection{\texorpdfstring{nameSyze}{nameSyze}}
-{\footnotesize\ttfamily \#define name\+Syze~60}
+\mbox{\Hypertarget{manager_8h_a2a0f365c6c1f202227d908ade2fed250}\label{manager_8h_a2a0f365c6c1f202227d908ade2fed250}} 
+\index{manager.h@{manager.h}!nameSize@{nameSize}}
+\index{nameSize@{nameSize}!manager.h@{manager.h}}
+\doxysubsubsection{\texorpdfstring{nameSize}{nameSize}}
+{\footnotesize\ttfamily \#define name\+Size~60}
 
 
 
@@ -95,218 +95,3 @@ Bruno Fernandes -\/ \href{mailto:a18576@alunos.ipca.pt}{\texttt{ a18576@alunos.\
 
 \mbox{\hyperlink{struct_manager}{Manager}} structure. 
 
-
-
-\doxysubsection{Function Documentation}
-\mbox{\Hypertarget{manager_8h_a4c9eb2f7c6442d26e70281bb10bbd52a}\label{manager_8h_a4c9eb2f7c6442d26e70281bb10bbd52a}} 
-\index{manager.h@{manager.h}!CreateManager@{CreateManager}}
-\index{CreateManager@{CreateManager}!manager.h@{manager.h}}
-\doxysubsubsection{\texorpdfstring{CreateManager()}{CreateManager()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{struct_manager}{Manager}} $\ast$ Create\+Manager (\begin{DoxyParamCaption}\item[{int}]{vat,  }\item[{char}]{name\mbox{[}$\,$\mbox{]},  }\item[{char}]{location\mbox{[}$\,$\mbox{]},  }\item[{char}]{mail\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
-
-
-
-Create a new \mbox{\hyperlink{struct_manager}{Manager}}. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em vat} & The VAT number of the manager \\
-\hline
-{\em name} & The name of the manager \\
-\hline
-{\em location} & The location of the manager \\
-\hline
-{\em mail} & The email of the manager \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-A pointer to the new manager 
-\end{DoxyReturn}
-\mbox{\Hypertarget{manager_8h_abe53980e45407ca9f378b540b7e27342}\label{manager_8h_abe53980e45407ca9f378b540b7e27342}} 
-\index{manager.h@{manager.h}!DestroyManagersList@{DestroyManagersList}}
-\index{DestroyManagersList@{DestroyManagersList}!manager.h@{manager.h}}
-\doxysubsubsection{\texorpdfstring{DestroyManagersList()}{DestroyManagersList()}}
-{\footnotesize\ttfamily bool Destroy\+Managers\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_manager}{Manager}} $\ast$$\ast$}]{managers }\end{DoxyParamCaption})}
-
-
-
-Free managers list from memory. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em managers} & A pointer to the pointer to the list of managers \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-True if successful, false otherwise 
-\end{DoxyReturn}
-\mbox{\Hypertarget{manager_8h_a6ff35bf8f4f2e83268faf8bdb81c310b}\label{manager_8h_a6ff35bf8f4f2e83268faf8bdb81c310b}} 
-\index{manager.h@{manager.h}!InsertManagerOrdered@{InsertManagerOrdered}}
-\index{InsertManagerOrdered@{InsertManagerOrdered}!manager.h@{manager.h}}
-\doxysubsubsection{\texorpdfstring{InsertManagerOrdered()}{InsertManagerOrdered()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{struct_manager}{Manager}} $\ast$ Insert\+Manager\+Ordered (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_manager}{Manager}} $\ast$}]{managers,  }\item[{\mbox{\hyperlink{struct_manager}{Manager}} $\ast$}]{new\+Manager }\end{DoxyParamCaption})}
-
-
-
-Insert a manager into the list in an ordered manner by name. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em managers} & A pointer to the list of managers \\
-\hline
-{\em new\+Manager} & A pointer to the new manager to insert \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-A pointer to the updated list of managers 
-\end{DoxyReturn}
-\mbox{\Hypertarget{manager_8h_a51c0a1e4a87c79a588f53448b7ccf45f}\label{manager_8h_a51c0a1e4a87c79a588f53448b7ccf45f}} 
-\index{manager.h@{manager.h}!ManagerExists@{ManagerExists}}
-\index{ManagerExists@{ManagerExists}!manager.h@{manager.h}}
-\doxysubsubsection{\texorpdfstring{ManagerExists()}{ManagerExists()}}
-{\footnotesize\ttfamily bool Manager\+Exists (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_manager}{Manager}} $\ast$}]{managers,  }\item[{int}]{vat }\end{DoxyParamCaption})}
-
-
-
-Check if a manager with a given VAT number exists in the list. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em managers} & A pointer to the list of managers \\
-\hline
-{\em vat} & The VAT number to search for \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-True if the manager exists, false otherwise 
-\end{DoxyReturn}
-\mbox{\Hypertarget{manager_8h_a056d34ea5f3ba3d00085f99f74b71a36}\label{manager_8h_a056d34ea5f3ba3d00085f99f74b71a36}} 
-\index{manager.h@{manager.h}!ModifyManagerName@{ModifyManagerName}}
-\index{ModifyManagerName@{ModifyManagerName}!manager.h@{manager.h}}
-\doxysubsubsection{\texorpdfstring{ModifyManagerName()}{ModifyManagerName()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{struct_manager}{Manager}} $\ast$ Modify\+Manager\+Name (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_manager}{Manager}} $\ast$}]{managers,  }\item[{int}]{vat,  }\item[{char}]{new\+Name\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
-
-
-
-Modify the name of a manager. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em managers} & A pointer to the list of managers \\
-\hline
-{\em vat} & The VAT number of the manager to modify \\
-\hline
-{\em new\+Name} & The new name for the manager \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-A pointer to the updated list of managers 
-\end{DoxyReturn}
-\mbox{\Hypertarget{manager_8h_a237af49ec49a147fe2d9e3270bb0a1a9}\label{manager_8h_a237af49ec49a147fe2d9e3270bb0a1a9}} 
-\index{manager.h@{manager.h}!ReadManagersFromBin@{ReadManagersFromBin}}
-\index{ReadManagersFromBin@{ReadManagersFromBin}!manager.h@{manager.h}}
-\doxysubsubsection{\texorpdfstring{ReadManagersFromBin()}{ReadManagersFromBin()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{struct_manager}{Manager}} $\ast$ Read\+Managers\+From\+Bin (\begin{DoxyParamCaption}\item[{char $\ast$}]{file\+Name }\end{DoxyParamCaption})}
-
-
-
-Read managers from a .bin file into a list. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em file\+Name} & The name of the .bin file to read from \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-A pointer to the list of managers read from the file, or NULL if unsuccessful 
-\end{DoxyReturn}
-\mbox{\Hypertarget{manager_8h_aa95119a3674336b9c8b379f71a0d25f8}\label{manager_8h_aa95119a3674336b9c8b379f71a0d25f8}} 
-\index{manager.h@{manager.h}!RemoveManager@{RemoveManager}}
-\index{RemoveManager@{RemoveManager}!manager.h@{manager.h}}
-\doxysubsubsection{\texorpdfstring{RemoveManager()}{RemoveManager()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{struct_manager}{Manager}} $\ast$ Remove\+Manager (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_manager}{Manager}} $\ast$}]{managers,  }\item[{int}]{vat }\end{DoxyParamCaption})}
-
-
-
-Remove a manager from the list. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em managers} & A pointer to the list of managers \\
-\hline
-{\em vat} & The VAT number of the manager to remove \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-A pointer to the updated list of managers 
-\end{DoxyReturn}
-\mbox{\Hypertarget{manager_8h_a3249c8fe1d2d85e4b59453416890e6c6}\label{manager_8h_a3249c8fe1d2d85e4b59453416890e6c6}} 
-\index{manager.h@{manager.h}!SaveManagersToBin@{SaveManagersToBin}}
-\index{SaveManagersToBin@{SaveManagersToBin}!manager.h@{manager.h}}
-\doxysubsubsection{\texorpdfstring{SaveManagersToBin()}{SaveManagersToBin()}}
-{\footnotesize\ttfamily bool Save\+Managers\+To\+Bin (\begin{DoxyParamCaption}\item[{char $\ast$}]{file\+Name,  }\item[{\mbox{\hyperlink{struct_manager}{Manager}} $\ast$}]{managers }\end{DoxyParamCaption})}
-
-
-
-Save the list of managers to a binary file. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em file\+Name} & The name of the binary file to save to. \\
-\hline
-{\em managers} & The head of the linked list of managers. \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-true if the list was saved successfully, false otherwise. 
-\end{DoxyReturn}
-\mbox{\Hypertarget{manager_8h_a6e609342801ef66c7deef0e0916cbdea}\label{manager_8h_a6e609342801ef66c7deef0e0916cbdea}} 
-\index{manager.h@{manager.h}!SearchManager@{SearchManager}}
-\index{SearchManager@{SearchManager}!manager.h@{manager.h}}
-\doxysubsubsection{\texorpdfstring{SearchManager()}{SearchManager()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{struct_manager}{Manager}} $\ast$ Search\+Manager (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_manager}{Manager}} $\ast$}]{managers,  }\item[{int}]{vat }\end{DoxyParamCaption})}
-
-
-
-Search a manager by VAT number. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em managers} & A pointer to the list of managers \\
-\hline
-{\em vat} & The VAT number of the manager to search for \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-A pointer to the found manager, or NULL if not found 
-\end{DoxyReturn}
-\mbox{\Hypertarget{manager_8h_a64bf4a8f8dc78eb30df1d21730b14a93}\label{manager_8h_a64bf4a8f8dc78eb30df1d21730b14a93}} 
-\index{manager.h@{manager.h}!ShowManager@{ShowManager}}
-\index{ShowManager@{ShowManager}!manager.h@{manager.h}}
-\doxysubsubsection{\texorpdfstring{ShowManager()}{ShowManager()}}
-{\footnotesize\ttfamily void Show\+Manager (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_manager}{Manager}} $\ast$}]{manager }\end{DoxyParamCaption})}
-
-
-
-Display the information of a single manager. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em manager} & A pointer to the manager instance to display. \\
-\hline
-\end{DoxyParams}
-\mbox{\Hypertarget{manager_8h_a22d46a7639a2d0a7fb215bcc9860eaf9}\label{manager_8h_a22d46a7639a2d0a7fb215bcc9860eaf9}} 
-\index{manager.h@{manager.h}!ShowManagersList@{ShowManagersList}}
-\index{ShowManagersList@{ShowManagersList}!manager.h@{manager.h}}
-\doxysubsubsection{\texorpdfstring{ShowManagersList()}{ShowManagersList()}}
-{\footnotesize\ttfamily void Show\+Managers\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_manager}{Manager}} $\ast$}]{managers }\end{DoxyParamCaption})}
-
-
-
-Display the information of all managers in a linked list. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em managers} & The head of the linked list of managers. \\
-\hline
-\end{DoxyParams}

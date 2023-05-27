@@ -46,6 +46,11 @@ typedef struct Client {
 #pragma region ClientFunctions
 
 /**
+ * @defgroup ClientFunctions
+ * @{
+ */
+
+/**
  * @brief Create a new Client
  * @param vat The VAT number of the client
  * @param name The name of the client
@@ -130,5 +135,8 @@ void ShowClient(Client* client);
  */
 void ShowClientsList(Client* clients);
 
+/**
+ * @}
+ */
 #pragma endregion
 

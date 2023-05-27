@@ -29,37 +29,37 @@ typedef struct \mbox{\hyperlink{struct_vehicle}{Vehicle}} \mbox{\hyperlink{vehic
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{struct_vehicle}{Vehicle}} $\ast$ \mbox{\hyperlink{vehicle_8h_ac700354dfabd747c418e92bb4531d433}{Create\+Vehicle}} (int id, char type\mbox{[}$\,$\mbox{]}, char location\mbox{[}$\,$\mbox{]}, int battery, float cost)
+\mbox{\hyperlink{struct_vehicle}{Vehicle}} $\ast$ \mbox{\hyperlink{group___vehicle_functions_gac700354dfabd747c418e92bb4531d433}{Create\+Vehicle}} (int id, char type\mbox{[}$\,$\mbox{]}, char location\mbox{[}$\,$\mbox{]}, int battery, float cost)
 \begin{DoxyCompactList}\small\item\em Create a \mbox{\hyperlink{struct_vehicle}{Vehicle}} object. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{struct_vehicle}{Vehicle}} $\ast$ \mbox{\hyperlink{vehicle_8h_a762f4dcb127283c3f5764b67cbd73ef7}{Insert\+Vehicle\+Ordered}} (\mbox{\hyperlink{struct_vehicle}{Vehicle}} $\ast$vehicles, \mbox{\hyperlink{struct_vehicle}{Vehicle}} $\ast$new\+Vehicle)
+\mbox{\hyperlink{struct_vehicle}{Vehicle}} $\ast$ \mbox{\hyperlink{group___vehicle_functions_ga762f4dcb127283c3f5764b67cbd73ef7}{Insert\+Vehicle\+Ordered}} (\mbox{\hyperlink{struct_vehicle}{Vehicle}} $\ast$vehicles, \mbox{\hyperlink{struct_vehicle}{Vehicle}} $\ast$new\+Vehicle)
 \begin{DoxyCompactList}\small\item\em Insert a \mbox{\hyperlink{struct_vehicle}{Vehicle}} into a sorted list. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{struct_vehicle}{Vehicle}} $\ast$ \mbox{\hyperlink{vehicle_8h_a8c6b4b423147de570220fbf9c7023287}{Insert\+Vehicle\+Sorted\+By\+Battery\+Desc}} (\mbox{\hyperlink{struct_vehicle}{Vehicle}} $\ast$vehicles, \mbox{\hyperlink{struct_vehicle}{Vehicle}} $\ast$new\+Vehicle)
+\mbox{\hyperlink{struct_vehicle}{Vehicle}} $\ast$ \mbox{\hyperlink{group___vehicle_functions_ga8c6b4b423147de570220fbf9c7023287}{Insert\+Vehicle\+Sorted\+By\+Battery\+Desc}} (\mbox{\hyperlink{struct_vehicle}{Vehicle}} $\ast$vehicles, \mbox{\hyperlink{struct_vehicle}{Vehicle}} $\ast$new\+Vehicle)
 \begin{DoxyCompactList}\small\item\em Insert a vehicle into a list sorted by descending battery. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{struct_vehicle}{Vehicle}} $\ast$ \mbox{\hyperlink{vehicle_8h_a48c71858f8141b936b92eb87368cc424}{Modify\+Vehicle\+Battery}} (\mbox{\hyperlink{struct_vehicle}{Vehicle}} $\ast$vehicles, int id, int battery)
+\mbox{\hyperlink{struct_vehicle}{Vehicle}} $\ast$ \mbox{\hyperlink{group___vehicle_functions_ga48c71858f8141b936b92eb87368cc424}{Modify\+Vehicle\+Battery}} (\mbox{\hyperlink{struct_vehicle}{Vehicle}} $\ast$vehicles, int id, int battery)
 \begin{DoxyCompactList}\small\item\em Modify the battery value of a vehicle. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{struct_vehicle}{Vehicle}} $\ast$ \mbox{\hyperlink{vehicle_8h_aa2b6088c7b249593484ea2cad0ff10fb}{Read\+Vehicles\+From\+Bin\+Sorted\+By\+Battery\+Desc}} (char $\ast$file\+Name)
+\mbox{\hyperlink{struct_vehicle}{Vehicle}} $\ast$ \mbox{\hyperlink{group___vehicle_functions_gaa2b6088c7b249593484ea2cad0ff10fb}{Read\+Vehicles\+From\+Bin\+Sorted\+By\+Battery\+Desc}} (char $\ast$file\+Name)
 \begin{DoxyCompactList}\small\item\em Read vehicles from a binary file and sort them by battery level. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{struct_vehicle}{Vehicle}} $\ast$ \mbox{\hyperlink{vehicle_8h_a4af4ab957604e5fd718a479462ef45db}{Read\+Vehicles\+From\+Bin}} (char $\ast$file\+Name)
+\mbox{\hyperlink{struct_vehicle}{Vehicle}} $\ast$ \mbox{\hyperlink{group___vehicle_functions_ga4af4ab957604e5fd718a479462ef45db}{Read\+Vehicles\+From\+Bin}} (char $\ast$file\+Name)
 \begin{DoxyCompactList}\small\item\em Read Vehicles from a binary file to a list. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{struct_vehicle}{Vehicle}} $\ast$ \mbox{\hyperlink{vehicle_8h_afae943245a9ba48cd4e260302ef608a8}{Remove\+Vehicle}} (\mbox{\hyperlink{struct_vehicle}{Vehicle}} $\ast$vehicles, int id)
+\mbox{\hyperlink{struct_vehicle}{Vehicle}} $\ast$ \mbox{\hyperlink{group___vehicle_functions_gafae943245a9ba48cd4e260302ef608a8}{Remove\+Vehicle}} (\mbox{\hyperlink{struct_vehicle}{Vehicle}} $\ast$vehicles, int id)
 \begin{DoxyCompactList}\small\item\em Remove a \mbox{\hyperlink{struct_vehicle}{Vehicle}} from the list. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{struct_vehicle}{Vehicle}} $\ast$ \mbox{\hyperlink{vehicle_8h_a1fb12565ddd7ecf3cf46a2ec3af10ba0}{Search\+Vehicle}} (\mbox{\hyperlink{struct_vehicle}{Vehicle}} $\ast$vehicles, int id)
+\mbox{\hyperlink{struct_vehicle}{Vehicle}} $\ast$ \mbox{\hyperlink{group___vehicle_functions_ga1fb12565ddd7ecf3cf46a2ec3af10ba0}{Search\+Vehicle}} (\mbox{\hyperlink{struct_vehicle}{Vehicle}} $\ast$vehicles, int id)
 \begin{DoxyCompactList}\small\item\em Search for a vehicle in the list by its ID. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{vehicle_8h_a0232920be3cf49a9154cff70a1116f84}{Destroy\+Vehicles\+List}} (\mbox{\hyperlink{struct_vehicle}{Vehicle}} $\ast$$\ast$vehicles)
+bool \mbox{\hyperlink{group___vehicle_functions_ga0232920be3cf49a9154cff70a1116f84}{Destroy\+Vehicles\+List}} (\mbox{\hyperlink{struct_vehicle}{Vehicle}} $\ast$$\ast$vehicles)
 \begin{DoxyCompactList}\small\item\em Free vehicles list from memory. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{vehicle_8h_a6da7aa08be3b3d8092ceaca22aa32dbc}{Rent\+Vehicle}} (\mbox{\hyperlink{struct_vehicle}{Vehicle}} $\ast$vehicles, int id)
+bool \mbox{\hyperlink{group___vehicle_functions_ga6da7aa08be3b3d8092ceaca22aa32dbc}{Rent\+Vehicle}} (\mbox{\hyperlink{struct_vehicle}{Vehicle}} $\ast$vehicles, int id)
 \begin{DoxyCompactList}\small\item\em Rent a vehicle. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{vehicle_8h_ae58878f3ad2b45b8e6792712a4a1c08b}{Save\+Vehicles\+To\+Bin}} (char $\ast$file\+Name, \mbox{\hyperlink{struct_vehicle}{Vehicle}} $\ast$vehicles)
+bool \mbox{\hyperlink{group___vehicle_functions_gae58878f3ad2b45b8e6792712a4a1c08b}{Save\+Vehicles\+To\+Bin}} (char $\ast$file\+Name, \mbox{\hyperlink{struct_vehicle}{Vehicle}} $\ast$vehicles)
 \begin{DoxyCompactList}\small\item\em Save Vehicles to a binary file. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{vehicle_8h_a001646d036b1572bbc64269f86123ecd}{Show\+Vehicles\+By\+Location}} (\mbox{\hyperlink{struct_vehicle}{Vehicle}} $\ast$vehicles, char $\ast$location)
+bool \mbox{\hyperlink{group___vehicle_functions_ga001646d036b1572bbc64269f86123ecd}{Show\+Vehicles\+By\+Location}} (\mbox{\hyperlink{struct_vehicle}{Vehicle}} $\ast$vehicles, char $\ast$location)
 \begin{DoxyCompactList}\small\item\em Show vehicles of a given location. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{vehicle_8h_af7d6df8d05ba70101743af9252c62641}{Unlease\+Vehicle}} (\mbox{\hyperlink{struct_vehicle}{Vehicle}} $\ast$vehicles, int id)
+bool \mbox{\hyperlink{group___vehicle_functions_gaf7d6df8d05ba70101743af9252c62641}{Unlease\+Vehicle}} (\mbox{\hyperlink{struct_vehicle}{Vehicle}} $\ast$vehicles, int id)
 \begin{DoxyCompactList}\small\item\em Unlease a vehicle. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{vehicle_8h_a59f6150e695811e820ab2c18e258d6e4}{Vehicle\+Exists}} (\mbox{\hyperlink{struct_vehicle}{Vehicle}} $\ast$vehicles, int id)
+bool \mbox{\hyperlink{group___vehicle_functions_ga59f6150e695811e820ab2c18e258d6e4}{Vehicle\+Exists}} (\mbox{\hyperlink{struct_vehicle}{Vehicle}} $\ast$vehicles, int id)
 \begin{DoxyCompactList}\small\item\em Check if a vehicle with the given ID exists in the list. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{vehicle_8h_a76943ef6c7af52cd1dba793f21f1f7ad}{Show\+Vehicle}} (\mbox{\hyperlink{struct_vehicle}{Vehicle}} $\ast$vehicle)
+void \mbox{\hyperlink{group___vehicle_functions_ga76943ef6c7af52cd1dba793f21f1f7ad}{Show\+Vehicle}} (\mbox{\hyperlink{struct_vehicle}{Vehicle}} $\ast$vehicle)
 \begin{DoxyCompactList}\small\item\em Print data from a \mbox{\hyperlink{struct_vehicle}{Vehicle}}. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{vehicle_8h_a209c8e97345431ca625eec3860105275}{Show\+Vehicles\+List}} (\mbox{\hyperlink{struct_vehicle}{Vehicle}} $\ast$vehicles)
+void \mbox{\hyperlink{group___vehicle_functions_ga209c8e97345431ca625eec3860105275}{Show\+Vehicles\+List}} (\mbox{\hyperlink{struct_vehicle}{Vehicle}} $\ast$vehicles)
 \begin{DoxyCompactList}\small\item\em Show a list of Vehicles in memory. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -97,318 +97,3 @@ Bruno Fernandes -\/ \href{mailto:a18576@alunos.ipca.pt}{\texttt{ a18576@alunos.\
 
 \mbox{\hyperlink{struct_vehicle}{Vehicle}} structure. 
 
-
-
-\doxysubsection{Function Documentation}
-\mbox{\Hypertarget{vehicle_8h_ac700354dfabd747c418e92bb4531d433}\label{vehicle_8h_ac700354dfabd747c418e92bb4531d433}} 
-\index{vehicle.h@{vehicle.h}!CreateVehicle@{CreateVehicle}}
-\index{CreateVehicle@{CreateVehicle}!vehicle.h@{vehicle.h}}
-\doxysubsubsection{\texorpdfstring{CreateVehicle()}{CreateVehicle()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{struct_vehicle}{Vehicle}} $\ast$ Create\+Vehicle (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{char}]{type\mbox{[}$\,$\mbox{]},  }\item[{char}]{location\mbox{[}$\,$\mbox{]},  }\item[{int}]{battery,  }\item[{float}]{cost }\end{DoxyParamCaption})}
-
-
-
-Create a \mbox{\hyperlink{struct_vehicle}{Vehicle}} object. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em id} & \mbox{\hyperlink{struct_vehicle}{Vehicle}} ID \\
-\hline
-{\em type} & \mbox{\hyperlink{struct_vehicle}{Vehicle}} type \\
-\hline
-{\em location} & \mbox{\hyperlink{struct_vehicle}{Vehicle}} location \\
-\hline
-{\em battery} & Battery percentage \\
-\hline
-{\em cost} & Cost of the vehicle \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-Vehicle$\ast$ Pointer to the new vehicle object 
-\end{DoxyReturn}
-\mbox{\Hypertarget{vehicle_8h_a0232920be3cf49a9154cff70a1116f84}\label{vehicle_8h_a0232920be3cf49a9154cff70a1116f84}} 
-\index{vehicle.h@{vehicle.h}!DestroyVehiclesList@{DestroyVehiclesList}}
-\index{DestroyVehiclesList@{DestroyVehiclesList}!vehicle.h@{vehicle.h}}
-\doxysubsubsection{\texorpdfstring{DestroyVehiclesList()}{DestroyVehiclesList()}}
-{\footnotesize\ttfamily bool Destroy\+Vehicles\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vehicle}{Vehicle}} $\ast$$\ast$}]{vehicles }\end{DoxyParamCaption})}
-
-
-
-Free vehicles list from memory. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em vehicles} & Pointer to the list of vehicles \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-bool True if the list was freed, false otherwise 
-\end{DoxyReturn}
-\mbox{\Hypertarget{vehicle_8h_a762f4dcb127283c3f5764b67cbd73ef7}\label{vehicle_8h_a762f4dcb127283c3f5764b67cbd73ef7}} 
-\index{vehicle.h@{vehicle.h}!InsertVehicleOrdered@{InsertVehicleOrdered}}
-\index{InsertVehicleOrdered@{InsertVehicleOrdered}!vehicle.h@{vehicle.h}}
-\doxysubsubsection{\texorpdfstring{InsertVehicleOrdered()}{InsertVehicleOrdered()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{struct_vehicle}{Vehicle}} $\ast$ Insert\+Vehicle\+Ordered (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vehicle}{Vehicle}} $\ast$}]{vehicles,  }\item[{\mbox{\hyperlink{struct_vehicle}{Vehicle}} $\ast$}]{new\+Vehicle }\end{DoxyParamCaption})}
-
-
-
-Insert a \mbox{\hyperlink{struct_vehicle}{Vehicle}} into a sorted list. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em vehicles} & List of vehicles \\
-\hline
-{\em new\+Vehicle} & \mbox{\hyperlink{struct_vehicle}{Vehicle}} to be inserted \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-Vehicle$\ast$ Updated list of vehicles 
-\end{DoxyReturn}
-\mbox{\Hypertarget{vehicle_8h_a8c6b4b423147de570220fbf9c7023287}\label{vehicle_8h_a8c6b4b423147de570220fbf9c7023287}} 
-\index{vehicle.h@{vehicle.h}!InsertVehicleSortedByBatteryDesc@{InsertVehicleSortedByBatteryDesc}}
-\index{InsertVehicleSortedByBatteryDesc@{InsertVehicleSortedByBatteryDesc}!vehicle.h@{vehicle.h}}
-\doxysubsubsection{\texorpdfstring{InsertVehicleSortedByBatteryDesc()}{InsertVehicleSortedByBatteryDesc()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{struct_vehicle}{Vehicle}} $\ast$ Insert\+Vehicle\+Sorted\+By\+Battery\+Desc (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vehicle}{Vehicle}} $\ast$}]{vehicles,  }\item[{\mbox{\hyperlink{struct_vehicle}{Vehicle}} $\ast$}]{new\+Vehicle }\end{DoxyParamCaption})}
-
-
-
-Insert a vehicle into a list sorted by descending battery. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em vehicles} & List of vehicles \\
-\hline
-{\em new\+Vehicle} & New vehicle to be inserted \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-Vehicle$\ast$ Updated list of vehicles 
-\end{DoxyReturn}
-\mbox{\Hypertarget{vehicle_8h_a48c71858f8141b936b92eb87368cc424}\label{vehicle_8h_a48c71858f8141b936b92eb87368cc424}} 
-\index{vehicle.h@{vehicle.h}!ModifyVehicleBattery@{ModifyVehicleBattery}}
-\index{ModifyVehicleBattery@{ModifyVehicleBattery}!vehicle.h@{vehicle.h}}
-\doxysubsubsection{\texorpdfstring{ModifyVehicleBattery()}{ModifyVehicleBattery()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{struct_vehicle}{Vehicle}} $\ast$ Modify\+Vehicle\+Battery (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vehicle}{Vehicle}} $\ast$}]{vehicles,  }\item[{int}]{id,  }\item[{int}]{battery }\end{DoxyParamCaption})}
-
-
-
-Modify the battery value of a vehicle. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em vehicles} & List of vehicles \\
-\hline
-{\em id} & \mbox{\hyperlink{struct_vehicle}{Vehicle}} ID to be modified \\
-\hline
-{\em battery} & New battery value \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-Vehicle$\ast$ Updated list of vehicles 
-\end{DoxyReturn}
-\mbox{\Hypertarget{vehicle_8h_a4af4ab957604e5fd718a479462ef45db}\label{vehicle_8h_a4af4ab957604e5fd718a479462ef45db}} 
-\index{vehicle.h@{vehicle.h}!ReadVehiclesFromBin@{ReadVehiclesFromBin}}
-\index{ReadVehiclesFromBin@{ReadVehiclesFromBin}!vehicle.h@{vehicle.h}}
-\doxysubsubsection{\texorpdfstring{ReadVehiclesFromBin()}{ReadVehiclesFromBin()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{struct_vehicle}{Vehicle}} $\ast$ Read\+Vehicles\+From\+Bin (\begin{DoxyParamCaption}\item[{char $\ast$}]{file\+Name }\end{DoxyParamCaption})}
-
-
-
-Read Vehicles from a binary file to a list. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em file\+Name} & Name of the file to read from \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-Vehicle$\ast$ List of vehicles read from the file 
-\end{DoxyReturn}
-\mbox{\Hypertarget{vehicle_8h_aa2b6088c7b249593484ea2cad0ff10fb}\label{vehicle_8h_aa2b6088c7b249593484ea2cad0ff10fb}} 
-\index{vehicle.h@{vehicle.h}!ReadVehiclesFromBinSortedByBatteryDesc@{ReadVehiclesFromBinSortedByBatteryDesc}}
-\index{ReadVehiclesFromBinSortedByBatteryDesc@{ReadVehiclesFromBinSortedByBatteryDesc}!vehicle.h@{vehicle.h}}
-\doxysubsubsection{\texorpdfstring{ReadVehiclesFromBinSortedByBatteryDesc()}{ReadVehiclesFromBinSortedByBatteryDesc()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{struct_vehicle}{Vehicle}} $\ast$ Read\+Vehicles\+From\+Bin\+Sorted\+By\+Battery\+Desc (\begin{DoxyParamCaption}\item[{char $\ast$}]{file\+Name }\end{DoxyParamCaption})}
-
-
-
-Read vehicles from a binary file and sort them by battery level. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em file\+Name} & Name of the binary file \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-Vehicle$\ast$ List of vehicles read and sorted by battery 
-\end{DoxyReturn}
-\mbox{\Hypertarget{vehicle_8h_afae943245a9ba48cd4e260302ef608a8}\label{vehicle_8h_afae943245a9ba48cd4e260302ef608a8}} 
-\index{vehicle.h@{vehicle.h}!RemoveVehicle@{RemoveVehicle}}
-\index{RemoveVehicle@{RemoveVehicle}!vehicle.h@{vehicle.h}}
-\doxysubsubsection{\texorpdfstring{RemoveVehicle()}{RemoveVehicle()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{struct_vehicle}{Vehicle}} $\ast$ Remove\+Vehicle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vehicle}{Vehicle}} $\ast$}]{vehicles,  }\item[{int}]{id }\end{DoxyParamCaption})}
-
-
-
-Remove a \mbox{\hyperlink{struct_vehicle}{Vehicle}} from the list. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em vehicles} & List of vehicles \\
-\hline
-{\em id} & \mbox{\hyperlink{struct_vehicle}{Vehicle}} ID to be removed \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-Vehicle$\ast$ Updated list of vehicles 
-\end{DoxyReturn}
-\mbox{\Hypertarget{vehicle_8h_a6da7aa08be3b3d8092ceaca22aa32dbc}\label{vehicle_8h_a6da7aa08be3b3d8092ceaca22aa32dbc}} 
-\index{vehicle.h@{vehicle.h}!RentVehicle@{RentVehicle}}
-\index{RentVehicle@{RentVehicle}!vehicle.h@{vehicle.h}}
-\doxysubsubsection{\texorpdfstring{RentVehicle()}{RentVehicle()}}
-{\footnotesize\ttfamily bool Rent\+Vehicle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vehicle}{Vehicle}} $\ast$}]{vehicles,  }\item[{int}]{id }\end{DoxyParamCaption})}
-
-
-
-Rent a vehicle. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em vehicles} & List of vehicles \\
-\hline
-{\em id} & \mbox{\hyperlink{struct_vehicle}{Vehicle}} ID to rent \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-bool True if the vehicle was rented, false otherwise 
-\end{DoxyReturn}
-\mbox{\Hypertarget{vehicle_8h_ae58878f3ad2b45b8e6792712a4a1c08b}\label{vehicle_8h_ae58878f3ad2b45b8e6792712a4a1c08b}} 
-\index{vehicle.h@{vehicle.h}!SaveVehiclesToBin@{SaveVehiclesToBin}}
-\index{SaveVehiclesToBin@{SaveVehiclesToBin}!vehicle.h@{vehicle.h}}
-\doxysubsubsection{\texorpdfstring{SaveVehiclesToBin()}{SaveVehiclesToBin()}}
-{\footnotesize\ttfamily bool Save\+Vehicles\+To\+Bin (\begin{DoxyParamCaption}\item[{char $\ast$}]{file\+Name,  }\item[{\mbox{\hyperlink{struct_vehicle}{Vehicle}} $\ast$}]{vehicles }\end{DoxyParamCaption})}
-
-
-
-Save Vehicles to a binary file. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em file\+Name} & Name of the file to save to \\
-\hline
-{\em vehicles} & List of vehicles \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-bool True if the operation was successful, false otherwise 
-\end{DoxyReturn}
-\mbox{\Hypertarget{vehicle_8h_a1fb12565ddd7ecf3cf46a2ec3af10ba0}\label{vehicle_8h_a1fb12565ddd7ecf3cf46a2ec3af10ba0}} 
-\index{vehicle.h@{vehicle.h}!SearchVehicle@{SearchVehicle}}
-\index{SearchVehicle@{SearchVehicle}!vehicle.h@{vehicle.h}}
-\doxysubsubsection{\texorpdfstring{SearchVehicle()}{SearchVehicle()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{struct_vehicle}{Vehicle}} $\ast$ Search\+Vehicle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vehicle}{Vehicle}} $\ast$}]{vehicles,  }\item[{int}]{id }\end{DoxyParamCaption})}
-
-
-
-Search for a vehicle in the list by its ID. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em vehicles} & List of vehicles \\
-\hline
-{\em id} & \mbox{\hyperlink{struct_vehicle}{Vehicle}} ID to search \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-Vehicle$\ast$ Pointer to the found vehicle, or NULL if not found 
-\end{DoxyReturn}
-\mbox{\Hypertarget{vehicle_8h_a76943ef6c7af52cd1dba793f21f1f7ad}\label{vehicle_8h_a76943ef6c7af52cd1dba793f21f1f7ad}} 
-\index{vehicle.h@{vehicle.h}!ShowVehicle@{ShowVehicle}}
-\index{ShowVehicle@{ShowVehicle}!vehicle.h@{vehicle.h}}
-\doxysubsubsection{\texorpdfstring{ShowVehicle()}{ShowVehicle()}}
-{\footnotesize\ttfamily void Show\+Vehicle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vehicle}{Vehicle}} $\ast$}]{vehicle }\end{DoxyParamCaption})}
-
-
-
-Print data from a \mbox{\hyperlink{struct_vehicle}{Vehicle}}. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em vehicle} & \mbox{\hyperlink{struct_vehicle}{Vehicle}} to show data from \\
-\hline
-\end{DoxyParams}
-\mbox{\Hypertarget{vehicle_8h_a001646d036b1572bbc64269f86123ecd}\label{vehicle_8h_a001646d036b1572bbc64269f86123ecd}} 
-\index{vehicle.h@{vehicle.h}!ShowVehiclesByLocation@{ShowVehiclesByLocation}}
-\index{ShowVehiclesByLocation@{ShowVehiclesByLocation}!vehicle.h@{vehicle.h}}
-\doxysubsubsection{\texorpdfstring{ShowVehiclesByLocation()}{ShowVehiclesByLocation()}}
-{\footnotesize\ttfamily bool Show\+Vehicles\+By\+Location (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vehicle}{Vehicle}} $\ast$}]{vehicles,  }\item[{char $\ast$}]{location }\end{DoxyParamCaption})}
-
-
-
-Show vehicles of a given location. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em vehicles} & List of vehicles \\
-\hline
-{\em location} & Location to filter vehicles by \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-bool True if there are vehicles to show, false otherwise 
-\end{DoxyReturn}
-\mbox{\Hypertarget{vehicle_8h_a209c8e97345431ca625eec3860105275}\label{vehicle_8h_a209c8e97345431ca625eec3860105275}} 
-\index{vehicle.h@{vehicle.h}!ShowVehiclesList@{ShowVehiclesList}}
-\index{ShowVehiclesList@{ShowVehiclesList}!vehicle.h@{vehicle.h}}
-\doxysubsubsection{\texorpdfstring{ShowVehiclesList()}{ShowVehiclesList()}}
-{\footnotesize\ttfamily void Show\+Vehicles\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vehicle}{Vehicle}} $\ast$}]{vehicles }\end{DoxyParamCaption})}
-
-
-
-Show a list of Vehicles in memory. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em vehicles} & List of vehicles \\
-\hline
-\end{DoxyParams}
-\mbox{\Hypertarget{vehicle_8h_af7d6df8d05ba70101743af9252c62641}\label{vehicle_8h_af7d6df8d05ba70101743af9252c62641}} 
-\index{vehicle.h@{vehicle.h}!UnleaseVehicle@{UnleaseVehicle}}
-\index{UnleaseVehicle@{UnleaseVehicle}!vehicle.h@{vehicle.h}}
-\doxysubsubsection{\texorpdfstring{UnleaseVehicle()}{UnleaseVehicle()}}
-{\footnotesize\ttfamily bool Unlease\+Vehicle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vehicle}{Vehicle}} $\ast$}]{vehicles,  }\item[{int}]{id }\end{DoxyParamCaption})}
-
-
-
-Unlease a vehicle. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em vehicles} & List of vehicles \\
-\hline
-{\em id} & \mbox{\hyperlink{struct_vehicle}{Vehicle}} ID to Unlease \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-bool True if the vehicle was Unleased, false otherwise 
-\end{DoxyReturn}
-\mbox{\Hypertarget{vehicle_8h_a59f6150e695811e820ab2c18e258d6e4}\label{vehicle_8h_a59f6150e695811e820ab2c18e258d6e4}} 
-\index{vehicle.h@{vehicle.h}!VehicleExists@{VehicleExists}}
-\index{VehicleExists@{VehicleExists}!vehicle.h@{vehicle.h}}
-\doxysubsubsection{\texorpdfstring{VehicleExists()}{VehicleExists()}}
-{\footnotesize\ttfamily bool Vehicle\+Exists (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vehicle}{Vehicle}} $\ast$}]{vehicles,  }\item[{int}]{id }\end{DoxyParamCaption})}
-
-
-
-Check if a vehicle with the given ID exists in the list. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em vehicle} & List of vehicles \\
-\hline
-{\em id} & \mbox{\hyperlink{struct_vehicle}{Vehicle}} ID to search \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-bool True if the vehicle exists, false otherwise 
-\end{DoxyReturn}

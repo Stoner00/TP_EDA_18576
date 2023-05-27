@@ -1,0 +1,54 @@
+\hypertarget{adjacency_8h_source}{}\doxysection{adjacency.\+h}
+\mbox{\hyperlink{adjacency_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ Disable\ security\ warnings}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#pragma\ warning\ (disable:\ 4996)}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ Import\ Libraries}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <stdbool.h>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <string.h>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{graph_8h}{graph.h}}"{}}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{comment}{//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//}}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ STRUCT\ DECLARATION\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ //}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#pragma\ region\ Structs}}
+\DoxyCodeLine{00027\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_adjacency}{Adjacency}}\ \{}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_adjacency_ab01e887c573bc06724d8d5b893a0538e}{cod}};}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{struct_adjacency_a605d08e56a792053d0f6f028d9450cb7}{distance}};}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_adjacency}{Adjacency}}*\ \mbox{\hyperlink{struct_adjacency_aa1de695ad362945c07784a107cdd2819}{next}};}
+\DoxyCodeLine{00031\ \}\ \mbox{\hyperlink{struct_adjacency}{Adjacency}};}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00036\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_adjacency_file}{AdjacencyFile}}\ \{}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_adjacency_file_a318259aa0054ea792bf50e528e4c0755}{sourceCode}};}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_adjacency_file_a818bb4dd355f5c8ca8e984c3bfcf9b58}{destCode}};}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{struct_adjacency_file_a15ffaf105d24abef23d171393e741903}{distance}};}
+\DoxyCodeLine{00040\ \}\ \mbox{\hyperlink{struct_adjacency_file}{AdjacencyFile}};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \textcolor{preprocessor}{\#pragma\ endregion}}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \textcolor{comment}{//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//}}
+\DoxyCodeLine{00045\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ FUNCTIONS\ DECLARATION\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ //}}
+\DoxyCodeLine{00046\ \textcolor{comment}{//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//}}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\#pragma\ region\ AdjacencyStructs}}
+\DoxyCodeLine{00064\ \mbox{\hyperlink{struct_adjacency}{Adjacency}}*\ \mbox{\hyperlink{group___adjacency_functions_ga0d2a853838421d6698a07d1e4a102a16}{CreateAdjacency}}(\textcolor{keywordtype}{int}\ AdjCode,\ \textcolor{keywordtype}{float}\ AdjDist);}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00076\ \mbox{\hyperlink{struct_adjacency}{Adjacency}}*\ \mbox{\hyperlink{group___adjacency_functions_ga6491190c1ec681648c06c030751cf069}{InsertAdjacency}}(\mbox{\hyperlink{struct_adjacency}{Adjacency}}*\ adjacencies,\ \mbox{\hyperlink{struct_adjacency}{Adjacency}}*\ newAdjacency,\ \textcolor{keywordtype}{bool}*\ result);}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00085\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group___adjacency_functions_ga62f35f91b847b7ba805bb22c672bcd5a}{ShowAdjacencies}}(\mbox{\hyperlink{struct_adjacency}{Adjacency}}*\ adjacencies);}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00096\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{group___adjacency_functions_gaa78346bd6e13d622d7304d4056fd96c0}{ExistsAdjacency}}(\mbox{\hyperlink{struct_adjacency}{Adjacency}}*\ adjacencies,\ \textcolor{keywordtype}{int}\ cod);}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00106\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group___adjacency_functions_ga9ad3d5244ff5881515f27ccc8a2a3e5e}{ShowAdjacenciesCity}}(\mbox{\hyperlink{struct_adjacency}{Adjacency}}*\ adjacencies,\ \mbox{\hyperlink{struct_edge}{Edge}}*\ vertices);}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00118\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{group___adjacency_functions_ga1d3c500302ede62519257366b90f74e4}{SaveAdjacencies}}(\mbox{\hyperlink{struct_adjacency}{Adjacency}}*\ adjacencies,\ \textcolor{keywordtype}{char}*\ fileName,\ \textcolor{keywordtype}{int}\ sourceEdgeCode);}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00123\ \textcolor{preprocessor}{\#pragma\ endregion}}
+
+\end{DoxyCode}

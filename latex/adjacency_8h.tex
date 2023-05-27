@@ -1,0 +1,72 @@
+\hypertarget{adjacency_8h}{}\doxysection{adjacency.\+h File Reference}
+\label{adjacency_8h}\index{adjacency.h@{adjacency.h}}
+
+
+Header file containing the structure and function declarations for adjacency.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}graph.\+h\char`\"{}}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_adjacency}{Adjacency}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{struct_adjacency}{Adjacency}} structure. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_adjacency_file}{Adjacency\+File}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{struct_adjacency}{Adjacency}} File structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{struct_adjacency}{Adjacency}} \mbox{\hyperlink{adjacency_8h_a27856a78003d0b59d2492e38f31349d3}{Adjacency}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{struct_adjacency}{Adjacency}} structure. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{struct_adjacency_file}{Adjacency\+File}} \mbox{\hyperlink{adjacency_8h_a86adb4e4e137101d6ab8b7174d1479b5}{Adjacency\+File}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{struct_adjacency}{Adjacency}} File structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_adjacency}{Adjacency}} $\ast$ \mbox{\hyperlink{group___adjacency_functions_ga0d2a853838421d6698a07d1e4a102a16}{Create\+Adjacency}} (int Adj\+Code, float Adj\+Dist)
+\begin{DoxyCompactList}\small\item\em Creates a new adjacency node. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_adjacency}{Adjacency}} $\ast$ \mbox{\hyperlink{group___adjacency_functions_ga6491190c1ec681648c06c030751cf069}{Insert\+Adjacency}} (\mbox{\hyperlink{struct_adjacency}{Adjacency}} $\ast$adjacencies, \mbox{\hyperlink{struct_adjacency}{Adjacency}} $\ast$new\+Adjacency, bool $\ast$result)
+\begin{DoxyCompactList}\small\item\em Inserts an adjacency node into the adjacency list. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___adjacency_functions_ga62f35f91b847b7ba805bb22c672bcd5a}{Show\+Adjacencies}} (\mbox{\hyperlink{struct_adjacency}{Adjacency}} $\ast$adjacencies)
+\begin{DoxyCompactList}\small\item\em Shows the list of adjacencies. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group___adjacency_functions_gaa78346bd6e13d622d7304d4056fd96c0}{Exists\+Adjacency}} (\mbox{\hyperlink{struct_adjacency}{Adjacency}} $\ast$adjacencies, int cod)
+\begin{DoxyCompactList}\small\item\em Checks if an adjacency with the given code exists. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___adjacency_functions_ga9ad3d5244ff5881515f27ccc8a2a3e5e}{Show\+Adjacencies\+City}} (\mbox{\hyperlink{struct_adjacency}{Adjacency}} $\ast$adjacencies, \mbox{\hyperlink{struct_edge}{Edge}} $\ast$vertices)
+\begin{DoxyCompactList}\small\item\em Shows the adjacencies of a specific city. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group___adjacency_functions_ga1d3c500302ede62519257366b90f74e4}{Save\+Adjacencies}} (\mbox{\hyperlink{struct_adjacency}{Adjacency}} $\ast$adjacencies, char $\ast$file\+Name, int source\+Edge\+Code)
+\begin{DoxyCompactList}\small\item\em Saves the adjacencies to a binary file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header file containing the structure and function declarations for adjacency. 
+
+\begin{DoxyAuthor}{Author}
+Bruno Fernandes -\/ \href{mailto:a18576@alunos.ipca.pt}{\texttt{ a18576@alunos.\+ipca.\+pt}} 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{adjacency_8h_a27856a78003d0b59d2492e38f31349d3}\label{adjacency_8h_a27856a78003d0b59d2492e38f31349d3}} 
+\index{adjacency.h@{adjacency.h}!Adjacency@{Adjacency}}
+\index{Adjacency@{Adjacency}!adjacency.h@{adjacency.h}}
+\doxysubsubsection{\texorpdfstring{Adjacency}{Adjacency}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_adjacency}{Adjacency}} \mbox{\hyperlink{struct_adjacency}{Adjacency}}}
+
+
+
+\mbox{\hyperlink{struct_adjacency}{Adjacency}} structure. 
+
+\mbox{\Hypertarget{adjacency_8h_a86adb4e4e137101d6ab8b7174d1479b5}\label{adjacency_8h_a86adb4e4e137101d6ab8b7174d1479b5}} 
+\index{adjacency.h@{adjacency.h}!AdjacencyFile@{AdjacencyFile}}
+\index{AdjacencyFile@{AdjacencyFile}!adjacency.h@{adjacency.h}}
+\doxysubsubsection{\texorpdfstring{AdjacencyFile}{AdjacencyFile}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_adjacency_file}{Adjacency\+File}} \mbox{\hyperlink{struct_adjacency_file}{Adjacency\+File}}}
+
+
+
+\mbox{\hyperlink{struct_adjacency}{Adjacency}} File structure. 
+

@@ -1,0 +1,562 @@
+\hypertarget{group___graph_structs}{}\doxysection{Graph Structs}
+\label{group___graph_structs}\index{Graph Structs@{Graph Structs}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_edge}{Edge}} $\ast$ \mbox{\hyperlink{group___graph_structs_gaaa751fe89ca23ba09ba0f6fe849bfd72}{Create\+Graph}} ()
+\begin{DoxyCompactList}\small\item\em Creates a graph structure. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_edge}{Edge}} $\ast$ \mbox{\hyperlink{group___graph_structs_gad47fdb2f0f0f34ef1e28daa78acebcaf}{Show\+Graph}} (\mbox{\hyperlink{struct_edge}{Edge}} $\ast$edges)
+\begin{DoxyCompactList}\small\item\em Displays the graph. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group___graph_structs_ga5853a2fad89347d4caa2029dfbd88e7f}{Save\+Graph}} (\mbox{\hyperlink{struct_edge}{Edge}} $\ast$edges, char $\ast$file\+Name)
+\begin{DoxyCompactList}\small\item\em Saves the graph to a file. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_edge}{Edge}} $\ast$ \mbox{\hyperlink{group___graph_structs_gac7eadf4053e6e3b16bc8a2467e8da2ed}{Read\+Graph}} (\mbox{\hyperlink{struct_edge}{Edge}} $\ast$edges, char $\ast$file\+Name, bool $\ast$result)
+\begin{DoxyCompactList}\small\item\em Reads the graph from a file. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_edge}{Edge}} $\ast$ \mbox{\hyperlink{group___graph_structs_ga78f38ad45773bf9e456b1a2eb2aef844}{Create\+Edge}} (char $\ast$city, int cod)
+\begin{DoxyCompactList}\small\item\em Creates a new edge. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_edge}{Edge}} $\ast$ \mbox{\hyperlink{group___graph_structs_ga4979f39780deab5f004dcfd3a4a5dc93}{Insert\+Edge\+Ordered}} (\mbox{\hyperlink{struct_edge}{Edge}} $\ast$edges, \mbox{\hyperlink{struct_edge}{Edge}} $\ast$new\+Edge, bool $\ast$result)
+\begin{DoxyCompactList}\small\item\em Inserts an edge into the graph in an ordered manner. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___graph_structs_gab15aa672695ba81b41b65f9cdca39bc0}{Show\+Edges\+List}} (\mbox{\hyperlink{struct_edge}{Edge}} $\ast$edges)
+\begin{DoxyCompactList}\small\item\em Displays the list of edges in the graph. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___graph_structs_ga0106c7e78442742c07a4bddf594302fb}{Show\+Edges\+List\+Total}} (\mbox{\hyperlink{struct_edge}{Edge}} $\ast$edges, \mbox{\hyperlink{struct_edge}{Edge}} $\ast$aux)
+\begin{DoxyCompactList}\small\item\em Displays the total list of edges in the graph. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_edge}{Edge}} $\ast$ \mbox{\hyperlink{group___graph_structs_gaad42f01555f057f49bd52fe55f56e019}{Search\+Edge}} (\mbox{\hyperlink{struct_edge}{Edge}} $\ast$edges, char $\ast$city)
+\begin{DoxyCompactList}\small\item\em Searches for an edge in the graph by city name. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group___graph_structs_gaa32aa877e7ae97a787a6f4c0e533ab4a}{Search\+Edge\+Code\+By\+City}} (\mbox{\hyperlink{struct_edge}{Edge}} $\ast$edges, char $\ast$city)
+\begin{DoxyCompactList}\small\item\em Searches for an edge\textquotesingle{}s code in the graph by city name. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_edge}{Edge}} $\ast$ \mbox{\hyperlink{group___graph_structs_ga6b1a470f3ba0dab940f1ceffa73cff93}{Search\+Edge\+Code}} (\mbox{\hyperlink{struct_edge}{Edge}} $\ast$edges, int cod)
+\begin{DoxyCompactList}\small\item\em Searches for an edge in the graph by code. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group___graph_structs_gadf34e449928538f427f3b69ebb11c799}{Validate\+Edge\+Conections}} (\mbox{\hyperlink{struct_edge}{Edge}} $\ast$edges, char $\ast$src, char $\ast$dst)
+\begin{DoxyCompactList}\small\item\em Validates the connections between edges in the graph using city names. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group___graph_structs_ga12a1590a1bc0874ebddd9ec43b5de386}{Count\+Hops\+By\+Name}} (\mbox{\hyperlink{struct_edge}{Edge}} $\ast$edges, char $\ast$src, char $\ast$dst, int count\+Hops)
+\begin{DoxyCompactList}\small\item\em Counts the number of hops between two cities in the graph using city names. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group___graph_structs_gabf83df3c757f8ee0c721b46a4f8500d4}{Count\+Hops\+By\+Code}} (\mbox{\hyperlink{struct_edge}{Edge}} $\ast$edge, int src, int dst, int count\+Hops)
+\begin{DoxyCompactList}\small\item\em Counts the number of hops between two cities in the graph using edge codes. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group___graph_structs_ga4d6cd792ea2c739a1c6f8496e79bf2bc}{Validate\+Connection\+By\+City\+Code}} (\mbox{\hyperlink{struct_edge}{Edge}} $\ast$edges, int src, int dst)
+\begin{DoxyCompactList}\small\item\em Validates the connection between two cities in the graph using city codes. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group___graph_structs_gaa2412cf0acf85cf4e34861402f64af03}{Validate\+Connection\+By\+City\+Name}} (\mbox{\hyperlink{struct_edge}{Edge}} $\ast$edges, char $\ast$src, char $\ast$dst)
+\begin{DoxyCompactList}\small\item\em Validates the connection between two cities in the graph using city names. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_edge}{Edge}} $\ast$ \mbox{\hyperlink{group___graph_structs_gaf03f2ab2ce1f31d3dc7a822da373147b}{Reset\+Visited\+Edges}} (\mbox{\hyperlink{struct_edge}{Edge}} $\ast$edges)
+\begin{DoxyCompactList}\small\item\em Resets the visited flag for all edges in the graph. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_edge}{Edge}} $\ast$ \mbox{\hyperlink{group___graph_structs_gae4b46ee38c021ec34261d7acec0c2da0}{Insert\+Adjacency\+Edge\+City\+Name}} (\mbox{\hyperlink{struct_edge}{Edge}} $\ast$edges, char $\ast$source\+City, char $\ast$dest\+City, float distance, bool $\ast$result)
+\begin{DoxyCompactList}\small\item\em Inserts an adjacency between two cities in the graph using city names. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_edge}{Edge}} $\ast$ \mbox{\hyperlink{group___graph_structs_ga9809c3a20c225b72dd3bab09781236be}{Read\+Adjacencies}} (\mbox{\hyperlink{struct_edge}{Edge}} $\ast$edges, bool $\ast$result)
+\begin{DoxyCompactList}\small\item\em Reads the adjacencies from the graph. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_edge}{Edge}} $\ast$ \mbox{\hyperlink{group___graph_structs_ga638497d55b96c7f4753e080f9ba9e234}{Insert\+Adjacency\+Edge\+City\+Code}} (\mbox{\hyperlink{struct_edge}{Edge}} $\ast$edges, int source\+Code, int dest\+Code, float distance, bool $\ast$result)
+\begin{DoxyCompactList}\small\item\em Inserts an adjacency between two cities in the graph using city codes. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_edge}{Edge}} $\ast$ \mbox{\hyperlink{group___graph_structs_ga94d03ca56a55fc087135a513555db0bf}{Insert\+Client\+Graph}} (\mbox{\hyperlink{struct_edge}{Edge}} $\ast$edges, \mbox{\hyperlink{struct_client}{Client}} $\ast$clients, bool $\ast$result)
+\begin{DoxyCompactList}\small\item\em Inserts a client into the graph. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_edge}{Edge}} $\ast$ \mbox{\hyperlink{group___graph_structs_ga1e02e2f0a25f2d6a544dbf402c3cdf39}{Insert\+Client\+Edge}} (\mbox{\hyperlink{struct_edge}{Edge}} $\ast$edges, \mbox{\hyperlink{struct_client}{Client}} $\ast$clients, char $\ast$location, bool $\ast$result)
+\begin{DoxyCompactList}\small\item\em Inserts a client into the edge of the graph. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_edge}{Edge}} $\ast$ \mbox{\hyperlink{group___graph_structs_gad2e6a1a14281079230f3b9a3d8c709f1}{Insert\+Vehicle\+Graph}} (\mbox{\hyperlink{struct_edge}{Edge}} $\ast$edges, \mbox{\hyperlink{struct_vehicle}{Vehicle}} $\ast$vehicle, bool $\ast$result)
+\begin{DoxyCompactList}\small\item\em Inserts a vehicle into the graph. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_edge}{Edge}} $\ast$ \mbox{\hyperlink{group___graph_structs_ga25832cc97edccd6449fbc45894362a7c}{Insert\+Vehicles\+Edge}} (\mbox{\hyperlink{struct_edge}{Edge}} $\ast$edges, \mbox{\hyperlink{struct_vehicle}{Vehicle}} $\ast$vehicles, char $\ast$location, bool $\ast$result)
+\begin{DoxyCompactList}\small\item\em Inserts vehicles into the edge of the graph. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group___graph_structs_gabf83df3c757f8ee0c721b46a4f8500d4}\label{group___graph_structs_gabf83df3c757f8ee0c721b46a4f8500d4}} 
+\index{Graph Structs@{Graph Structs}!CountHopsByCode@{CountHopsByCode}}
+\index{CountHopsByCode@{CountHopsByCode}!Graph Structs@{Graph Structs}}
+\doxysubsubsection{\texorpdfstring{CountHopsByCode()}{CountHopsByCode()}}
+{\footnotesize\ttfamily int Count\+Hops\+By\+Code (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_edge}{Edge}} $\ast$}]{edge,  }\item[{int}]{src,  }\item[{int}]{dst,  }\item[{int}]{count\+Hops }\end{DoxyParamCaption})}
+
+
+
+Counts the number of hops between two cities in the graph using edge codes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em edge} & The pointer to the edge. \\
+\hline
+{\em src} & The code of the source city. \\
+\hline
+{\em dst} & The code of the destination city. \\
+\hline
+{\em count\+Hops} & The initial count of hops. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of hops between the cities. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___graph_structs_ga12a1590a1bc0874ebddd9ec43b5de386}\label{group___graph_structs_ga12a1590a1bc0874ebddd9ec43b5de386}} 
+\index{Graph Structs@{Graph Structs}!CountHopsByName@{CountHopsByName}}
+\index{CountHopsByName@{CountHopsByName}!Graph Structs@{Graph Structs}}
+\doxysubsubsection{\texorpdfstring{CountHopsByName()}{CountHopsByName()}}
+{\footnotesize\ttfamily int Count\+Hops\+By\+Name (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_edge}{Edge}} $\ast$}]{edges,  }\item[{char $\ast$}]{src,  }\item[{char $\ast$}]{dst,  }\item[{int}]{count\+Hops }\end{DoxyParamCaption})}
+
+
+
+Counts the number of hops between two cities in the graph using city names. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em edges} & The pointer to the graph. \\
+\hline
+{\em src} & The name of the source city. \\
+\hline
+{\em dst} & The name of the destination city. \\
+\hline
+{\em count\+Hops} & The initial count of hops. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of hops between the cities. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___graph_structs_ga78f38ad45773bf9e456b1a2eb2aef844}\label{group___graph_structs_ga78f38ad45773bf9e456b1a2eb2aef844}} 
+\index{Graph Structs@{Graph Structs}!CreateEdge@{CreateEdge}}
+\index{CreateEdge@{CreateEdge}!Graph Structs@{Graph Structs}}
+\doxysubsubsection{\texorpdfstring{CreateEdge()}{CreateEdge()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_edge}{Edge}} $\ast$ Create\+Edge (\begin{DoxyParamCaption}\item[{char $\ast$}]{city,  }\item[{int}]{cod }\end{DoxyParamCaption})}
+
+
+
+Creates a new edge. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em city} & The name of the city. \\
+\hline
+{\em cod} & The code of the edge. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The pointer to the created edge. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___graph_structs_gaaa751fe89ca23ba09ba0f6fe849bfd72}\label{group___graph_structs_gaaa751fe89ca23ba09ba0f6fe849bfd72}} 
+\index{Graph Structs@{Graph Structs}!CreateGraph@{CreateGraph}}
+\index{CreateGraph@{CreateGraph}!Graph Structs@{Graph Structs}}
+\doxysubsubsection{\texorpdfstring{CreateGraph()}{CreateGraph()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_edge}{Edge}} $\ast$ Create\+Graph (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creates a graph structure. 
+
+\begin{DoxyReturn}{Returns}
+The pointer to the created graph. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___graph_structs_ga638497d55b96c7f4753e080f9ba9e234}\label{group___graph_structs_ga638497d55b96c7f4753e080f9ba9e234}} 
+\index{Graph Structs@{Graph Structs}!InsertAdjacencyEdgeCityCode@{InsertAdjacencyEdgeCityCode}}
+\index{InsertAdjacencyEdgeCityCode@{InsertAdjacencyEdgeCityCode}!Graph Structs@{Graph Structs}}
+\doxysubsubsection{\texorpdfstring{InsertAdjacencyEdgeCityCode()}{InsertAdjacencyEdgeCityCode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_edge}{Edge}} $\ast$ Insert\+Adjacency\+Edge\+City\+Code (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_edge}{Edge}} $\ast$}]{edges,  }\item[{int}]{source\+Code,  }\item[{int}]{dest\+Code,  }\item[{float}]{distance,  }\item[{bool $\ast$}]{result }\end{DoxyParamCaption})}
+
+
+
+Inserts an adjacency between two cities in the graph using city codes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em edges} & The pointer to the graph. \\
+\hline
+{\em source\+Code} & The code of the source city. \\
+\hline
+{\em dest\+Code} & The code of the destination city. \\
+\hline
+{\em distance} & The distance between the cities. \\
+\hline
+{\em result} & The result of the operation (success or failure). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The pointer to the graph. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___graph_structs_gae4b46ee38c021ec34261d7acec0c2da0}\label{group___graph_structs_gae4b46ee38c021ec34261d7acec0c2da0}} 
+\index{Graph Structs@{Graph Structs}!InsertAdjacencyEdgeCityName@{InsertAdjacencyEdgeCityName}}
+\index{InsertAdjacencyEdgeCityName@{InsertAdjacencyEdgeCityName}!Graph Structs@{Graph Structs}}
+\doxysubsubsection{\texorpdfstring{InsertAdjacencyEdgeCityName()}{InsertAdjacencyEdgeCityName()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_edge}{Edge}} $\ast$ Insert\+Adjacency\+Edge\+City\+Name (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_edge}{Edge}} $\ast$}]{edges,  }\item[{char $\ast$}]{source\+City,  }\item[{char $\ast$}]{dest\+City,  }\item[{float}]{distance,  }\item[{bool $\ast$}]{result }\end{DoxyParamCaption})}
+
+
+
+Inserts an adjacency between two cities in the graph using city names. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em edges} & The pointer to the graph. \\
+\hline
+{\em source\+City} & The name of the source city. \\
+\hline
+{\em dest\+City} & The name of the destination city. \\
+\hline
+{\em distance} & The distance between the cities. \\
+\hline
+{\em result} & The result of the operation (success or failure). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The pointer to the graph. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___graph_structs_ga1e02e2f0a25f2d6a544dbf402c3cdf39}\label{group___graph_structs_ga1e02e2f0a25f2d6a544dbf402c3cdf39}} 
+\index{Graph Structs@{Graph Structs}!InsertClientEdge@{InsertClientEdge}}
+\index{InsertClientEdge@{InsertClientEdge}!Graph Structs@{Graph Structs}}
+\doxysubsubsection{\texorpdfstring{InsertClientEdge()}{InsertClientEdge()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_edge}{Edge}} $\ast$ Insert\+Client\+Edge (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_edge}{Edge}} $\ast$}]{edges,  }\item[{\mbox{\hyperlink{struct_client}{Client}} $\ast$}]{clients,  }\item[{char $\ast$}]{location,  }\item[{bool $\ast$}]{result }\end{DoxyParamCaption})}
+
+
+
+Inserts a client into the edge of the graph. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em edges} & The pointer to the graph. \\
+\hline
+{\em clients} & The pointer to the clients. \\
+\hline
+{\em location} & The location of the client. \\
+\hline
+{\em result} & The result of the operation (success or failure). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The pointer to the graph. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___graph_structs_ga94d03ca56a55fc087135a513555db0bf}\label{group___graph_structs_ga94d03ca56a55fc087135a513555db0bf}} 
+\index{Graph Structs@{Graph Structs}!InsertClientGraph@{InsertClientGraph}}
+\index{InsertClientGraph@{InsertClientGraph}!Graph Structs@{Graph Structs}}
+\doxysubsubsection{\texorpdfstring{InsertClientGraph()}{InsertClientGraph()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_edge}{Edge}} $\ast$ Insert\+Client\+Graph (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_edge}{Edge}} $\ast$}]{edges,  }\item[{\mbox{\hyperlink{struct_client}{Client}} $\ast$}]{clients,  }\item[{bool $\ast$}]{result }\end{DoxyParamCaption})}
+
+
+
+Inserts a client into the graph. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em edges} & The pointer to the graph. \\
+\hline
+{\em clients} & The pointer to the clients. \\
+\hline
+{\em result} & The result of the operation (success or failure). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The pointer to the graph. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___graph_structs_ga4979f39780deab5f004dcfd3a4a5dc93}\label{group___graph_structs_ga4979f39780deab5f004dcfd3a4a5dc93}} 
+\index{Graph Structs@{Graph Structs}!InsertEdgeOrdered@{InsertEdgeOrdered}}
+\index{InsertEdgeOrdered@{InsertEdgeOrdered}!Graph Structs@{Graph Structs}}
+\doxysubsubsection{\texorpdfstring{InsertEdgeOrdered()}{InsertEdgeOrdered()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_edge}{Edge}} $\ast$ Insert\+Edge\+Ordered (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_edge}{Edge}} $\ast$}]{edges,  }\item[{\mbox{\hyperlink{struct_edge}{Edge}} $\ast$}]{new\+Edge,  }\item[{bool $\ast$}]{result }\end{DoxyParamCaption})}
+
+
+
+Inserts an edge into the graph in an ordered manner. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em edges} & The pointer to the graph. \\
+\hline
+{\em new\+Edge} & The pointer to the edge to insert. \\
+\hline
+{\em result} & The result of the operation (success or failure). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The pointer to the graph. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___graph_structs_gad2e6a1a14281079230f3b9a3d8c709f1}\label{group___graph_structs_gad2e6a1a14281079230f3b9a3d8c709f1}} 
+\index{Graph Structs@{Graph Structs}!InsertVehicleGraph@{InsertVehicleGraph}}
+\index{InsertVehicleGraph@{InsertVehicleGraph}!Graph Structs@{Graph Structs}}
+\doxysubsubsection{\texorpdfstring{InsertVehicleGraph()}{InsertVehicleGraph()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_edge}{Edge}} $\ast$ Insert\+Vehicle\+Graph (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_edge}{Edge}} $\ast$}]{edges,  }\item[{\mbox{\hyperlink{struct_vehicle}{Vehicle}} $\ast$}]{vehicle,  }\item[{bool $\ast$}]{result }\end{DoxyParamCaption})}
+
+
+
+Inserts a vehicle into the graph. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em edges} & The pointer to the graph. \\
+\hline
+{\em vehicle} & The pointer to the vehicle. \\
+\hline
+{\em result} & The result of the operation (success or failure). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The pointer to the graph. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___graph_structs_ga25832cc97edccd6449fbc45894362a7c}\label{group___graph_structs_ga25832cc97edccd6449fbc45894362a7c}} 
+\index{Graph Structs@{Graph Structs}!InsertVehiclesEdge@{InsertVehiclesEdge}}
+\index{InsertVehiclesEdge@{InsertVehiclesEdge}!Graph Structs@{Graph Structs}}
+\doxysubsubsection{\texorpdfstring{InsertVehiclesEdge()}{InsertVehiclesEdge()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_edge}{Edge}} $\ast$ Insert\+Vehicles\+Edge (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_edge}{Edge}} $\ast$}]{edges,  }\item[{\mbox{\hyperlink{struct_vehicle}{Vehicle}} $\ast$}]{vehicles,  }\item[{char $\ast$}]{location,  }\item[{bool $\ast$}]{result }\end{DoxyParamCaption})}
+
+
+
+Inserts vehicles into the edge of the graph. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em edges} & The pointer to the graph. \\
+\hline
+{\em vehicles} & The pointer to the vehicles. \\
+\hline
+{\em location} & The location of the vehicles. \\
+\hline
+{\em result} & The result of the operation (success or failure). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The pointer to the graph. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___graph_structs_ga9809c3a20c225b72dd3bab09781236be}\label{group___graph_structs_ga9809c3a20c225b72dd3bab09781236be}} 
+\index{Graph Structs@{Graph Structs}!ReadAdjacencies@{ReadAdjacencies}}
+\index{ReadAdjacencies@{ReadAdjacencies}!Graph Structs@{Graph Structs}}
+\doxysubsubsection{\texorpdfstring{ReadAdjacencies()}{ReadAdjacencies()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_edge}{Edge}} $\ast$ Read\+Adjacencies (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_edge}{Edge}} $\ast$}]{edges,  }\item[{bool $\ast$}]{result }\end{DoxyParamCaption})}
+
+
+
+Reads the adjacencies from the graph. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em edges} & The pointer to the graph. \\
+\hline
+{\em result} & The result of the operation (success or failure). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The pointer to the graph. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___graph_structs_gac7eadf4053e6e3b16bc8a2467e8da2ed}\label{group___graph_structs_gac7eadf4053e6e3b16bc8a2467e8da2ed}} 
+\index{Graph Structs@{Graph Structs}!ReadGraph@{ReadGraph}}
+\index{ReadGraph@{ReadGraph}!Graph Structs@{Graph Structs}}
+\doxysubsubsection{\texorpdfstring{ReadGraph()}{ReadGraph()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_edge}{Edge}} $\ast$ Read\+Graph (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_edge}{Edge}} $\ast$}]{edges,  }\item[{char $\ast$}]{file\+Name,  }\item[{bool $\ast$}]{result }\end{DoxyParamCaption})}
+
+
+
+Reads the graph from a file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em edges} & The pointer to the graph. \\
+\hline
+{\em file\+Name} & The name of the file to read the graph from. \\
+\hline
+{\em result} & The result of the operation (success or failure). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The pointer to the graph. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___graph_structs_gaf03f2ab2ce1f31d3dc7a822da373147b}\label{group___graph_structs_gaf03f2ab2ce1f31d3dc7a822da373147b}} 
+\index{Graph Structs@{Graph Structs}!ResetVisitedEdges@{ResetVisitedEdges}}
+\index{ResetVisitedEdges@{ResetVisitedEdges}!Graph Structs@{Graph Structs}}
+\doxysubsubsection{\texorpdfstring{ResetVisitedEdges()}{ResetVisitedEdges()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_edge}{Edge}} $\ast$ Reset\+Visited\+Edges (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_edge}{Edge}} $\ast$}]{edges }\end{DoxyParamCaption})}
+
+
+
+Resets the visited flag for all edges in the graph. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em edges} & The pointer to the graph. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The pointer to the graph. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___graph_structs_ga5853a2fad89347d4caa2029dfbd88e7f}\label{group___graph_structs_ga5853a2fad89347d4caa2029dfbd88e7f}} 
+\index{Graph Structs@{Graph Structs}!SaveGraph@{SaveGraph}}
+\index{SaveGraph@{SaveGraph}!Graph Structs@{Graph Structs}}
+\doxysubsubsection{\texorpdfstring{SaveGraph()}{SaveGraph()}}
+{\footnotesize\ttfamily int Save\+Graph (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_edge}{Edge}} $\ast$}]{edges,  }\item[{char $\ast$}]{file\+Name }\end{DoxyParamCaption})}
+
+
+
+Saves the graph to a file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em edges} & The pointer to the graph. \\
+\hline
+{\em file\+Name} & The name of the file to save the graph. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result of the operation (success or failure). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___graph_structs_gaad42f01555f057f49bd52fe55f56e019}\label{group___graph_structs_gaad42f01555f057f49bd52fe55f56e019}} 
+\index{Graph Structs@{Graph Structs}!SearchEdge@{SearchEdge}}
+\index{SearchEdge@{SearchEdge}!Graph Structs@{Graph Structs}}
+\doxysubsubsection{\texorpdfstring{SearchEdge()}{SearchEdge()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_edge}{Edge}} $\ast$ Search\+Edge (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_edge}{Edge}} $\ast$}]{edges,  }\item[{char $\ast$}]{city }\end{DoxyParamCaption})}
+
+
+
+Searches for an edge in the graph by city name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em edges} & The pointer to the graph. \\
+\hline
+{\em city} & The name of the city. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The pointer to the edge if found, NULL otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___graph_structs_ga6b1a470f3ba0dab940f1ceffa73cff93}\label{group___graph_structs_ga6b1a470f3ba0dab940f1ceffa73cff93}} 
+\index{Graph Structs@{Graph Structs}!SearchEdgeCode@{SearchEdgeCode}}
+\index{SearchEdgeCode@{SearchEdgeCode}!Graph Structs@{Graph Structs}}
+\doxysubsubsection{\texorpdfstring{SearchEdgeCode()}{SearchEdgeCode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_edge}{Edge}} $\ast$ Search\+Edge\+Code (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_edge}{Edge}} $\ast$}]{edges,  }\item[{int}]{cod }\end{DoxyParamCaption})}
+
+
+
+Searches for an edge in the graph by code. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em edges} & The pointer to the graph. \\
+\hline
+{\em cod} & The code of the edge. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The pointer to the edge if found, NULL otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___graph_structs_gaa32aa877e7ae97a787a6f4c0e533ab4a}\label{group___graph_structs_gaa32aa877e7ae97a787a6f4c0e533ab4a}} 
+\index{Graph Structs@{Graph Structs}!SearchEdgeCodeByCity@{SearchEdgeCodeByCity}}
+\index{SearchEdgeCodeByCity@{SearchEdgeCodeByCity}!Graph Structs@{Graph Structs}}
+\doxysubsubsection{\texorpdfstring{SearchEdgeCodeByCity()}{SearchEdgeCodeByCity()}}
+{\footnotesize\ttfamily int Search\+Edge\+Code\+By\+City (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_edge}{Edge}} $\ast$}]{edges,  }\item[{char $\ast$}]{city }\end{DoxyParamCaption})}
+
+
+
+Searches for an edge\textquotesingle{}s code in the graph by city name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em edges} & The pointer to the graph. \\
+\hline
+{\em city} & The name of the city. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The code of the edge if found, -\/1 otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___graph_structs_gab15aa672695ba81b41b65f9cdca39bc0}\label{group___graph_structs_gab15aa672695ba81b41b65f9cdca39bc0}} 
+\index{Graph Structs@{Graph Structs}!ShowEdgesList@{ShowEdgesList}}
+\index{ShowEdgesList@{ShowEdgesList}!Graph Structs@{Graph Structs}}
+\doxysubsubsection{\texorpdfstring{ShowEdgesList()}{ShowEdgesList()}}
+{\footnotesize\ttfamily void Show\+Edges\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_edge}{Edge}} $\ast$}]{edges }\end{DoxyParamCaption})}
+
+
+
+Displays the list of edges in the graph. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em edges} & The pointer to the graph. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group___graph_structs_ga0106c7e78442742c07a4bddf594302fb}\label{group___graph_structs_ga0106c7e78442742c07a4bddf594302fb}} 
+\index{Graph Structs@{Graph Structs}!ShowEdgesListTotal@{ShowEdgesListTotal}}
+\index{ShowEdgesListTotal@{ShowEdgesListTotal}!Graph Structs@{Graph Structs}}
+\doxysubsubsection{\texorpdfstring{ShowEdgesListTotal()}{ShowEdgesListTotal()}}
+{\footnotesize\ttfamily void Show\+Edges\+List\+Total (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_edge}{Edge}} $\ast$}]{edges,  }\item[{\mbox{\hyperlink{struct_edge}{Edge}} $\ast$}]{aux }\end{DoxyParamCaption})}
+
+
+
+Displays the total list of edges in the graph. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em edges} & The pointer to the graph. \\
+\hline
+{\em aux} & The auxiliary pointer to the graph. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group___graph_structs_gad47fdb2f0f0f34ef1e28daa78acebcaf}\label{group___graph_structs_gad47fdb2f0f0f34ef1e28daa78acebcaf}} 
+\index{Graph Structs@{Graph Structs}!ShowGraph@{ShowGraph}}
+\index{ShowGraph@{ShowGraph}!Graph Structs@{Graph Structs}}
+\doxysubsubsection{\texorpdfstring{ShowGraph()}{ShowGraph()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_edge}{Edge}} $\ast$ Show\+Graph (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_edge}{Edge}} $\ast$}]{edges }\end{DoxyParamCaption})}
+
+
+
+Displays the graph. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em edges} & The pointer to the graph. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The pointer to the graph. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___graph_structs_ga4d6cd792ea2c739a1c6f8496e79bf2bc}\label{group___graph_structs_ga4d6cd792ea2c739a1c6f8496e79bf2bc}} 
+\index{Graph Structs@{Graph Structs}!ValidateConnectionByCityCode@{ValidateConnectionByCityCode}}
+\index{ValidateConnectionByCityCode@{ValidateConnectionByCityCode}!Graph Structs@{Graph Structs}}
+\doxysubsubsection{\texorpdfstring{ValidateConnectionByCityCode()}{ValidateConnectionByCityCode()}}
+{\footnotesize\ttfamily bool Validate\+Connection\+By\+City\+Code (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_edge}{Edge}} $\ast$}]{edges,  }\item[{int}]{src,  }\item[{int}]{dst }\end{DoxyParamCaption})}
+
+
+
+Validates the connection between two cities in the graph using city codes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em edges} & The pointer to the graph. \\
+\hline
+{\em src} & The code of the source city. \\
+\hline
+{\em dst} & The code of the destination city. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the connection is valid, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___graph_structs_gaa2412cf0acf85cf4e34861402f64af03}\label{group___graph_structs_gaa2412cf0acf85cf4e34861402f64af03}} 
+\index{Graph Structs@{Graph Structs}!ValidateConnectionByCityName@{ValidateConnectionByCityName}}
+\index{ValidateConnectionByCityName@{ValidateConnectionByCityName}!Graph Structs@{Graph Structs}}
+\doxysubsubsection{\texorpdfstring{ValidateConnectionByCityName()}{ValidateConnectionByCityName()}}
+{\footnotesize\ttfamily bool Validate\+Connection\+By\+City\+Name (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_edge}{Edge}} $\ast$}]{edges,  }\item[{char $\ast$}]{src,  }\item[{char $\ast$}]{dst }\end{DoxyParamCaption})}
+
+
+
+Validates the connection between two cities in the graph using city names. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em edges} & The pointer to the graph. \\
+\hline
+{\em src} & The name of the source city. \\
+\hline
+{\em dst} & The name of the destination city. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the connection is valid, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___graph_structs_gadf34e449928538f427f3b69ebb11c799}\label{group___graph_structs_gadf34e449928538f427f3b69ebb11c799}} 
+\index{Graph Structs@{Graph Structs}!ValidateEdgeConections@{ValidateEdgeConections}}
+\index{ValidateEdgeConections@{ValidateEdgeConections}!Graph Structs@{Graph Structs}}
+\doxysubsubsection{\texorpdfstring{ValidateEdgeConections()}{ValidateEdgeConections()}}
+{\footnotesize\ttfamily bool Validate\+Edge\+Conections (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_edge}{Edge}} $\ast$}]{edges,  }\item[{char $\ast$}]{src,  }\item[{char $\ast$}]{dst }\end{DoxyParamCaption})}
+
+
+
+Validates the connections between edges in the graph using city names. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em edges} & The pointer to the graph. \\
+\hline
+{\em src} & The name of the source city. \\
+\hline
+{\em dst} & The name of the destination city. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the connection is valid, false otherwise. 
+\end{DoxyReturn}

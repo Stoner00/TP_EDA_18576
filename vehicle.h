@@ -45,6 +45,11 @@ typedef  struct Vehicle {
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
 
 #pragma region VehicleFunctions
+/**
+ * @defgroup VehicleFunctions
+ * @{
+ */
+
 
 /**
  * @brief Create a Vehicle object
@@ -153,7 +158,7 @@ bool UnleaseVehicle(Vehicle* vehicles, int id);
 
 /**
  * @brief Check if a vehicle with the given ID exists in the list
- * @param vehicle List of vehicles
+ * @param vehicles List of vehicles
  * @param id Vehicle ID to search
  * @return bool True if the vehicle exists, false otherwise
  */
@@ -171,4 +176,7 @@ void ShowVehicle(Vehicle* vehicle);
  */
 void ShowVehiclesList(Vehicle* vehicles);
 
+/**
+ * @}
+ */
 #pragma endregion

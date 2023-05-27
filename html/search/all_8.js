@@ -1,16 +1,15 @@
 var searchData=
 [
-  ['saveclienttobin_0',['SaveClientToBin',['../client_8c.html#a35bf0f198f217a5dd8abb36824dafc13',1,'SaveClientToBin(char *fileName, Client *clients):&#160;client.c'],['../client_8h.html#a35bf0f198f217a5dd8abb36824dafc13',1,'SaveClientToBin(char *fileName, Client *clients):&#160;client.c']]],
-  ['savemanagerstobin_1',['SaveManagersToBin',['../manager_8c.html#a3249c8fe1d2d85e4b59453416890e6c6',1,'SaveManagersToBin(char *fileName, Manager *managers):&#160;manager.c'],['../manager_8h.html#a3249c8fe1d2d85e4b59453416890e6c6',1,'SaveManagersToBin(char *fileName, Manager *managers):&#160;manager.c']]],
-  ['savevehiclestobin_2',['SaveVehiclesToBin',['../vehicle_8c.html#ae58878f3ad2b45b8e6792712a4a1c08b',1,'SaveVehiclesToBin(char *fileName, Vehicle *vehicles):&#160;vehicle.c'],['../vehicle_8h.html#ae58878f3ad2b45b8e6792712a4a1c08b',1,'SaveVehiclesToBin(char *fileName, Vehicle *vehicles):&#160;vehicle.c']]],
-  ['searchclient_3',['SearchClient',['../client_8c.html#a39bd92b98134af03c3e6ca6bd03d5391',1,'SearchClient(Client *clients, int vat):&#160;client.c'],['../client_8h.html#a39bd92b98134af03c3e6ca6bd03d5391',1,'SearchClient(Client *clients, int vat):&#160;client.c']]],
-  ['searchmanager_4',['SearchManager',['../manager_8c.html#a6e609342801ef66c7deef0e0916cbdea',1,'SearchManager(Manager *managers, int vat):&#160;manager.c'],['../manager_8h.html#a6e609342801ef66c7deef0e0916cbdea',1,'SearchManager(Manager *managers, int vat):&#160;manager.c']]],
-  ['searchvehicle_5',['SearchVehicle',['../vehicle_8c.html#a1fb12565ddd7ecf3cf46a2ec3af10ba0',1,'SearchVehicle(Vehicle *vehicles, int id):&#160;vehicle.c'],['../vehicle_8h.html#a1fb12565ddd7ecf3cf46a2ec3af10ba0',1,'SearchVehicle(Vehicle *vehicles, int id):&#160;vehicle.c']]],
-  ['showclient_6',['ShowClient',['../client_8c.html#ab238e88dc39d1912168b6c01caf4a023',1,'ShowClient(Client *client):&#160;client.c'],['../client_8h.html#ab238e88dc39d1912168b6c01caf4a023',1,'ShowClient(Client *client):&#160;client.c']]],
-  ['showclientslist_7',['ShowClientsList',['../client_8c.html#ad6c1f2b8b1b14463f25ea613f2ab2143',1,'ShowClientsList(Client *clients):&#160;client.c'],['../client_8h.html#ad6c1f2b8b1b14463f25ea613f2ab2143',1,'ShowClientsList(Client *clients):&#160;client.c']]],
-  ['showmanager_8',['ShowManager',['../manager_8c.html#a64bf4a8f8dc78eb30df1d21730b14a93',1,'ShowManager(Manager *manager):&#160;manager.c'],['../manager_8h.html#a64bf4a8f8dc78eb30df1d21730b14a93',1,'ShowManager(Manager *manager):&#160;manager.c']]],
-  ['showmanagerslist_9',['ShowManagersList',['../manager_8c.html#a22d46a7639a2d0a7fb215bcc9860eaf9',1,'ShowManagersList(Manager *managers):&#160;manager.c'],['../manager_8h.html#a22d46a7639a2d0a7fb215bcc9860eaf9',1,'ShowManagersList(Manager *managers):&#160;manager.c']]],
-  ['showvehicle_10',['ShowVehicle',['../vehicle_8c.html#a76943ef6c7af52cd1dba793f21f1f7ad',1,'ShowVehicle(Vehicle *vehicle):&#160;vehicle.c'],['../vehicle_8h.html#a76943ef6c7af52cd1dba793f21f1f7ad',1,'ShowVehicle(Vehicle *vehicle):&#160;vehicle.c']]],
-  ['showvehiclesbylocation_11',['ShowVehiclesByLocation',['../vehicle_8c.html#a001646d036b1572bbc64269f86123ecd',1,'ShowVehiclesByLocation(Vehicle *vehicles, char *location):&#160;vehicle.c'],['../vehicle_8h.html#a001646d036b1572bbc64269f86123ecd',1,'ShowVehiclesByLocation(Vehicle *vehicles, char *location):&#160;vehicle.c']]],
-  ['showvehicleslist_12',['ShowVehiclesList',['../vehicle_8c.html#a209c8e97345431ca625eec3860105275',1,'ShowVehiclesList(Vehicle *vehicles):&#160;vehicle.c'],['../vehicle_8h.html#a209c8e97345431ca625eec3860105275',1,'ShowVehiclesList(Vehicle *vehicles):&#160;vehicle.c']]]
+  ['mail_0',['mail',['../struct_manager.html#a9a726ea20340b26c0b2cb637fc88f557',1,'Manager']]],
+  ['mailsize_1',['mailSize',['../manager_8h.html#aaa376833929907395cc167417175b600',1,'manager.h']]],
+  ['main_2',['main',['../main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main.c']]],
+  ['main_2ec_3',['main.c',['../main_8c.html',1,'']]],
+  ['manager_4',['Manager',['../struct_manager.html',1,'Manager'],['../manager_8h.html#a500e58fb3d31f91e2bec1fab4875e1b6',1,'Manager():&#160;manager.h']]],
+  ['manager_2ec_5',['manager.c',['../manager_8c.html',1,'']]],
+  ['manager_2eh_6',['manager.h',['../manager_8h.html',1,'']]],
+  ['managerexists_7',['ManagerExists',['../group___manager_functions.html#ga51c0a1e4a87c79a588f53448b7ccf45f',1,'ManagerExists(Manager *managers, int vat):&#160;manager.c'],['../group___manager_functions.html#ga51c0a1e4a87c79a588f53448b7ccf45f',1,'ManagerExists(Manager *managers, int vat):&#160;manager.c']]],
+  ['managerfunctions_8',['ManagerFunctions',['../group___manager_functions.html',1,'']]],
+  ['modifyclientname_9',['ModifyClientName',['../group___client_functions.html#gadd5cca97aaf44444b3d69bf5f9ce71b2',1,'ModifyClientName(Client *clients, int vat, char *newName):&#160;client.c'],['../group___client_functions.html#gadd5cca97aaf44444b3d69bf5f9ce71b2',1,'ModifyClientName(Client *clients, int vat, char *newName):&#160;client.c']]],
+  ['modifymanagername_10',['ModifyManagerName',['../manager_8c.html#af17eb027d45f2fa5bea363954aa90731',1,'ModifyManagerName(Manager *managers, int vat, char *newName):&#160;manager.c'],['../group___manager_functions.html#ga056d34ea5f3ba3d00085f99f74b71a36',1,'ModifyManagerName(Manager *managers, int vat, char newName[]):&#160;manager.h']]],
+  ['modifyvehiclebattery_11',['ModifyVehicleBattery',['../group___vehicle_functions.html#ga48c71858f8141b936b92eb87368cc424',1,'ModifyVehicleBattery(Vehicle *vehicles, int id, int battery):&#160;vehicle.c'],['../group___vehicle_functions.html#ga48c71858f8141b936b92eb87368cc424',1,'ModifyVehicleBattery(Vehicle *vehicles, int id, int battery):&#160;vehicle.c']]]
 ];

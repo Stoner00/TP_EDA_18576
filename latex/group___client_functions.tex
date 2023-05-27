@@ -1,0 +1,245 @@
+\hypertarget{group___client_functions}{}\doxysection{Client\+Functions}
+\label{group___client_functions}\index{ClientFunctions@{ClientFunctions}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_client}{Client}} $\ast$ \mbox{\hyperlink{group___client_functions_gaf3d4f3ccfd2e288a46cc3f461295de89}{Create\+Client}} (int vat, char name\mbox{[}$\,$\mbox{]}, char location\mbox{[}$\,$\mbox{]}, float balance)
+\begin{DoxyCompactList}\small\item\em Create a new \mbox{\hyperlink{struct_client}{Client}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_client}{Client}} $\ast$ \mbox{\hyperlink{group___client_functions_ga4e56ca2ed0327f64261c20678889f071}{Insert\+Client\+Ordered}} (\mbox{\hyperlink{struct_client}{Client}} $\ast$clients, \mbox{\hyperlink{struct_client}{Client}} $\ast$new\+Client)
+\begin{DoxyCompactList}\small\item\em Insert a client into the list in an ordered manner by name. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_client}{Client}} $\ast$ \mbox{\hyperlink{group___client_functions_gadd5cca97aaf44444b3d69bf5f9ce71b2}{Modify\+Client\+Name}} (\mbox{\hyperlink{struct_client}{Client}} $\ast$clients, int vat, char $\ast$new\+Name)
+\begin{DoxyCompactList}\small\item\em Modify the name of a client. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_client}{Client}} $\ast$ \mbox{\hyperlink{group___client_functions_gac3b5bcce836a7b4e61097c7a63b02ef6}{Read\+Client\+From\+Bin}} (char $\ast$file\+Name)
+\begin{DoxyCompactList}\small\item\em Read clients from a .bin file into a list. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_client}{Client}} $\ast$ \mbox{\hyperlink{group___client_functions_ga61ff8c0250c1629712d9d9dca891e9fe}{Remove\+Client}} (\mbox{\hyperlink{struct_client}{Client}} $\ast$clients, int vat)
+\begin{DoxyCompactList}\small\item\em Remove a client from the list. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_client}{Client}} $\ast$ \mbox{\hyperlink{group___client_functions_ga39bd92b98134af03c3e6ca6bd03d5391}{Search\+Client}} (\mbox{\hyperlink{struct_client}{Client}} $\ast$clients, int vat)
+\begin{DoxyCompactList}\small\item\em Search a client by VAT number. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group___client_functions_gadeefc685930d45f22d0defb45774746e}{Client\+Exists}} (\mbox{\hyperlink{struct_client}{Client}} $\ast$clients, int vat)
+\begin{DoxyCompactList}\small\item\em Check if a client with a given VAT number exists in the list. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group___client_functions_ga533b00a44539c2685185e64e9eb198b4}{Destroy\+Clients\+List}} (\mbox{\hyperlink{struct_client}{Client}} $\ast$$\ast$clients)
+\begin{DoxyCompactList}\small\item\em Free clients list from memory. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group___client_functions_ga35bf0f198f217a5dd8abb36824dafc13}{Save\+Client\+To\+Bin}} (char $\ast$file\+Name, \mbox{\hyperlink{struct_client}{Client}} $\ast$clients)
+\begin{DoxyCompactList}\small\item\em Save clients list to a .bin file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___client_functions_gab238e88dc39d1912168b6c01caf4a023}{Show\+Client}} (\mbox{\hyperlink{struct_client}{Client}} $\ast$client)
+\begin{DoxyCompactList}\small\item\em Print data from a client. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___client_functions_gad6c1f2b8b1b14463f25ea613f2ab2143}{Show\+Clients\+List}} (\mbox{\hyperlink{struct_client}{Client}} $\ast$clients)
+\begin{DoxyCompactList}\small\item\em Show the list of clients in memory. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group___client_functions_gadeefc685930d45f22d0defb45774746e}\label{group___client_functions_gadeefc685930d45f22d0defb45774746e}} 
+\index{ClientFunctions@{ClientFunctions}!ClientExists@{ClientExists}}
+\index{ClientExists@{ClientExists}!ClientFunctions@{ClientFunctions}}
+\doxysubsubsection{\texorpdfstring{ClientExists()}{ClientExists()}}
+{\footnotesize\ttfamily bool Client\+Exists (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_client}{Client}} $\ast$}]{clients,  }\item[{int}]{vat }\end{DoxyParamCaption})}
+
+
+
+Check if a client with a given VAT number exists in the list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em clients} & A pointer to the list of clients \\
+\hline
+{\em vat} & The VAT number to search for \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the client exists, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___client_functions_gaf3d4f3ccfd2e288a46cc3f461295de89}\label{group___client_functions_gaf3d4f3ccfd2e288a46cc3f461295de89}} 
+\index{ClientFunctions@{ClientFunctions}!CreateClient@{CreateClient}}
+\index{CreateClient@{CreateClient}!ClientFunctions@{ClientFunctions}}
+\doxysubsubsection{\texorpdfstring{CreateClient()}{CreateClient()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_client}{Client}} $\ast$ Create\+Client (\begin{DoxyParamCaption}\item[{int}]{vat,  }\item[{char}]{name\mbox{[}$\,$\mbox{]},  }\item[{char}]{location\mbox{[}$\,$\mbox{]},  }\item[{float}]{balance }\end{DoxyParamCaption})}
+
+
+
+Create a new \mbox{\hyperlink{struct_client}{Client}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vat} & The VAT number of the client \\
+\hline
+{\em name} & The name of the client \\
+\hline
+{\em location} & The location of the client \\
+\hline
+{\em balance} & The balance of the client \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the new client 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___client_functions_ga533b00a44539c2685185e64e9eb198b4}\label{group___client_functions_ga533b00a44539c2685185e64e9eb198b4}} 
+\index{ClientFunctions@{ClientFunctions}!DestroyClientsList@{DestroyClientsList}}
+\index{DestroyClientsList@{DestroyClientsList}!ClientFunctions@{ClientFunctions}}
+\doxysubsubsection{\texorpdfstring{DestroyClientsList()}{DestroyClientsList()}}
+{\footnotesize\ttfamily bool Destroy\+Clients\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_client}{Client}} $\ast$$\ast$}]{clients }\end{DoxyParamCaption})}
+
+
+
+Free clients list from memory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em clients} & A pointer to the pointer to the list of clients \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if successful, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___client_functions_ga4e56ca2ed0327f64261c20678889f071}\label{group___client_functions_ga4e56ca2ed0327f64261c20678889f071}} 
+\index{ClientFunctions@{ClientFunctions}!InsertClientOrdered@{InsertClientOrdered}}
+\index{InsertClientOrdered@{InsertClientOrdered}!ClientFunctions@{ClientFunctions}}
+\doxysubsubsection{\texorpdfstring{InsertClientOrdered()}{InsertClientOrdered()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_client}{Client}} $\ast$ Insert\+Client\+Ordered (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_client}{Client}} $\ast$}]{clients,  }\item[{\mbox{\hyperlink{struct_client}{Client}} $\ast$}]{new\+Client }\end{DoxyParamCaption})}
+
+
+
+Insert a client into the list in an ordered manner by name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em clients} & A pointer to the list of clients \\
+\hline
+{\em new\+Client} & A pointer to the new client to insert \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the updated list of clients 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___client_functions_gadd5cca97aaf44444b3d69bf5f9ce71b2}\label{group___client_functions_gadd5cca97aaf44444b3d69bf5f9ce71b2}} 
+\index{ClientFunctions@{ClientFunctions}!ModifyClientName@{ModifyClientName}}
+\index{ModifyClientName@{ModifyClientName}!ClientFunctions@{ClientFunctions}}
+\doxysubsubsection{\texorpdfstring{ModifyClientName()}{ModifyClientName()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_client}{Client}} $\ast$ Modify\+Client\+Name (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_client}{Client}} $\ast$}]{clients,  }\item[{int}]{vat,  }\item[{char $\ast$}]{new\+Name }\end{DoxyParamCaption})}
+
+
+
+Modify the name of a client. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em clients} & A pointer to the list of clients \\
+\hline
+{\em vat} & The VAT number of the client to modify \\
+\hline
+{\em new\+Name} & The new name for the client \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the updated list of clients 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___client_functions_gac3b5bcce836a7b4e61097c7a63b02ef6}\label{group___client_functions_gac3b5bcce836a7b4e61097c7a63b02ef6}} 
+\index{ClientFunctions@{ClientFunctions}!ReadClientFromBin@{ReadClientFromBin}}
+\index{ReadClientFromBin@{ReadClientFromBin}!ClientFunctions@{ClientFunctions}}
+\doxysubsubsection{\texorpdfstring{ReadClientFromBin()}{ReadClientFromBin()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_client}{Client}} $\ast$ Read\+Client\+From\+Bin (\begin{DoxyParamCaption}\item[{char $\ast$}]{file\+Name }\end{DoxyParamCaption})}
+
+
+
+Read clients from a .bin file into a list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Name} & The name of the .bin file to read from \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the list of clients read from the file, or NULL if unsuccessful 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___client_functions_ga61ff8c0250c1629712d9d9dca891e9fe}\label{group___client_functions_ga61ff8c0250c1629712d9d9dca891e9fe}} 
+\index{ClientFunctions@{ClientFunctions}!RemoveClient@{RemoveClient}}
+\index{RemoveClient@{RemoveClient}!ClientFunctions@{ClientFunctions}}
+\doxysubsubsection{\texorpdfstring{RemoveClient()}{RemoveClient()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_client}{Client}} $\ast$ Remove\+Client (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_client}{Client}} $\ast$}]{clients,  }\item[{int}]{vat }\end{DoxyParamCaption})}
+
+
+
+Remove a client from the list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em clients} & A pointer to the list of clients \\
+\hline
+{\em vat} & The VAT number of the client to remove \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the updated list of clients 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___client_functions_ga35bf0f198f217a5dd8abb36824dafc13}\label{group___client_functions_ga35bf0f198f217a5dd8abb36824dafc13}} 
+\index{ClientFunctions@{ClientFunctions}!SaveClientToBin@{SaveClientToBin}}
+\index{SaveClientToBin@{SaveClientToBin}!ClientFunctions@{ClientFunctions}}
+\doxysubsubsection{\texorpdfstring{SaveClientToBin()}{SaveClientToBin()}}
+{\footnotesize\ttfamily bool Save\+Client\+To\+Bin (\begin{DoxyParamCaption}\item[{char $\ast$}]{file\+Name,  }\item[{\mbox{\hyperlink{struct_client}{Client}} $\ast$}]{clients }\end{DoxyParamCaption})}
+
+
+
+Save clients list to a .bin file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Name} & The name of the .bin file to save to \\
+\hline
+{\em clients} & A pointer to the list of clients \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if successful, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___client_functions_ga39bd92b98134af03c3e6ca6bd03d5391}\label{group___client_functions_ga39bd92b98134af03c3e6ca6bd03d5391}} 
+\index{ClientFunctions@{ClientFunctions}!SearchClient@{SearchClient}}
+\index{SearchClient@{SearchClient}!ClientFunctions@{ClientFunctions}}
+\doxysubsubsection{\texorpdfstring{SearchClient()}{SearchClient()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_client}{Client}} $\ast$ Search\+Client (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_client}{Client}} $\ast$}]{clients,  }\item[{int}]{vat }\end{DoxyParamCaption})}
+
+
+
+Search a client by VAT number. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em clients} & A pointer to the list of clients \\
+\hline
+{\em vat} & The VAT number of the client to search for \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the found client, or NULL if not found 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___client_functions_gab238e88dc39d1912168b6c01caf4a023}\label{group___client_functions_gab238e88dc39d1912168b6c01caf4a023}} 
+\index{ClientFunctions@{ClientFunctions}!ShowClient@{ShowClient}}
+\index{ShowClient@{ShowClient}!ClientFunctions@{ClientFunctions}}
+\doxysubsubsection{\texorpdfstring{ShowClient()}{ShowClient()}}
+{\footnotesize\ttfamily void Show\+Client (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_client}{Client}} $\ast$}]{client }\end{DoxyParamCaption})}
+
+
+
+Print data from a client. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em client} & A pointer to the client to show \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group___client_functions_gad6c1f2b8b1b14463f25ea613f2ab2143}\label{group___client_functions_gad6c1f2b8b1b14463f25ea613f2ab2143}} 
+\index{ClientFunctions@{ClientFunctions}!ShowClientsList@{ShowClientsList}}
+\index{ShowClientsList@{ShowClientsList}!ClientFunctions@{ClientFunctions}}
+\doxysubsubsection{\texorpdfstring{ShowClientsList()}{ShowClientsList()}}
+{\footnotesize\ttfamily void Show\+Clients\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_client}{Client}} $\ast$}]{clients }\end{DoxyParamCaption})}
+
+
+
+Show the list of clients in memory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em clients} & A pointer to the list of clients \\
+\hline
+\end{DoxyParams}

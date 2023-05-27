@@ -15,7 +15,7 @@
 #include <string.h>
 
 //Configure char size
-#define nameSyze 60
+#define nameSize 60
 #define locationSize 40
 #define mailSize 70
 
@@ -30,7 +30,7 @@
  */
 typedef  struct Manager {
     int vat;
-    char name[nameSyze];
+    char name[nameSize];
     char location[locationSize];
     char mail[mailSize];
     struct Manager* next;
@@ -44,6 +44,11 @@ typedef  struct Manager {
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
 
 #pragma region ManagerFunctions
+
+/**
+ * @defgroup ManagerFunctions
+ * @{
+ */
 
 /**
  * @brief Create a new Manager
@@ -130,4 +135,7 @@ void ShowManager(Manager* manager);
  */
 void ShowManagersList(Manager* managers);
 
+/**
+ * @}
+ */
 #pragma endregion

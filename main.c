@@ -52,7 +52,13 @@ int main() {
     ShowClientsList(clients);
 
     // Clean up
-    DestroyClientsList(&clients);
+    if(DestroyClientsList(&clients)){
+        printf("Client list erased from memory \n");
+    }
+    else
+    {
+        printf("Error cleaning memory\n");
+    }
 
 
 #pragma endregion

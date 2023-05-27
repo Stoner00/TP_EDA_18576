@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['location_0',['location',['../struct_client.html#a25dfe417163495768bf366f64a50d797',1,'Client::location()'],['../struct_manager.html#a76457c7a39db4c78c3e7bd4ee96e6bfd',1,'Manager::location()'],['../struct_vehicle.html#aea860b3c7b454653fda9054bca943c97',1,'Vehicle::location()']]],
-  ['locationsize_1',['locationSize',['../client_8h.html#a40ec03e31fd0eda63d13807500db49aa',1,'locationSize():&#160;client.h'],['../manager_8h.html#a40ec03e31fd0eda63d13807500db49aa',1,'locationSize():&#160;manager.h'],['../vehicle_8h.html#a40ec03e31fd0eda63d13807500db49aa',1,'locationSize():&#160;vehicle.h']]]
+  ['edge_0',['Edge',['../struct_edge.html',1,'Edge'],['../graph_8h.html#a89b91ff6921535d9c8215110f215c2c7',1,'Edge():&#160;graph.h']]],
+  ['edgefile_1',['EdgeFile',['../struct_edge_file.html',1,'EdgeFile'],['../graph_8h.html#a79cdad05a24cee9fdca94635add043e9',1,'EdgeFile():&#160;graph.h']]],
+  ['existsadjacency_2',['ExistsAdjacency',['../group___adjacency_functions.html#gaa78346bd6e13d622d7304d4056fd96c0',1,'ExistsAdjacency(Adjacency *adjacencies, int cod):&#160;adjacency.c'],['../group___adjacency_functions.html#gaa78346bd6e13d622d7304d4056fd96c0',1,'ExistsAdjacency(Adjacency *adjacencies, int cod):&#160;adjacency.c']]]
 ];

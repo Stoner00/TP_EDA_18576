@@ -1,0 +1,101 @@
+\hypertarget{graph_8h_source}{}\doxysection{graph.\+h}
+\mbox{\hyperlink{graph_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ Disable\ security\ warnings}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#pragma\ warning\ (disable:\ 4996)}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ Import\ Libraries}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <stdbool.h>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <string.h>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{client_8h}{client.h}}"{}}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{vehicle_8h}{vehicle.h}}"{}}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{adjacency_8h}{adjacency.h}}"{}}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{comment}{//Configure\ char\ size}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#define\ nameSize\ 25}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{comment}{//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//}}
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ STRUCT\ DECLARATION\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ //}}
+\DoxyCodeLine{00025\ \textcolor{comment}{//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#pragma\ region\ Structs}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00032\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_edge}{Edge}}\ \{}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_edge_a611d1f4ce72874983425e90304a9d06f}{cod}};}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{struct_edge_ad2f76e618fa77ac7a6c71c4b91e3dd17}{city}}[\mbox{\hyperlink{graph_8h_a2a0f365c6c1f202227d908ade2fed250}{nameSize}}];}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_edge_aa4e2883518a2e2bd15cf8f1272e83327}{visited}};}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_edge}{Edge}}*\ \mbox{\hyperlink{struct_edge_a6364279547b42e7fa3e418f44ec29f18}{next}};}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_adjacency}{Adjacency}}*\ \mbox{\hyperlink{struct_edge_a57a890569a8334a0c0c4c3aa403d279e}{adjacencies}};}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_client}{Client}}*\ \mbox{\hyperlink{struct_edge_a1b07bc01e80c867215a9bd30e32a0159}{clients}};}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_vehicle}{Vehicle}}*\ \mbox{\hyperlink{struct_edge_ad405915bd9c777c4ce1cd91555141180}{vehicle}};}
+\DoxyCodeLine{00040\ \}\ \mbox{\hyperlink{struct_edge}{Edge}};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_edge_file}{EdgeFile}}\ \{}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_edge_file_a3d8d4051dd524cbe5ad24951be31a5ec}{cod}};}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{struct_edge_file_a8aa46e7e9a132b550b53af723a55fff1}{city}}[\mbox{\hyperlink{graph_8h_a2a0f365c6c1f202227d908ade2fed250}{nameSize}}];}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_edge_file_a9c95f051b048512e89db2d11ad5468ce}{visited}};}
+\DoxyCodeLine{00046\ \}\ \mbox{\hyperlink{struct_edge_file}{EdgeFile}};}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\#pragma\ endregion}}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \textcolor{comment}{//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//}}
+\DoxyCodeLine{00051\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ FUNCTIONS\ DECLARATION\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ //}}
+\DoxyCodeLine{00052\ \textcolor{comment}{//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//}}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#pragma\ region\ GraphFunctions}}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00066\ \mbox{\hyperlink{struct_edge}{Edge}}*\ \mbox{\hyperlink{group___graph_functions_gaaa751fe89ca23ba09ba0f6fe849bfd72}{CreateGraph}}();}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00074\ \mbox{\hyperlink{struct_edge}{Edge}}*\ \mbox{\hyperlink{group___graph_functions_gad47fdb2f0f0f34ef1e28daa78acebcaf}{ShowGraph}}(\mbox{\hyperlink{struct_edge}{Edge}}*\ edges);}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00083\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{group___graph_functions_ga5853a2fad89347d4caa2029dfbd88e7f}{SaveGraph}}(\mbox{\hyperlink{struct_edge}{Edge}}*\ edges,\ \textcolor{keywordtype}{char}*\ fileName);}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00093\ \mbox{\hyperlink{struct_edge}{Edge}}*\ \mbox{\hyperlink{group___graph_functions_gac7eadf4053e6e3b16bc8a2467e8da2ed}{ReadGraph}}(\mbox{\hyperlink{struct_edge}{Edge}}*\ edges,\ \textcolor{keywordtype}{char}*\ fileName,\ \textcolor{keywordtype}{bool}*\ result);}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00102\ \mbox{\hyperlink{struct_edge}{Edge}}*\ \mbox{\hyperlink{group___graph_functions_ga78f38ad45773bf9e456b1a2eb2aef844}{CreateEdge}}(\textcolor{keywordtype}{char}*\ city,\ \textcolor{keywordtype}{int}\ cod);}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00112\ \mbox{\hyperlink{struct_edge}{Edge}}*\ \mbox{\hyperlink{group___graph_functions_ga4979f39780deab5f004dcfd3a4a5dc93}{InsertEdgeOrdered}}(\mbox{\hyperlink{struct_edge}{Edge}}*\ edges,\ \mbox{\hyperlink{struct_edge}{Edge}}*\ newEdge,\ \textcolor{keywordtype}{bool}*\ result);}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00119\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group___graph_functions_gab15aa672695ba81b41b65f9cdca39bc0}{ShowEdgesList}}(\mbox{\hyperlink{struct_edge}{Edge}}*\ edges);}
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00127\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group___graph_functions_ga0106c7e78442742c07a4bddf594302fb}{ShowEdgesListTotal}}(\mbox{\hyperlink{struct_edge}{Edge}}*\ edges,\ \mbox{\hyperlink{struct_edge}{Edge}}*\ aux);}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00136\ \mbox{\hyperlink{struct_edge}{Edge}}*\ \mbox{\hyperlink{group___graph_functions_gaad42f01555f057f49bd52fe55f56e019}{SearchEdge}}(\mbox{\hyperlink{struct_edge}{Edge}}*\ edges,\ \textcolor{keywordtype}{char}*\ city);}
+\DoxyCodeLine{00137\ }
+\DoxyCodeLine{00145\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{group___graph_functions_gaa32aa877e7ae97a787a6f4c0e533ab4a}{SearchEdgeCodeByCity}}(\mbox{\hyperlink{struct_edge}{Edge}}*\ edges,\ \textcolor{keywordtype}{char}*\ city);}
+\DoxyCodeLine{00146\ }
+\DoxyCodeLine{00154\ \mbox{\hyperlink{struct_edge}{Edge}}*\ \mbox{\hyperlink{group___graph_functions_ga6b1a470f3ba0dab940f1ceffa73cff93}{SearchEdgeCode}}(\mbox{\hyperlink{struct_edge}{Edge}}*\ edges,\ \textcolor{keywordtype}{int}\ cod);}
+\DoxyCodeLine{00155\ }
+\DoxyCodeLine{00164\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{group___graph_functions_gadf34e449928538f427f3b69ebb11c799}{ValidateEdgeConections}}(\mbox{\hyperlink{struct_edge}{Edge}}*\ edges,\ \textcolor{keywordtype}{char}*\ src,\ \textcolor{keywordtype}{char}*\ dst);}
+\DoxyCodeLine{00165\ }
+\DoxyCodeLine{00175\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{group___graph_functions_ga12a1590a1bc0874ebddd9ec43b5de386}{CountHopsByName}}(\mbox{\hyperlink{struct_edge}{Edge}}*\ edges,\ \textcolor{keywordtype}{char}*\ src,\ \textcolor{keywordtype}{char}*\ dst,\ \textcolor{keywordtype}{int}\ countHops);}
+\DoxyCodeLine{00176\ }
+\DoxyCodeLine{00186\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{group___graph_functions_gabf83df3c757f8ee0c721b46a4f8500d4}{CountHopsByCode}}(\mbox{\hyperlink{struct_edge}{Edge}}*\ edge,\ \textcolor{keywordtype}{int}\ src,\ \textcolor{keywordtype}{int}\ dst,\ \textcolor{keywordtype}{int}\ countHops);}
+\DoxyCodeLine{00187\ }
+\DoxyCodeLine{00196\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{group___graph_functions_ga4d6cd792ea2c739a1c6f8496e79bf2bc}{ValidateConnectionByCityCode}}(\mbox{\hyperlink{struct_edge}{Edge}}*\ edges,\ \textcolor{keywordtype}{int}\ src,\ \textcolor{keywordtype}{int}\ dst);}
+\DoxyCodeLine{00197\ }
+\DoxyCodeLine{00206\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{group___graph_functions_gaa2412cf0acf85cf4e34861402f64af03}{ValidateConnectionByCityName}}(\mbox{\hyperlink{struct_edge}{Edge}}*\ edges,\ \textcolor{keywordtype}{char}*\ src,\ \textcolor{keywordtype}{char}*\ dst);}
+\DoxyCodeLine{00207\ }
+\DoxyCodeLine{00214\ \mbox{\hyperlink{struct_edge}{Edge}}*\ \mbox{\hyperlink{group___graph_functions_gaf03f2ab2ce1f31d3dc7a822da373147b}{ResetVisitedEdges}}(\mbox{\hyperlink{struct_edge}{Edge}}*\ edges);}
+\DoxyCodeLine{00215\ }
+\DoxyCodeLine{00226\ \mbox{\hyperlink{struct_edge}{Edge}}*\ \mbox{\hyperlink{group___graph_functions_gae4b46ee38c021ec34261d7acec0c2da0}{InsertAdjacencyEdgeCityName}}(\mbox{\hyperlink{struct_edge}{Edge}}*\ edges,\ \textcolor{keywordtype}{char}*\ sourceCity,\ \textcolor{keywordtype}{char}*\ destCity,\ \textcolor{keywordtype}{float}\ distance,\ \textcolor{keywordtype}{bool}*\ result);}
+\DoxyCodeLine{00227\ }
+\DoxyCodeLine{00235\ \mbox{\hyperlink{struct_edge}{Edge}}*\ \mbox{\hyperlink{group___graph_functions_ga9809c3a20c225b72dd3bab09781236be}{ReadAdjacencies}}(\mbox{\hyperlink{struct_edge}{Edge}}*\ edges,\ \textcolor{keywordtype}{bool}*\ result);}
+\DoxyCodeLine{00236\ }
+\DoxyCodeLine{00247\ \mbox{\hyperlink{struct_edge}{Edge}}*\ \mbox{\hyperlink{group___graph_functions_ga638497d55b96c7f4753e080f9ba9e234}{InsertAdjacencyEdgeCityCode}}(\mbox{\hyperlink{struct_edge}{Edge}}*\ edges,\ \textcolor{keywordtype}{int}\ sourceCode,\ \textcolor{keywordtype}{int}\ destCode,\ \textcolor{keywordtype}{float}\ distance,\ \textcolor{keywordtype}{bool}*\ result);}
+\DoxyCodeLine{00248\ }
+\DoxyCodeLine{00257\ \mbox{\hyperlink{struct_edge}{Edge}}*\ \mbox{\hyperlink{group___graph_functions_ga94d03ca56a55fc087135a513555db0bf}{InsertClientGraph}}(\mbox{\hyperlink{struct_edge}{Edge}}*\ edges,\ \mbox{\hyperlink{struct_client}{Client}}*\ clients,\ \textcolor{keywordtype}{bool}*\ result);}
+\DoxyCodeLine{00258\ }
+\DoxyCodeLine{00268\ \mbox{\hyperlink{struct_edge}{Edge}}*\ \mbox{\hyperlink{group___graph_functions_ga1e02e2f0a25f2d6a544dbf402c3cdf39}{InsertClientEdge}}(\mbox{\hyperlink{struct_edge}{Edge}}*\ edges,\ \mbox{\hyperlink{struct_client}{Client}}*\ clients,\ \textcolor{keywordtype}{char}*\ location,\ \textcolor{keywordtype}{bool}*\ result);}
+\DoxyCodeLine{00269\ }
+\DoxyCodeLine{00278\ \mbox{\hyperlink{struct_edge}{Edge}}*\ \mbox{\hyperlink{group___graph_functions_gad2e6a1a14281079230f3b9a3d8c709f1}{InsertVehicleGraph}}(\mbox{\hyperlink{struct_edge}{Edge}}*\ edges,\ \mbox{\hyperlink{struct_vehicle}{Vehicle}}*\ vehicle,\ \textcolor{keywordtype}{bool}*\ result);}
+\DoxyCodeLine{00279\ }
+\DoxyCodeLine{00289\ \mbox{\hyperlink{struct_edge}{Edge}}*\ \mbox{\hyperlink{group___graph_functions_ga25832cc97edccd6449fbc45894362a7c}{InsertVehiclesEdge}}(\mbox{\hyperlink{struct_edge}{Edge}}*\ edges,\ \mbox{\hyperlink{struct_vehicle}{Vehicle}}*\ vehicles,\ \textcolor{keywordtype}{char}*\ location,\ \textcolor{keywordtype}{bool}*\ result);}
+\DoxyCodeLine{00290\ }
+\DoxyCodeLine{00296\ \textcolor{preprocessor}{\#pragma\ endregion}}
+
+\end{DoxyCode}

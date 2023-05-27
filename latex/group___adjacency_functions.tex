@@ -1,0 +1,151 @@
+\hypertarget{group___adjacency_functions}{}\doxysection{Adjacency\+Functions}
+\label{group___adjacency_functions}\index{AdjacencyFunctions@{AdjacencyFunctions}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_adjacency}{Adjacency}} $\ast$ \mbox{\hyperlink{group___adjacency_functions_ga0d2a853838421d6698a07d1e4a102a16}{Create\+Adjacency}} (int Adj\+Code, float Adj\+Dist)
+\begin{DoxyCompactList}\small\item\em Creates a new adjacency node. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_adjacency}{Adjacency}} $\ast$ \mbox{\hyperlink{group___adjacency_functions_ga6491190c1ec681648c06c030751cf069}{Insert\+Adjacency}} (\mbox{\hyperlink{struct_adjacency}{Adjacency}} $\ast$adjacencies, \mbox{\hyperlink{struct_adjacency}{Adjacency}} $\ast$new\+Adjacency, bool $\ast$result)
+\begin{DoxyCompactList}\small\item\em Inserts an adjacency node into the adjacency list. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___adjacency_functions_ga62f35f91b847b7ba805bb22c672bcd5a}{Show\+Adjacencies}} (\mbox{\hyperlink{struct_adjacency}{Adjacency}} $\ast$adjacencies)
+\begin{DoxyCompactList}\small\item\em Shows the list of adjacencies. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group___adjacency_functions_gaa78346bd6e13d622d7304d4056fd96c0}{Exists\+Adjacency}} (\mbox{\hyperlink{struct_adjacency}{Adjacency}} $\ast$adjacencies, int cod)
+\begin{DoxyCompactList}\small\item\em Checks if an adjacency with the given code exists. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___adjacency_functions_ga9ad3d5244ff5881515f27ccc8a2a3e5e}{Show\+Adjacencies\+City}} (\mbox{\hyperlink{struct_adjacency}{Adjacency}} $\ast$adjacencies, \mbox{\hyperlink{struct_edge}{Edge}} $\ast$vertices)
+\begin{DoxyCompactList}\small\item\em Shows the adjacencies of a specific city. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group___adjacency_functions_ga1d3c500302ede62519257366b90f74e4}{Save\+Adjacencies}} (\mbox{\hyperlink{struct_adjacency}{Adjacency}} $\ast$adjacencies, char $\ast$file\+Name, int source\+Edge\+Code)
+\begin{DoxyCompactList}\small\item\em Saves the adjacencies to a binary file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group___adjacency_functions_ga0d2a853838421d6698a07d1e4a102a16}\label{group___adjacency_functions_ga0d2a853838421d6698a07d1e4a102a16}} 
+\index{AdjacencyFunctions@{AdjacencyFunctions}!CreateAdjacency@{CreateAdjacency}}
+\index{CreateAdjacency@{CreateAdjacency}!AdjacencyFunctions@{AdjacencyFunctions}}
+\doxysubsubsection{\texorpdfstring{CreateAdjacency()}{CreateAdjacency()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_adjacency}{Adjacency}} $\ast$ Create\+Adjacency (\begin{DoxyParamCaption}\item[{int}]{Adj\+Code,  }\item[{float}]{Adj\+Dist }\end{DoxyParamCaption})}
+
+
+
+Creates a new adjacency node. 
+
+This function allocates memory for a new adjacency node and initializes its values.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Adj\+Code} & The unique code of the adjacency. \\
+\hline
+{\em Adj\+Dist} & The distance between locations/cities (weight). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the newly created adjacency node. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___adjacency_functions_gaa78346bd6e13d622d7304d4056fd96c0}\label{group___adjacency_functions_gaa78346bd6e13d622d7304d4056fd96c0}} 
+\index{AdjacencyFunctions@{AdjacencyFunctions}!ExistsAdjacency@{ExistsAdjacency}}
+\index{ExistsAdjacency@{ExistsAdjacency}!AdjacencyFunctions@{AdjacencyFunctions}}
+\doxysubsubsection{\texorpdfstring{ExistsAdjacency()}{ExistsAdjacency()}}
+{\footnotesize\ttfamily bool Exists\+Adjacency (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_adjacency}{Adjacency}} $\ast$}]{adjacencies,  }\item[{int}]{cod }\end{DoxyParamCaption})}
+
+
+
+Checks if an adjacency with the given code exists. 
+
+This function checks if an adjacency with the specified code exists in the adjacency list.
+
+
+\begin{DoxyParams}{Parameters}
+{\em adjacencies} & The adjacency list to be searched. \\
+\hline
+{\em cod} & The code of the adjacency to be checked. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the adjacency exists, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___adjacency_functions_ga6491190c1ec681648c06c030751cf069}\label{group___adjacency_functions_ga6491190c1ec681648c06c030751cf069}} 
+\index{AdjacencyFunctions@{AdjacencyFunctions}!InsertAdjacency@{InsertAdjacency}}
+\index{InsertAdjacency@{InsertAdjacency}!AdjacencyFunctions@{AdjacencyFunctions}}
+\doxysubsubsection{\texorpdfstring{InsertAdjacency()}{InsertAdjacency()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_adjacency}{Adjacency}} $\ast$ Insert\+Adjacency (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_adjacency}{Adjacency}} $\ast$}]{adjacencies,  }\item[{\mbox{\hyperlink{struct_adjacency}{Adjacency}} $\ast$}]{new\+Adjacency,  }\item[{bool $\ast$}]{result }\end{DoxyParamCaption})}
+
+
+
+Inserts an adjacency node into the adjacency list. 
+
+This function inserts a new adjacency node into the adjacency list, maintaining the order of adjacency codes.
+
+
+\begin{DoxyParams}{Parameters}
+{\em adjacencies} & The current adjacency list. \\
+\hline
+{\em new\+Adjacency} & The adjacency node to be inserted. \\
+\hline
+{\em result} & A pointer to a boolean variable indicating the success of the insertion. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The updated adjacency list. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___adjacency_functions_ga1d3c500302ede62519257366b90f74e4}\label{group___adjacency_functions_ga1d3c500302ede62519257366b90f74e4}} 
+\index{AdjacencyFunctions@{AdjacencyFunctions}!SaveAdjacencies@{SaveAdjacencies}}
+\index{SaveAdjacencies@{SaveAdjacencies}!AdjacencyFunctions@{AdjacencyFunctions}}
+\doxysubsubsection{\texorpdfstring{SaveAdjacencies()}{SaveAdjacencies()}}
+{\footnotesize\ttfamily int Save\+Adjacencies (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_adjacency}{Adjacency}} $\ast$}]{adjacencies,  }\item[{char $\ast$}]{file\+Name,  }\item[{int}]{source\+Edge\+Code }\end{DoxyParamCaption})}
+
+
+
+Saves the adjacencies to a binary file. 
+
+This function saves the adjacencies to a binary file with the given file name, associated with the source edge code.
+
+
+\begin{DoxyParams}{Parameters}
+{\em adjacencies} & The adjacency list to be saved. \\
+\hline
+{\em file\+Name} & The name of the file to which the adjacencies will be saved. \\
+\hline
+{\em source\+Edge\+Code} & The code of the source edge. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if the adjacencies were successfully saved, -\/1 if an error occurred while opening the file, -\/2 if an error occurred while writing to the file. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___adjacency_functions_ga62f35f91b847b7ba805bb22c672bcd5a}\label{group___adjacency_functions_ga62f35f91b847b7ba805bb22c672bcd5a}} 
+\index{AdjacencyFunctions@{AdjacencyFunctions}!ShowAdjacencies@{ShowAdjacencies}}
+\index{ShowAdjacencies@{ShowAdjacencies}!AdjacencyFunctions@{AdjacencyFunctions}}
+\doxysubsubsection{\texorpdfstring{ShowAdjacencies()}{ShowAdjacencies()}}
+{\footnotesize\ttfamily void Show\+Adjacencies (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_adjacency}{Adjacency}} $\ast$}]{adjacencies }\end{DoxyParamCaption})}
+
+
+
+Shows the list of adjacencies. 
+
+This function displays the adjacencies created.
+
+
+\begin{DoxyParams}{Parameters}
+{\em adjacencies} & The adjacency list to be displayed. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group___adjacency_functions_ga9ad3d5244ff5881515f27ccc8a2a3e5e}\label{group___adjacency_functions_ga9ad3d5244ff5881515f27ccc8a2a3e5e}} 
+\index{AdjacencyFunctions@{AdjacencyFunctions}!ShowAdjacenciesCity@{ShowAdjacenciesCity}}
+\index{ShowAdjacenciesCity@{ShowAdjacenciesCity}!AdjacencyFunctions@{AdjacencyFunctions}}
+\doxysubsubsection{\texorpdfstring{ShowAdjacenciesCity()}{ShowAdjacenciesCity()}}
+{\footnotesize\ttfamily void Show\+Adjacencies\+City (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_adjacency}{Adjacency}} $\ast$}]{adjacencies,  }\item[{\mbox{\hyperlink{struct_edge}{Edge}} $\ast$}]{vertices }\end{DoxyParamCaption})}
+
+
+
+Shows the adjacencies of a specific city. 
+
+This function displays the adjacencies (city ID and distance) of a specific city.
+
+
+\begin{DoxyParams}{Parameters}
+{\em adjacencies} & The adjacency list. \\
+\hline
+{\em vertices} & The list of edges representing the cities. \\
+\hline
+\end{DoxyParams}

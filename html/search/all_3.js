@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['id_0',['id',['../struct_vehicle.html#a7421a7a2d98b4ec6dfabd1041261aa03',1,'Vehicle']]],
-  ['insertclientordered_1',['InsertClientOrdered',['../client_8c.html#a4e56ca2ed0327f64261c20678889f071',1,'InsertClientOrdered(Client *clients, Client *newClient):&#160;client.c'],['../client_8h.html#a4e56ca2ed0327f64261c20678889f071',1,'InsertClientOrdered(Client *clients, Client *newClient):&#160;client.c']]],
-  ['insertmanagerordered_2',['InsertManagerOrdered',['../manager_8c.html#a6ff35bf8f4f2e83268faf8bdb81c310b',1,'InsertManagerOrdered(Manager *managers, Manager *newManager):&#160;manager.c'],['../manager_8h.html#a6ff35bf8f4f2e83268faf8bdb81c310b',1,'InsertManagerOrdered(Manager *managers, Manager *newManager):&#160;manager.c']]],
-  ['insertvehicleordered_3',['InsertVehicleOrdered',['../vehicle_8c.html#a762f4dcb127283c3f5764b67cbd73ef7',1,'InsertVehicleOrdered(Vehicle *vehicles, Vehicle *newVehicle):&#160;vehicle.c'],['../vehicle_8h.html#a762f4dcb127283c3f5764b67cbd73ef7',1,'InsertVehicleOrdered(Vehicle *vehicles, Vehicle *newVehicle):&#160;vehicle.c']]],
-  ['insertvehiclesortedbybatterydesc_4',['InsertVehicleSortedByBatteryDesc',['../vehicle_8c.html#a8c6b4b423147de570220fbf9c7023287',1,'InsertVehicleSortedByBatteryDesc(Vehicle *vehicles, Vehicle *newVehicle):&#160;vehicle.c'],['../vehicle_8h.html#a8c6b4b423147de570220fbf9c7023287',1,'InsertVehicleSortedByBatteryDesc(Vehicle *vehicles, Vehicle *newVehicle):&#160;vehicle.c']]]
+  ['destcode_0',['destCode',['../struct_adjacency_file.html#a818bb4dd355f5c8ca8e984c3bfcf9b58',1,'AdjacencyFile']]],
+  ['destroyclientslist_1',['DestroyClientsList',['../group___client_functions.html#ga533b00a44539c2685185e64e9eb198b4',1,'DestroyClientsList(Client **clients):&#160;client.c'],['../group___client_functions.html#ga533b00a44539c2685185e64e9eb198b4',1,'DestroyClientsList(Client **clients):&#160;client.c']]],
+  ['destroymanagerslist_2',['DestroyManagersList',['../group___manager_functions.html#gabe53980e45407ca9f378b540b7e27342',1,'DestroyManagersList(Manager **managers):&#160;manager.c'],['../group___manager_functions.html#gabe53980e45407ca9f378b540b7e27342',1,'DestroyManagersList(Manager **managers):&#160;manager.c']]],
+  ['destroyvehicleslist_3',['DestroyVehiclesList',['../group___vehicle_functions.html#ga0232920be3cf49a9154cff70a1116f84',1,'DestroyVehiclesList(Vehicle **vehicles):&#160;vehicle.c'],['../group___vehicle_functions.html#ga0232920be3cf49a9154cff70a1116f84',1,'DestroyVehiclesList(Vehicle **vehicles):&#160;vehicle.c']]],
+  ['distance_4',['distance',['../struct_adjacency.html#a605d08e56a792053d0f6f028d9450cb7',1,'Adjacency::distance()'],['../struct_adjacency_file.html#a15ffaf105d24abef23d171393e741903',1,'AdjacencyFile::distance()']]]
 ];

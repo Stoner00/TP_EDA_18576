@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['location_0',['location',['../struct_client.html#a25dfe417163495768bf366f64a50d797',1,'Client::location()'],['../struct_manager.html#a76457c7a39db4c78c3e7bd4ee96e6bfd',1,'Manager::location()'],['../struct_vehicle.html#aea860b3c7b454653fda9054bca943c97',1,'Vehicle::location()']]]
+  ['destcode_0',['destCode',['../struct_adjacency_file.html#a818bb4dd355f5c8ca8e984c3bfcf9b58',1,'AdjacencyFile']]],
+  ['distance_1',['distance',['../struct_adjacency.html#a605d08e56a792053d0f6f028d9450cb7',1,'Adjacency::distance()'],['../struct_adjacency_file.html#a15ffaf105d24abef23d171393e741903',1,'AdjacencyFile::distance()']]]
 ];
