@@ -13,6 +13,7 @@
 #include <stdbool.h>
 #include <stdlib.h>
 #include <string.h>
+#include "client.h"
 
 //Configure char size
 #define locationSize 40
@@ -37,6 +38,17 @@ typedef  struct Vehicle {
     struct Client* rentedTo;
     struct Vehicle* next;
 } Vehicle;
+
+/**
+ * @brief Rental structure
+ */
+typedef struct Rental {
+    Vehicle* vehicle;
+    Client* client;
+    int km;
+    float kmPrice;
+    struct rental* next;
+} Rental;
 
 #pragma endregion
 

@@ -15,10 +15,9 @@
 #include <string.h>
 #include "client.h"
 #include "vehicle.h"
-#include "adjacency.h"
 
 //Configure char size
-#define nameSize 25
+#define sizeName 25
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
 //					STRUCT DECLARATION 						    //
@@ -31,7 +30,7 @@
  */
 typedef struct Edge {
     int cod;
-    char city[nameSize];
+    char city[sizeName];
     bool visited;
     struct Edge* next;
     struct Adjacency* adjacencies;
@@ -41,7 +40,7 @@ typedef struct Edge {
 
 typedef struct EdgeFile {
     int cod;
-    char city[nameSize];
+    char city[sizeName];
     bool visited;
 } EdgeFile;
 
@@ -80,7 +79,7 @@ Edge* ShowGraph(Edge* edges);
  * @param fileName The name of the file to save the graph.
  * @return The result of the operation (success or failure).
  */
-int SaveGraph(Edge* edges, char* fileName);
+bool SaveGraph(Edge* edges, char* fileName);
 
 /**
  * @brief Reads the graph from a file.

@@ -21,132 +21,137 @@ Edge* CreateGraph() {
 
 Edge* ShowGraph(Edge* edges) {
     if (edges == NULL) {
-        printf("Graph is empty.\n");
         return NULL;
     }
-
-    printf("Graph:\n");
     ShowEdgesList(edges);
     return edges;
 }
 
-int SaveGraph(Edge* edges, char* fileName) {
-    if (edges == NULL) {
-        printf("Graph is empty. Nothing to save.\n");
-        return 0;
-    }
+bool SaveGraph(Edge* edges, char* fileName) {
+    if (edges == NULL) return false;
+    FILE* file;
+    int auxAdjacency;
 
-    FILE* file = fopen(fileName, "wb");
-    if (file == NULL) {
-        printf("Error opening file '%s' for writing.\n", fileName);
-        return 0;
-    }
+    file = fopen(fileName, "wb");
+    if (file == NULL) return false;
+    Edge * auxEdge = edges;
+    EdgeFile auxFile;
+    while (auxEdge != NULL) {
+        auxFile.cod = auxEdge->cod;
+        strcpy(auxFile.city, auxEdge->city);
+        fwrite(&auxFile, 1, sizeof(EdgeFile), file);
 
-    Edge* current = edges;
-    while (current != NULL) {
-        fwrite(current, sizeof(Edge), 1, file);
-        current = current->next;
+        if (auxEdge->adjacencies) {
+            char fileName2[100];
+            sprintf(fileName2, "ficheiros/vertices_%s.bin", auxEdge->city);
+            auxAdjacency = SaveAdjacencies(auxEdge->adjacencies, fileName2, auxEdge->cod);
+        }
+        auxEdge = auxEdge->next;
     }
-
     fclose(file);
-    printf("Graph saved to file '%s' successfully.\n", fileName);
-    return 1;
+    return true;
 }
 
 Edge* ReadGraph(Edge* edges, char* fileName, bool* result) {
+    *result = false;
     FILE* file = fopen(fileName, "rb");
-    if (file == NULL) {
-        printf("Error opening file '%s' for reading.\n", fileName);
-        *result = false;
-        return edges;
+    if (file == NULL) return NULL;
+    EdgeFile aux;
+    Edge* newEdge;
+    while (fread(&aux, 1, sizeof(EdgeFile), file)) {
+        newEdge = CreateEdge(aux.city, aux.cod);
+        edges = InsertEdgeOrdered(edges, newEdge, result);
     }
-
-    Edge edge;
-    while (fread(&edge, sizeof(Edge), 1, file) != 0) {
-        edges = InsertEdgeOrdered(edges, &edge, result);
-        if (!*result) {
-            fclose(file);
-            return edges;
-        }
-    }
-
     fclose(file);
-    printf("Graph read from file '%s' successfully.\n", fileName);
-    *result = true;
     return edges;
 }
 
 Edge* CreateEdge(char* city, int cod) {
     Edge* newEdge = (Edge*)malloc(sizeof(Edge));
     if (newEdge == NULL) {
-        printf("Memory allocation failed.\n");
         return NULL;
     }
 
     strcpy(newEdge->city, city);
     newEdge->cod = cod;
+    strcpy(newEdge->city, city);
     newEdge->next = NULL;
+    newEdge->adjacencies = NULL;
     return newEdge;
 }
 
 Edge* InsertEdgeOrdered(Edge* edges, Edge* newEdge, bool* result) {
-    if (edges == NULL) {
+    *result = false;
+
+    if (newEdge == NULL) return edges;
+
+
+    Edge *aux = edges;
+    while (aux != NULL) {						//Check if exists
+        if (aux->cod == newEdge->cod) {
+            *result = false;
+            return edges;
+        }
+        aux = aux->next;
+    }
+
+    if (edges == NULL) {						// Insert at the beggining
+        edges = newEdge;
         *result = true;
-        return newEdge;
-    }
-
-    if (strcmp(newEdge->city, edges->city) < 0) {
-        newEdge->next = edges;
-        *result = true;
-        return newEdge;
-    }
-
-    Edge* current = edges;
-    while (current->next != NULL && strcmp(newEdge->city, current->next->city) > 0) {
-        current = current->next;
-    }
-
-    if (current->next != NULL && strcmp(newEdge->city, current->next->city) == 0) {
-        printf("Edge with city '%s' already exists.\n", newEdge->city);
-        *result = false;
         return edges;
     }
 
-    newEdge->next = current->next;
-    current->next = newEdge;
-    *result = true;
+    else
+    {
+        Edge* aux = edges;
+        Edge* auxAnt = NULL;
+        while (aux && aux->cod < newEdge->cod) {
+            auxAnt = aux;
+            aux = aux->next;
+        }
+        if (auxAnt == NULL) {					// Insert in the middle
+            newEdge->next = edges;
+            edges = newEdge;
+        }
+        else
+        {
+            auxAnt->next = newEdge;			// Insert at the end
+            newEdge->next = aux;
+        }
+        *result = true;
+    }
     return edges;
 }
 
 void ShowEdgesList(Edge* edges) {
     Edge* currentEdge = edges;
 
-    while (currentEdge != NULL) {
-        printf("City: %s\n", currentEdge->city);
-        printf("Code: %d\n", currentEdge->cod);
-        printf("Adjacencies:\n");
-        ShowAdjacencies(currentEdge->adjacencies);
-        printf("------------------------\n");
-        currentEdge = currentEdge->next;
-    }
+    if (edges == NULL) return;
+
+    printf("\tEdge: %d - %s \n", edges->cod, edges->city);
+    ShowEdgesList(edges->next);
 }
 
 void ShowEdgesListTotal(Edge* edges, Edge* aux) {
-    Edge* currentEdge = edges;
+    if (edges == NULL) return;
 
-    while (currentEdge != NULL) {
-        printf("City: %s\n", currentEdge->city);
-        printf("Code: %d\n", currentEdge->cod);
-        printf("Adjacencies:\n");
-        ShowAdjacencies(currentEdge->adjacencies);
-        printf("------------------------\n");
+    printf("\nEdge: %d - %s\n", edges->cod, edges->city);
+    ShowAdjacenciesCity(edges->adjacencies, aux);
 
-        if (currentEdge->cod == aux->cod) {
-            break;
-        }
-
-        currentEdge = currentEdge->next;
+    Client* currentClient = edges->clients;
+    while (currentClient != NULL) {
+        printf("\t	Clients: VAT: %d, Name: %s\n", currentClient->vat, currentClient->name);
+        currentClient = currentClient->next;
     }
+
+    Vehicle* currentVehicle = edges->vehicle;
+    while (currentVehicle != NULL) {
+        printf("\t	Vehicles: ID: %d, Type: %s, Battery: %d%%\n", currentVehicle->id, currentVehicle->type, currentVehicle->battery);
+        currentVehicle = currentVehicle->next;
+    }
+
+    ShowEdgesListTotal(edges->next, aux);
+
 }
 
 Edge* SearchEdge(Edge* edges, char* city) {
@@ -181,15 +186,30 @@ Edge* SearchEdgeCode(Edge* edges, int cod) {
     return NULL;
 }
 
-bool ValidateEdgeConections(Edge* edges, char* src, char* dst) {
-    Edge* source = SearchEdge(edges, src);
-    Edge* destination = SearchEdge(edges, dst);
+bool ValidateEdgeConectionsCode(Edge* edges, int src, int dst) {
+    if (src == dst) return true;
 
-    if (source == NULL || destination == NULL) {
-        return false;
+    Edge* aux = SearchEdgeCode(edges, src);
+    aux->visited = true;
+    printf(" Edge: %s : %d\n", aux->city, aux->cod);
+
+    Adjacency* adjacency = aux->adjacencies;
+    while (adjacency) {
+        Edge* aux = SearchEdgeCode(edges, adjacency->cod);
+        if (aux->visited == false)
+        {
+            return ValidateEdgeConectionsCode(edges, adjacency->cod, dst);
+        }
+        else
+            aux = aux->next;
     }
+}
 
-    return true;
+bool ValidateEdgeConectionsCity(Edge* edges, char* src, char* dst) {
+    int srcCod = SearchEdgeCodeByCity(edges, src);
+    int dstCod = SearchEdgeCodeByCity(edges, dst);
+    bool validateCode = ValidateEdgeConectionsCode(edges, srcCod, dstCod);
+    return validateCode;
 }
 
 int CountHopsByName(Edge* edges, char* src, char* dst, int countHops) {
@@ -215,10 +235,9 @@ int CountHopsByCode(Edge* edges, int src, int dst, int countHops) {
 
     if (src == dst) return (++countHops);
 
-        // Retorna vertices com adjacencias
     else {
         Edge* auxEdge = SearchEdgeCode(edges, src);
-        Adjacency * auxAdj = auxEdge->adjacencies;			// Adjacencias em relação á cidade de SRC
+        Adjacency * auxAdj = auxEdge->adjacencies;
 
         while (auxAdj) {
             Edge* v = SearchEdgeCode(edges, auxAdj->cod);
@@ -337,8 +356,8 @@ Edge* InsertAdjacencyEdgeCityCode(Edge* edges, int sourceCode, int destCode, flo
     }
 
     newAdjacency->cod = destination->cod;
-    newAdjacency->dist = distance;
-    newAdjacency->prox = NULL;
+    newAdjacency->distance = distance;
+    newAdjacency->next = NULL;
 
     Adjacency* current = source->adjacencies;
     if (current == NULL) {
@@ -390,34 +409,72 @@ Edge* InsertClientEdge(Edge* edges, Client* clients, char* location, bool* resul
 }
 
 Edge* InsertVehicleGraph(Edge* edges, Vehicle* vehicle, bool* result) {
-    if (vehicle == NULL) {
-        printf("No vehicle to insert.\n");
-        *result = false;
-        return edges;
-    }
+    if (edges != NULL) {
+        Vehicle* auxVehicle = vehicle;
 
-    edges = InsertVehiclesEdge(edges, vehicle, vehicle->location, result);
+        while (auxVehicle != NULL)
+        {
+            if (auxVehicle->location == vehicle->location) {
+                edges = InsertVehiclesEdge(edges, vehicle, &auxVehicle->location, &result);
+                vehicle = vehicle->next;
+            }
+            auxVehicle = auxVehicle->next;
+        }
+    }
+    else printf("Error inserting Vehicle!\n");
+
     return edges;
 }
 
 Edge* InsertVehiclesEdge(Edge* edges, Vehicle* vehicles, char* location, bool* result) {
-    Edge* edge = SearchEdge(edges, location);
-    if (edge == NULL) {
-        printf("No edge with city '%s' found.\n", location);
-        *result = false;
-        return edges;
-    }
+    *result = false;
+    if (edges == NULL) return edges;
+    if (location == NULL) return edges;
 
-    if (edge->vehicle == NULL) {
-        edge->vehicle = vehicles;
-    } else {
-        Vehicle* current = edge->vehicle;
-        while (current->next != NULL) {
-            current = current->next;
+    Edge* auxEdge = SearchEdge(edges, location);
+
+    while (auxEdge != NULL) {
+
+        // check if the location is theone we want
+        if (strcmp(auxEdge->city, location) == 0) {
+            Vehicle* currentVehicle = vehicles;
+
+            while (currentVehicle != NULL) {
+
+                // check vehicle location
+                if (strcmp(currentVehicle->location, location) == 0) {
+
+                    // Check if vehicle already on edge
+                    bool alreadyInserted = false;
+                    Vehicle* existingVehicle = auxEdge->vehicle;
+                    while (existingVehicle != NULL) {
+                        if (strcmp(existingVehicle->location, location) == 0 &&
+                            strcmp(existingVehicle->type, currentVehicle->type) == 0) {
+                            alreadyInserted = true;
+                            break;
+                        }
+                        currentVehicle = existingVehicle->next;
+                    }
+
+                    // Insert vehicle
+                    if (!alreadyInserted) {
+
+                        Vehicle * newVehicle = (Vehicle*)malloc(sizeof(Vehicle));
+                        *newVehicle = *currentVehicle;
+
+                        newVehicle->next = auxEdge->vehicle;
+                        auxEdge->vehicle = newVehicle;
+
+                        *result = true;
+                    }
+                }
+
+                currentVehicle = currentVehicle->next;
+            }
+            break;
         }
-        current->next = vehicles;
+        auxEdge = auxEdge->next;
     }
 
-    *result = true;
     return edges;
 }

@@ -6,7 +6,6 @@
 
 
 // Disable security warnings
-#pragma once
 #pragma warning (disable: 4996)
 
 // Import Libraries
@@ -101,9 +100,9 @@ bool ExistsAdjacency(Adjacency* adjacencies, int cod);
  * This function displays the adjacencies (city ID and distance) of a specific city.
  *
  * @param adjacencies The adjacency list.
- * @param vertices The list of edges representing the cities.
+ * @param edges The list of edges representing the cities.
  */
-void ShowAdjacenciesCity(Adjacency* adjacencies, Edge* vertices);
+void ShowAdjacenciesCity(Adjacency* adjacencies, Edge* edges);
 
 /**
  * @brief Saves the adjacencies to a binary file.
