@@ -173,7 +173,7 @@ bool SaveVehiclesToBin(char* fileName, Vehicle* vehicles)
     return true;
 }
 
-Vehicle* ReadVehicleFromBin(char* fileName)
+Vehicle* ReadVehiclesFromBin(char* fileName)
 {
     FILE* file;
     Vehicle* vehicles = NULL;
@@ -316,4 +316,20 @@ bool ShowVehiclesByLocation(Vehicle* vehicles, char* location)
         return true;
     }
     return false;
+}
+
+Vehicle* GetVehicleById(Vehicle* vehicles, int id)
+{
+    if (vehicles == NULL) return NULL;
+    else
+    {
+        Vehicle* aux = vehicles;
+        while (aux != NULL) {
+            if (aux->id == id) {
+                return aux;
+            }
+            aux = aux->next;
+        }
+        return NULL;
+    }
 }

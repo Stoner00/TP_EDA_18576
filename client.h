@@ -4,7 +4,6 @@
  * @brief Header file containing the structure and function declarations for clients
  */
 
-
 // Disable security warnings
 #pragma once
 #pragma warning (disable: 4996)

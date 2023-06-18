@@ -15,7 +15,7 @@
 #include <string.h>
 
 //Configure char size
-#define locationSize 40
+#define locationSize 3
 #define typeSize 15
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
@@ -170,5 +170,13 @@ void ShowVehicle(Vehicle* vehicle);
  * @param vehicles List of vehicles
  */
 void ShowVehiclesList(Vehicle* vehicles);
+
+/**
+ * @brief Get a vehicle by its ID
+ * @param vehicles List of vehicles
+ * @param id Vehicle ID to get
+ * @return Vehicle* Pointer to the found vehicle, or NULL if not found
+ */
+Vehicle* GetVehicleById(Vehicle* vehicles, int id);
 
 #pragma endregion
