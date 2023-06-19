@@ -1,0 +1,110 @@
+\hypertarget{graph_8c}{}\doxysection{graph.\+c File Reference}
+\label{graph_8c}\index{graph.c@{graph.c}}
+
+
+\mbox{\hyperlink{struct_graph}{Graph}} functions implementation from \mbox{\hyperlink{graph_8h}{graph.\+h}}.  
+
+
+{\ttfamily \#include \char`\"{}graph.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}city.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$limits.\+h$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_graph}{Graph}} $\ast$ \mbox{\hyperlink{graph_8c_a4869a3d70b368c52a4859f5ddf378875}{Create\+Graph}} (int size)
+\begin{DoxyCompactList}\small\item\em Create a new graph of a given size. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{graph_8c_a6e4e04e726f3d0b291ec2a849610d10f}{Free\+Graph}} (\mbox{\hyperlink{struct_graph}{Graph}} $\ast$graph)
+\item 
+\mbox{\hyperlink{struct_graph}{Graph}} $\ast$ \mbox{\hyperlink{graph_8c_aad85eb03dd77817a368763a946061f87}{Add\+Edge}} (\mbox{\hyperlink{struct_graph}{Graph}} $\ast$graph, \mbox{\hyperlink{struct_city}{City}} $\ast$city1, \mbox{\hyperlink{struct_city}{City}} $\ast$city2, int distance)
+\begin{DoxyCompactList}\small\item\em Adds an edge to the given graph. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{graph_8c_a0da946701f5e08642e474a5f1bfeb904}{Nearest\+Neighbor}} (\mbox{\hyperlink{struct_graph}{Graph}} $\ast$graph, int start\+City)
+\begin{DoxyCompactList}\small\item\em Lists the shortest path by nearest neighbour method. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{graph_8c_a4b32a22d0b6c835ffa9c9fc089a48160}{Nearest\+Neighbor\+Low\+Battery}} (\mbox{\hyperlink{struct_graph}{Graph}} $\ast$graph, \mbox{\hyperlink{struct_city}{City}} $\ast$cities, \mbox{\hyperlink{struct_vehicle}{Vehicle}} $\ast$vehicles, int start\+City)
+\item 
+bool \mbox{\hyperlink{graph_8c_a3d0fa115fb7efade84b477dc3f5d025b}{City\+Has\+Vehicle\+Below\+Battery}} (\mbox{\hyperlink{struct_city}{City}} $\ast$city, \mbox{\hyperlink{struct_vehicle}{Vehicle}} $\ast$vehicles, int battery)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{struct_graph}{Graph}} functions implementation from \mbox{\hyperlink{graph_8h}{graph.\+h}}. 
+
+\begin{DoxyAuthor}{Author}
+Bruno Fernandes -\/ \href{mailto:a18576@alunos.ipca.pt}{\texttt{ a18576@alunos.\+ipca.\+pt}} 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{graph_8c_aad85eb03dd77817a368763a946061f87}\label{graph_8c_aad85eb03dd77817a368763a946061f87}} 
+\index{graph.c@{graph.c}!AddEdge@{AddEdge}}
+\index{AddEdge@{AddEdge}!graph.c@{graph.c}}
+\doxysubsubsection{\texorpdfstring{AddEdge()}{AddEdge()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_graph}{Graph}} $\ast$ Add\+Edge (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_graph}{Graph}} $\ast$}]{graph,  }\item[{\mbox{\hyperlink{struct_city}{City}} $\ast$}]{city1,  }\item[{\mbox{\hyperlink{struct_city}{City}} $\ast$}]{city2,  }\item[{int}]{distance }\end{DoxyParamCaption})}
+
+
+
+Adds an edge to the given graph. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em city1} & First city \\
+\hline
+{\em city2} & Second city \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Graph$\ast$ Updated \mbox{\hyperlink{struct_graph}{Graph}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{graph_8c_a3d0fa115fb7efade84b477dc3f5d025b}\label{graph_8c_a3d0fa115fb7efade84b477dc3f5d025b}} 
+\index{graph.c@{graph.c}!CityHasVehicleBelowBattery@{CityHasVehicleBelowBattery}}
+\index{CityHasVehicleBelowBattery@{CityHasVehicleBelowBattery}!graph.c@{graph.c}}
+\doxysubsubsection{\texorpdfstring{CityHasVehicleBelowBattery()}{CityHasVehicleBelowBattery()}}
+{\footnotesize\ttfamily bool City\+Has\+Vehicle\+Below\+Battery (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_city}{City}} $\ast$}]{city,  }\item[{\mbox{\hyperlink{struct_vehicle}{Vehicle}} $\ast$}]{vehicles,  }\item[{int}]{battery }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{graph_8c_a4869a3d70b368c52a4859f5ddf378875}\label{graph_8c_a4869a3d70b368c52a4859f5ddf378875}} 
+\index{graph.c@{graph.c}!CreateGraph@{CreateGraph}}
+\index{CreateGraph@{CreateGraph}!graph.c@{graph.c}}
+\doxysubsubsection{\texorpdfstring{CreateGraph()}{CreateGraph()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_graph}{Graph}} $\ast$ Create\+Graph (\begin{DoxyParamCaption}\item[{int}]{size }\end{DoxyParamCaption})}
+
+
+
+Create a new graph of a given size. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & Size of the matrix \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Graph$\ast$ New graph created 
+\end{DoxyReturn}
+\mbox{\Hypertarget{graph_8c_a6e4e04e726f3d0b291ec2a849610d10f}\label{graph_8c_a6e4e04e726f3d0b291ec2a849610d10f}} 
+\index{graph.c@{graph.c}!FreeGraph@{FreeGraph}}
+\index{FreeGraph@{FreeGraph}!graph.c@{graph.c}}
+\doxysubsubsection{\texorpdfstring{FreeGraph()}{FreeGraph()}}
+{\footnotesize\ttfamily void Free\+Graph (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_graph}{Graph}} $\ast$}]{graph }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{graph_8c_a0da946701f5e08642e474a5f1bfeb904}\label{graph_8c_a0da946701f5e08642e474a5f1bfeb904}} 
+\index{graph.c@{graph.c}!NearestNeighbor@{NearestNeighbor}}
+\index{NearestNeighbor@{NearestNeighbor}!graph.c@{graph.c}}
+\doxysubsubsection{\texorpdfstring{NearestNeighbor()}{NearestNeighbor()}}
+{\footnotesize\ttfamily void Nearest\+Neighbor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_graph}{Graph}} $\ast$}]{graph,  }\item[{int}]{start\+City }\end{DoxyParamCaption})}
+
+
+
+Lists the shortest path by nearest neighbour method. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em graph} & Size of the matrix \\
+\hline
+{\em start\+City} & ID of the start city \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{graph_8c_a4b32a22d0b6c835ffa9c9fc089a48160}\label{graph_8c_a4b32a22d0b6c835ffa9c9fc089a48160}} 
+\index{graph.c@{graph.c}!NearestNeighborLowBattery@{NearestNeighborLowBattery}}
+\index{NearestNeighborLowBattery@{NearestNeighborLowBattery}!graph.c@{graph.c}}
+\doxysubsubsection{\texorpdfstring{NearestNeighborLowBattery()}{NearestNeighborLowBattery()}}
+{\footnotesize\ttfamily void Nearest\+Neighbor\+Low\+Battery (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_graph}{Graph}} $\ast$}]{graph,  }\item[{\mbox{\hyperlink{struct_city}{City}} $\ast$}]{cities,  }\item[{\mbox{\hyperlink{struct_vehicle}{Vehicle}} $\ast$}]{vehicles,  }\item[{int}]{start\+City }\end{DoxyParamCaption})}
+

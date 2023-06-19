@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['vehicle_0',['Vehicle',['../struct_vehicle.html',1,'']]]
+  ['graph_0',['Graph',['../struct_graph.html',1,'']]]
 ];

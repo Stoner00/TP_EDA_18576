@@ -95,7 +95,7 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a40ec03e31fd0eda63d13807500db49aa"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vehicle_8h.html#a40ec03e31fd0eda63d13807500db49aa">locationSize</a>&#160;&#160;&#160;40</td></tr>
+<tr class="memitem:a40ec03e31fd0eda63d13807500db49aa"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vehicle_8h.html#a40ec03e31fd0eda63d13807500db49aa">locationSize</a>&#160;&#160;&#160;3</td></tr>
 <tr class="separator:a40ec03e31fd0eda63d13807500db49aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a020109429e259477a16f8191a651a21b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vehicle_8h.html#a020109429e259477a16f8191a651a21b">typeSize</a>&#160;&#160;&#160;15</td></tr>
 <tr class="separator:a020109429e259477a16f8191a651a21b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -156,6 +156,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a209c8e97345431ca625eec3860105275"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vehicle_8h.html#a209c8e97345431ca625eec3860105275">ShowVehiclesList</a> (<a class="el" href="struct_vehicle.html">Vehicle</a> *vehicles)</td></tr>
 <tr class="memdesc:a209c8e97345431ca625eec3860105275"><td class="mdescLeft">&#160;</td><td class="mdescRight">Show a list of Vehicles in memory.  <br /></td></tr>
 <tr class="separator:a209c8e97345431ca625eec3860105275"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e5755d6cb7aecd738477e5788b69a92"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_vehicle.html">Vehicle</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vehicle_8h.html#a6e5755d6cb7aecd738477e5788b69a92">GetVehicleById</a> (<a class="el" href="struct_vehicle.html">Vehicle</a> *vehicles, int id)</td></tr>
+<tr class="memdesc:a6e5755d6cb7aecd738477e5788b69a92"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a vehicle by its ID.  <br /></td></tr>
+<tr class="separator:a6e5755d6cb7aecd738477e5788b69a92"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Header file containing the structure and function declarations for vehicles. </p>
@@ -168,7 +171,7 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define locationSize&#160;&#160;&#160;40</td>
+          <td class="memname">#define locationSize&#160;&#160;&#160;3</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -290,6 +293,44 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>bool True if the list was freed, false otherwise </dd></dl>
+
+</div>
+</div>
+<a id="a6e5755d6cb7aecd738477e5788b69a92" name="a6e5755d6cb7aecd738477e5788b69a92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e5755d6cb7aecd738477e5788b69a92">&#9670;&#160;</a></span>GetVehicleById()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_vehicle.html">Vehicle</a> * GetVehicleById </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_vehicle.html">Vehicle</a> *&#160;</td>
+          <td class="paramname"><em>vehicles</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>id</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get a vehicle by its ID. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vehicles</td><td>List of vehicles </td></tr>
+    <tr><td class="paramname">id</td><td><a class="el" href="struct_vehicle.html" title="Vehicle structure.">Vehicle</a> ID to get </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Vehicle* Pointer to the found vehicle, or NULL if not found </dd></dl>
 
 </div>
 </div>

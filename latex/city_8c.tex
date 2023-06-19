@@ -1,0 +1,255 @@
+\hypertarget{city_8c}{}\doxysection{city.\+c File Reference}
+\label{city_8c}\index{city.c@{city.c}}
+
+
+\mbox{\hyperlink{struct_city}{City}} functions implementation from \mbox{\hyperlink{city_8h}{city.\+h}}.  
+
+
+{\ttfamily \#include \char`\"{}city.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_city}{City}} $\ast$ \mbox{\hyperlink{city_8c_ac32e305cb15961cb491fca40d810133b}{Create\+City}} (int id, char $\ast$code, char $\ast$name)
+\begin{DoxyCompactList}\small\item\em Creates a city with the specified code. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_edge_node}{Edge\+Node}} $\ast$ \mbox{\hyperlink{city_8c_a649cb30b1ba87d10b71a8d45e904ade0}{Create\+Edge\+Node}} (int distance, \mbox{\hyperlink{struct_city}{City}} $\ast$origin, \mbox{\hyperlink{struct_city}{City}} $\ast$destination)
+\begin{DoxyCompactList}\small\item\em Creates an edge node with the specified distance, origin, and destination. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_city}{City}} $\ast$ \mbox{\hyperlink{city_8c_aec51aa3f05c404c0102c9472741209f0}{Insert\+City\+Ordered}} (\mbox{\hyperlink{struct_city}{City}} $\ast$cities, \mbox{\hyperlink{struct_city}{City}} $\ast$new\+City)
+\begin{DoxyCompactList}\small\item\em Inserts a city into the city list in alphabetical order based on city code. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{city_8c_aba46cbb837c328312cf549f0b8aee3f8}{City\+Exists}} (\mbox{\hyperlink{struct_city}{City}} $\ast$cities, char $\ast$code)
+\begin{DoxyCompactList}\small\item\em Checks if a city with a specific code exists in the city list. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{city_8c_ab283f36e469591da39e5ea5bb14eeb32}{Show\+Cities}} (\mbox{\hyperlink{struct_city}{City}} $\ast$cities)
+\begin{DoxyCompactList}\small\item\em Display the list of cities. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{city_8c_a15765d1622a2fb0822a47cad8617b5ee}{Show\+City\+Edges}} (\mbox{\hyperlink{struct_graph}{Graph}} $\ast$graph, \mbox{\hyperlink{struct_city}{City}} $\ast$city, \mbox{\hyperlink{struct_city}{City}} $\ast$cities)
+\begin{DoxyCompactList}\small\item\em Display all edges (connections between cities) for a specific city. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{city_8c_a2826633c54d0d644b270f6e3e14c007f}{Show\+Vehicles\+In\+City}} (\mbox{\hyperlink{struct_vehicle}{Vehicle}} $\ast$vehicles, \mbox{\hyperlink{struct_city}{City}} $\ast$city)
+\begin{DoxyCompactList}\small\item\em Display all vehicles in a specific city. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_city}{City}} $\ast$ \mbox{\hyperlink{city_8c_ac4272728a08ad51e4df4ca775f4ddcb9}{Get\+City}} (\mbox{\hyperlink{struct_city}{City}} $\ast$cities, char $\ast$code)
+\begin{DoxyCompactList}\small\item\em Get a city by it\textquotesingle{}s code. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_city}{City}} $\ast$ \mbox{\hyperlink{city_8c_a301cb737b3914a9c0987b60e8921191a}{Get\+City\+By\+Id}} (\mbox{\hyperlink{struct_city}{City}} $\ast$cities, int id)
+\begin{DoxyCompactList}\small\item\em Get a city by it\textquotesingle{}s id. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{city_8c_a1b359202652b977d11628448717cbb29}{Show\+All\+City\+Info}} (\mbox{\hyperlink{struct_city}{City}} $\ast$cities, \mbox{\hyperlink{struct_graph}{Graph}} $\ast$graph, \mbox{\hyperlink{struct_vehicle}{Vehicle}} $\ast$vehicles)
+\begin{DoxyCompactList}\small\item\em Shows a city and it\textquotesingle{}s connections and vehicles. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{city_8c_a10674bbdaf9479fedad180da56cb839b}{Show\+Nearby\+Vehicles\+From\+Graph}} (\mbox{\hyperlink{struct_city}{City}} $\ast$cities, \mbox{\hyperlink{struct_graph}{Graph}} $\ast$graph, \mbox{\hyperlink{struct_vehicle}{Vehicle}} $\ast$vehicles, char $\ast$start\+City\+Code, int range)
+\begin{DoxyCompactList}\small\item\em Shows vehicles in a range of a city. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{struct_city}{City}} functions implementation from \mbox{\hyperlink{city_8h}{city.\+h}}. 
+
+\begin{DoxyAuthor}{Author}
+Bruno Fernandes -\/ \href{mailto:a18576@alunos.ipca.pt}{\texttt{ a18576@alunos.\+ipca.\+pt}} 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{city_8c_aba46cbb837c328312cf549f0b8aee3f8}\label{city_8c_aba46cbb837c328312cf549f0b8aee3f8}} 
+\index{city.c@{city.c}!CityExists@{CityExists}}
+\index{CityExists@{CityExists}!city.c@{city.c}}
+\doxysubsubsection{\texorpdfstring{CityExists()}{CityExists()}}
+{\footnotesize\ttfamily int City\+Exists (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_city}{City}} $\ast$}]{cities,  }\item[{char $\ast$}]{code }\end{DoxyParamCaption})}
+
+
+
+Checks if a city with a specific code exists in the city list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cities} & -\/ Pointer to the head of the city list \\
+\hline
+{\em code} & -\/ \mbox{\hyperlink{struct_city}{City}} code to search for \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int -\/ Returns 1 if the city exists, 0 otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{city_8c_ac32e305cb15961cb491fca40d810133b}\label{city_8c_ac32e305cb15961cb491fca40d810133b}} 
+\index{city.c@{city.c}!CreateCity@{CreateCity}}
+\index{CreateCity@{CreateCity}!city.c@{city.c}}
+\doxysubsubsection{\texorpdfstring{CreateCity()}{CreateCity()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_city}{City}} $\ast$ Create\+City (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{char $\ast$}]{code,  }\item[{char $\ast$}]{name }\end{DoxyParamCaption})}
+
+
+
+Creates a city with the specified code. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & -\/ \mbox{\hyperlink{struct_city}{City}} ID \\
+\hline
+{\em code} & -\/ \mbox{\hyperlink{struct_city}{City}} code \\
+\hline
+{\em name} & -\/ \mbox{\hyperlink{struct_city}{City}} name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+City$\ast$ -\/ Pointer to the new city 
+\end{DoxyReturn}
+\mbox{\Hypertarget{city_8c_a649cb30b1ba87d10b71a8d45e904ade0}\label{city_8c_a649cb30b1ba87d10b71a8d45e904ade0}} 
+\index{city.c@{city.c}!CreateEdgeNode@{CreateEdgeNode}}
+\index{CreateEdgeNode@{CreateEdgeNode}!city.c@{city.c}}
+\doxysubsubsection{\texorpdfstring{CreateEdgeNode()}{CreateEdgeNode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_edge_node}{Edge\+Node}} $\ast$ Create\+Edge\+Node (\begin{DoxyParamCaption}\item[{int}]{distance,  }\item[{\mbox{\hyperlink{struct_city}{City}} $\ast$}]{origin,  }\item[{\mbox{\hyperlink{struct_city}{City}} $\ast$}]{destination }\end{DoxyParamCaption})}
+
+
+
+Creates an edge node with the specified distance, origin, and destination. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em distance} & -\/ Distance between the cities \\
+\hline
+{\em origin} & -\/ Origin city \\
+\hline
+{\em destination} & -\/ Destination city \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Edge\+Node$\ast$ -\/ Pointer to the new edge node 
+\end{DoxyReturn}
+\mbox{\Hypertarget{city_8c_ac4272728a08ad51e4df4ca775f4ddcb9}\label{city_8c_ac4272728a08ad51e4df4ca775f4ddcb9}} 
+\index{city.c@{city.c}!GetCity@{GetCity}}
+\index{GetCity@{GetCity}!city.c@{city.c}}
+\doxysubsubsection{\texorpdfstring{GetCity()}{GetCity()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_city}{City}} $\ast$ Get\+City (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_city}{City}} $\ast$}]{cities,  }\item[{char $\ast$}]{code }\end{DoxyParamCaption})}
+
+
+
+Get a city by it\textquotesingle{}s code. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cities} & Pointer to the head of the city list \\
+\hline
+{\em code} & \mbox{\hyperlink{struct_city}{City}} code \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{city_8c_a301cb737b3914a9c0987b60e8921191a}\label{city_8c_a301cb737b3914a9c0987b60e8921191a}} 
+\index{city.c@{city.c}!GetCityById@{GetCityById}}
+\index{GetCityById@{GetCityById}!city.c@{city.c}}
+\doxysubsubsection{\texorpdfstring{GetCityById()}{GetCityById()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_city}{City}} $\ast$ Get\+City\+By\+Id (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_city}{City}} $\ast$}]{cities,  }\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+Get a city by it\textquotesingle{}s id. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cities} & Pointer to the head of the city list \\
+\hline
+{\em id} & \mbox{\hyperlink{struct_city}{City}} id \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{city_8c_aec51aa3f05c404c0102c9472741209f0}\label{city_8c_aec51aa3f05c404c0102c9472741209f0}} 
+\index{city.c@{city.c}!InsertCityOrdered@{InsertCityOrdered}}
+\index{InsertCityOrdered@{InsertCityOrdered}!city.c@{city.c}}
+\doxysubsubsection{\texorpdfstring{InsertCityOrdered()}{InsertCityOrdered()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_city}{City}} $\ast$ Insert\+City\+Ordered (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_city}{City}} $\ast$}]{cities,  }\item[{\mbox{\hyperlink{struct_city}{City}} $\ast$}]{new\+City }\end{DoxyParamCaption})}
+
+
+
+Inserts a city into the city list in alphabetical order based on city code. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cities} & -\/ Pointer to the head of the city list \\
+\hline
+{\em new\+City} & -\/ \mbox{\hyperlink{struct_city}{City}} to insert \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+City$\ast$ -\/ Pointer to the head of the modified city list 
+\end{DoxyReturn}
+\mbox{\Hypertarget{city_8c_a1b359202652b977d11628448717cbb29}\label{city_8c_a1b359202652b977d11628448717cbb29}} 
+\index{city.c@{city.c}!ShowAllCityInfo@{ShowAllCityInfo}}
+\index{ShowAllCityInfo@{ShowAllCityInfo}!city.c@{city.c}}
+\doxysubsubsection{\texorpdfstring{ShowAllCityInfo()}{ShowAllCityInfo()}}
+{\footnotesize\ttfamily void Show\+All\+City\+Info (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_city}{City}} $\ast$}]{cities,  }\item[{\mbox{\hyperlink{struct_graph}{Graph}} $\ast$}]{graph,  }\item[{\mbox{\hyperlink{struct_vehicle}{Vehicle}} $\ast$}]{vehicles }\end{DoxyParamCaption})}
+
+
+
+Shows a city and it\textquotesingle{}s connections and vehicles. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cities} & Pointer to the head of the city list \\
+\hline
+{\em graph} & Pointer to the graph of edged \\
+\hline
+{\em vehicles} & Pointer to the head of the vehicles list \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{city_8c_ab283f36e469591da39e5ea5bb14eeb32}\label{city_8c_ab283f36e469591da39e5ea5bb14eeb32}} 
+\index{city.c@{city.c}!ShowCities@{ShowCities}}
+\index{ShowCities@{ShowCities}!city.c@{city.c}}
+\doxysubsubsection{\texorpdfstring{ShowCities()}{ShowCities()}}
+{\footnotesize\ttfamily void Show\+Cities (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_city}{City}} $\ast$}]{cities }\end{DoxyParamCaption})}
+
+
+
+Display the list of cities. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cities} & Pointer to the head of the city list \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{city_8c_a15765d1622a2fb0822a47cad8617b5ee}\label{city_8c_a15765d1622a2fb0822a47cad8617b5ee}} 
+\index{city.c@{city.c}!ShowCityEdges@{ShowCityEdges}}
+\index{ShowCityEdges@{ShowCityEdges}!city.c@{city.c}}
+\doxysubsubsection{\texorpdfstring{ShowCityEdges()}{ShowCityEdges()}}
+{\footnotesize\ttfamily void Show\+City\+Edges (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_graph}{Graph}} $\ast$}]{graph,  }\item[{\mbox{\hyperlink{struct_city}{City}} $\ast$}]{city,  }\item[{\mbox{\hyperlink{struct_city}{City}} $\ast$}]{cities }\end{DoxyParamCaption})}
+
+
+
+Display all edges (connections between cities) for a specific city. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em edges} & Pointer to the head of the edge list \\
+\hline
+{\em city} & Pointer to the city \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{city_8c_a10674bbdaf9479fedad180da56cb839b}\label{city_8c_a10674bbdaf9479fedad180da56cb839b}} 
+\index{city.c@{city.c}!ShowNearbyVehiclesFromGraph@{ShowNearbyVehiclesFromGraph}}
+\index{ShowNearbyVehiclesFromGraph@{ShowNearbyVehiclesFromGraph}!city.c@{city.c}}
+\doxysubsubsection{\texorpdfstring{ShowNearbyVehiclesFromGraph()}{ShowNearbyVehiclesFromGraph()}}
+{\footnotesize\ttfamily void Show\+Nearby\+Vehicles\+From\+Graph (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_city}{City}} $\ast$}]{cities,  }\item[{\mbox{\hyperlink{struct_graph}{Graph}} $\ast$}]{graph,  }\item[{\mbox{\hyperlink{struct_vehicle}{Vehicle}} $\ast$}]{vehicles,  }\item[{char $\ast$}]{start\+City\+Code,  }\item[{int}]{range }\end{DoxyParamCaption})}
+
+
+
+Shows vehicles in a range of a city. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cities} & Pointer to the head of the city list \\
+\hline
+{\em graph} & Pointer to the graph of edged \\
+\hline
+{\em vehicles} & Pointer to the head of the vehicles list \\
+\hline
+{\em start\+City\+Code} & Code of the city to start the range from \\
+\hline
+{\em range} & Range in kilometers \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{city_8c_a2826633c54d0d644b270f6e3e14c007f}\label{city_8c_a2826633c54d0d644b270f6e3e14c007f}} 
+\index{city.c@{city.c}!ShowVehiclesInCity@{ShowVehiclesInCity}}
+\index{ShowVehiclesInCity@{ShowVehiclesInCity}!city.c@{city.c}}
+\doxysubsubsection{\texorpdfstring{ShowVehiclesInCity()}{ShowVehiclesInCity()}}
+{\footnotesize\ttfamily void Show\+Vehicles\+In\+City (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vehicle}{Vehicle}} $\ast$}]{vehicles,  }\item[{\mbox{\hyperlink{struct_city}{City}} $\ast$}]{city }\end{DoxyParamCaption})}
+
+
+
+Display all vehicles in a specific city. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vehicles} & Pointer to the head of the vehicle list \\
+\hline
+{\em city} & Pointer to the city \\
+\hline
+\end{DoxyParams}

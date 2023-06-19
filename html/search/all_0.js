@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['balance_0',['balance',['../struct_client.html#a9a199ed00a1834bf12bee5a00f4f5873',1,'Client']]],
-  ['battery_1',['battery',['../struct_vehicle.html#a643e6d5ab06b7462bbd3ce1663ab3506',1,'Vehicle']]]
+  ['addedge_0',['AddEdge',['../graph_8c.html#aad85eb03dd77817a368763a946061f87',1,'AddEdge(Graph *graph, City *city1, City *city2, int distance):&#160;graph.c'],['../graph_8h.html#aad85eb03dd77817a368763a946061f87',1,'AddEdge(Graph *graph, City *city1, City *city2, int distance):&#160;graph.c']]]
 ];

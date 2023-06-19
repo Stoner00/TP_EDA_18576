@@ -1,0 +1,50 @@
+\hypertarget{city_8h_source}{}\doxysection{city.\+h}
+\mbox{\hyperlink{city_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{vehicle_8h}{vehicle.h}}"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{graph_8h}{graph.h}}"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_city}{City}}\ \{}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_city_aef9846a5f7e0653bf951576cc17670f3}{id}};}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{struct_city_a62f556954190780c1564ef6623c1ac40}{code}}[4];}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{struct_city_a7b69c7b27377848227f2f94f8b836eb5}{name}}[30];}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_city}{City}}*\ \mbox{\hyperlink{struct_city_ade1df0899bc9c3534f3debce939a2e98}{next}};}
+\DoxyCodeLine{00015\ \}\ \mbox{\hyperlink{struct_city}{City}};}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_edge_node}{EdgeNode}}\ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_edge_node_ad286218df86b3f1383f9500f2fb10f09}{distance}};}
+\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{struct_city}{City}}*\ \mbox{\hyperlink{struct_edge_node_af661abd8328880be8301c65ad5d66d2f}{origin}};}
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{struct_city}{City}}*\ \mbox{\hyperlink{struct_edge_node_a2d4293727e2961bab1a9c5b20b61c0cd}{destination}};}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_edge_node}{EdgeNode}}*\ \mbox{\hyperlink{struct_edge_node_abf130d69a3db0ad6ea3201cfe21e0651}{next}};}
+\DoxyCodeLine{00022\ \}\ \mbox{\hyperlink{struct_edge_node}{EdgeNode}};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{struct_city}{City}}*\ \mbox{\hyperlink{struct_city_distance_abecd6554f9dee836e2dfdec19f91ef83}{city}};}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_city_distance_aabe1e1bba711dab73cd70f1105c35c9e}{distance}};}
+\DoxyCodeLine{00027\ \}\ \mbox{\hyperlink{struct_city_distance}{CityDistance}};}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00038\ \mbox{\hyperlink{struct_city}{City}}*\ \mbox{\hyperlink{city_8h_ac32e305cb15961cb491fca40d810133b}{CreateCity}}(\textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id},\ \textcolor{keywordtype}{char}*\ code,\ \textcolor{keywordtype}{char}*\ name);}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00048\ \mbox{\hyperlink{struct_edge_node}{EdgeNode}}*\ \mbox{\hyperlink{city_8h_a649cb30b1ba87d10b71a8d45e904ade0}{CreateEdgeNode}}(\textcolor{keywordtype}{int}\ distance,\ \mbox{\hyperlink{struct_city}{City}}*\ origin,\ \mbox{\hyperlink{struct_city}{City}}*\ destination);}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00057\ \mbox{\hyperlink{struct_city}{City}}*\ \mbox{\hyperlink{city_8h_aec51aa3f05c404c0102c9472741209f0}{InsertCityOrdered}}(\mbox{\hyperlink{struct_city}{City}}*\ cities,\ \mbox{\hyperlink{struct_city}{City}}*\ newCity);}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00066\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{city_8h_aba46cbb837c328312cf549f0b8aee3f8}{CityExists}}(\mbox{\hyperlink{struct_city}{City}}*\ cities,\ \textcolor{keywordtype}{char}*\ code);}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00073\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{city_8h_ab283f36e469591da39e5ea5bb14eeb32}{ShowCities}}(\mbox{\hyperlink{struct_city}{City}}*\ cities);}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00081\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{city_8h_a15765d1622a2fb0822a47cad8617b5ee}{ShowCityEdges}}(\mbox{\hyperlink{struct_graph}{Graph}}*\ graph,\ \mbox{\hyperlink{struct_city}{City}}*\ city,\ \mbox{\hyperlink{struct_city}{City}}*\ cities);}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00089\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{city_8h_a2826633c54d0d644b270f6e3e14c007f}{ShowVehiclesInCity}}(\mbox{\hyperlink{struct_vehicle}{Vehicle}}*\ vehicles,\ \mbox{\hyperlink{struct_city}{City}}*\ city);}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00097\ \mbox{\hyperlink{struct_city}{City}}*\ \mbox{\hyperlink{city_8h_ac4272728a08ad51e4df4ca775f4ddcb9}{GetCity}}(\mbox{\hyperlink{struct_city}{City}}*\ cities,\ \textcolor{keywordtype}{char}*\ code);}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00105\ \mbox{\hyperlink{struct_city}{City}}*\ \mbox{\hyperlink{city_8h_a301cb737b3914a9c0987b60e8921191a}{GetCityById}}(\mbox{\hyperlink{struct_city}{City}}*\ cities,\ \textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id});}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00114\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{city_8h_a1b359202652b977d11628448717cbb29}{ShowAllCityInfo}}(\mbox{\hyperlink{struct_city}{City}}*\ cities,\ \mbox{\hyperlink{struct_graph}{Graph}}*\ graph,\ \mbox{\hyperlink{struct_vehicle}{Vehicle}}*\ vehicles);}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00125\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{city_8h_a10674bbdaf9479fedad180da56cb839b}{ShowNearbyVehiclesFromGraph}}(\mbox{\hyperlink{struct_city}{City}}*\ cities,\ \mbox{\hyperlink{struct_graph}{Graph}}*\ graph,\ \mbox{\hyperlink{struct_vehicle}{Vehicle}}*\ vehicles,\ \textcolor{keywordtype}{char}*\ startCityCode,\ \textcolor{keywordtype}{int}\ range);}
+
+\end{DoxyCode}

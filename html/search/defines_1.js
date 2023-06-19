@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['mailsize_0',['mailSize',['../manager_8h.html#aaa376833929907395cc167417175b600',1,'manager.h']]]
+  ['locationsize_0',['locationSize',['../client_8h.html#a40ec03e31fd0eda63d13807500db49aa',1,'locationSize():&#160;client.h'],['../manager_8h.html#a40ec03e31fd0eda63d13807500db49aa',1,'locationSize():&#160;manager.h'],['../vehicle_8h.html#a40ec03e31fd0eda63d13807500db49aa',1,'locationSize():&#160;vehicle.h']]]
 ];

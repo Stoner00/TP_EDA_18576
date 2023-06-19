@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['namesyze_0',['nameSyze',['../client_8h.html#a49fac7fe3ba584c953a60c609c3a6118',1,'nameSyze():&#160;client.h'],['../manager_8h.html#a49fac7fe3ba584c953a60c609c3a6118',1,'nameSyze():&#160;manager.h']]]
+  ['mailsize_0',['mailSize',['../manager_8h.html#aaa376833929907395cc167417175b600',1,'manager.h']]]
 ];

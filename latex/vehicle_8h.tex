@@ -17,7 +17,7 @@ struct \mbox{\hyperlink{struct_vehicle}{Vehicle}}
 \doxysubsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
-\#define \mbox{\hyperlink{vehicle_8h_a40ec03e31fd0eda63d13807500db49aa}{location\+Size}}~40
+\#define \mbox{\hyperlink{vehicle_8h_a40ec03e31fd0eda63d13807500db49aa}{location\+Size}}~3
 \item 
 \#define \mbox{\hyperlink{vehicle_8h_a020109429e259477a16f8191a651a21b}{type\+Size}}~15
 \end{DoxyCompactItemize}
@@ -60,7 +60,9 @@ bool \mbox{\hyperlink{vehicle_8h_a59f6150e695811e820ab2c18e258d6e4}{Vehicle\+Exi
 void \mbox{\hyperlink{vehicle_8h_a76943ef6c7af52cd1dba793f21f1f7ad}{Show\+Vehicle}} (\mbox{\hyperlink{struct_vehicle}{Vehicle}} $\ast$vehicle)
 \begin{DoxyCompactList}\small\item\em Print data from a \mbox{\hyperlink{struct_vehicle}{Vehicle}}. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{vehicle_8h_a209c8e97345431ca625eec3860105275}{Show\+Vehicles\+List}} (\mbox{\hyperlink{struct_vehicle}{Vehicle}} $\ast$vehicles)
-\begin{DoxyCompactList}\small\item\em Show a list of Vehicles in memory. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Show a list of Vehicles in memory. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_vehicle}{Vehicle}} $\ast$ \mbox{\hyperlink{vehicle_8h_a6e5755d6cb7aecd738477e5788b69a92}{Get\+Vehicle\+By\+Id}} (\mbox{\hyperlink{struct_vehicle}{Vehicle}} $\ast$vehicles, int id)
+\begin{DoxyCompactList}\small\item\em Get a vehicle by its ID. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -76,7 +78,7 @@ Bruno Fernandes -\/ \href{mailto:a18576@alunos.ipca.pt}{\texttt{ a18576@alunos.\
 \index{vehicle.h@{vehicle.h}!locationSize@{locationSize}}
 \index{locationSize@{locationSize}!vehicle.h@{vehicle.h}}
 \doxysubsubsection{\texorpdfstring{locationSize}{locationSize}}
-{\footnotesize\ttfamily \#define location\+Size~40}
+{\footnotesize\ttfamily \#define location\+Size~3}
 
 \mbox{\Hypertarget{vehicle_8h_a020109429e259477a16f8191a651a21b}\label{vehicle_8h_a020109429e259477a16f8191a651a21b}} 
 \index{vehicle.h@{vehicle.h}!typeSize@{typeSize}}
@@ -143,6 +145,26 @@ Free vehicles list from memory.
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 bool True if the list was freed, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{vehicle_8h_a6e5755d6cb7aecd738477e5788b69a92}\label{vehicle_8h_a6e5755d6cb7aecd738477e5788b69a92}} 
+\index{vehicle.h@{vehicle.h}!GetVehicleById@{GetVehicleById}}
+\index{GetVehicleById@{GetVehicleById}!vehicle.h@{vehicle.h}}
+\doxysubsubsection{\texorpdfstring{GetVehicleById()}{GetVehicleById()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_vehicle}{Vehicle}} $\ast$ Get\+Vehicle\+By\+Id (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vehicle}{Vehicle}} $\ast$}]{vehicles,  }\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+Get a vehicle by its ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vehicles} & List of vehicles \\
+\hline
+{\em id} & \mbox{\hyperlink{struct_vehicle}{Vehicle}} ID to get \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vehicle$\ast$ Pointer to the found vehicle, or NULL if not found 
 \end{DoxyReturn}
 \mbox{\Hypertarget{vehicle_8h_a762f4dcb127283c3f5764b67cbd73ef7}\label{vehicle_8h_a762f4dcb127283c3f5764b67cbd73ef7}} 
 \index{vehicle.h@{vehicle.h}!InsertVehicleOrdered@{InsertVehicleOrdered}}

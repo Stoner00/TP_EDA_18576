@@ -1,0 +1,37 @@
+\hypertarget{graph_8h_source}{}\doxysection{graph.\+h}
+\mbox{\hyperlink{graph_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#ifndef\ GRAPH\_H}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ GRAPH\_H}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{comment}{//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//}}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ STRUCT\ DECLARATION\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ //}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <stdbool.h>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{vehicle_8h}{vehicle.h}}"{}}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_city}{City}}\ \mbox{\hyperlink{struct_city}{City}};}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_graph}{Graph}}\ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{int}**\ \mbox{\hyperlink{struct_graph_ab14ba4d672ef30129845a40c665d523a}{matrix}};}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_graph_a726d5df1025e915e8785b6522331b21c}{size}};}
+\DoxyCodeLine{00021\ \}\ \mbox{\hyperlink{struct_graph}{Graph}};}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{comment}{//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//}}
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ FUNCTIONS\ DECLARATION\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ //}}
+\DoxyCodeLine{00025\ \textcolor{comment}{//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00032\ \mbox{\hyperlink{struct_graph}{Graph}}*\ \mbox{\hyperlink{graph_8h_a4869a3d70b368c52a4859f5ddf378875}{CreateGraph}}(\textcolor{keywordtype}{int}\ size);}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00040\ \mbox{\hyperlink{struct_graph}{Graph}}*\ \mbox{\hyperlink{graph_8h_aad85eb03dd77817a368763a946061f87}{AddEdge}}(\mbox{\hyperlink{struct_graph}{Graph}}*\ graph,\ \mbox{\hyperlink{struct_city}{City}}*\ city1,\ \mbox{\hyperlink{struct_city}{City}}*\ city2,\ \textcolor{keywordtype}{int}\ distance);}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00047\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{graph_8h_a0da946701f5e08642e474a5f1bfeb904}{NearestNeighbor}}(\mbox{\hyperlink{struct_graph}{Graph}}*\ graph,\ \textcolor{keywordtype}{int}\ startCity);}
+\DoxyCodeLine{00048\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{graph_8h_a4b32a22d0b6c835ffa9c9fc089a48160}{NearestNeighborLowBattery}}(\mbox{\hyperlink{struct_graph}{Graph}}*\ graph,\mbox{\hyperlink{struct_city}{City}}*\ cities,\ \mbox{\hyperlink{struct_vehicle}{Vehicle}}*\ vehicles,\textcolor{keywordtype}{int}\ startCity);}
+\DoxyCodeLine{00049\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{graph_8h_a3d0fa115fb7efade84b477dc3f5d025b}{CityHasVehicleBelowBattery}}(\mbox{\hyperlink{struct_city}{City}}*\ city,\ \mbox{\hyperlink{struct_vehicle}{Vehicle}}*\ vehicles,\ \textcolor{keywordtype}{int}\ battery);}
+\DoxyCodeLine{00050\ \mbox{\hyperlink{struct_graph}{Graph}}*\ \mbox{\hyperlink{graph_8h_a2844d60c944066f46c227f904a40f6b9}{FilterGraphForLowBattery}}(\mbox{\hyperlink{struct_graph}{Graph}}*\ graph,\ \mbox{\hyperlink{struct_city}{City}}*\ cities,\ \mbox{\hyperlink{struct_vehicle}{Vehicle}}*\ vehicles,\ \textcolor{keywordtype}{int}\ startCity,\ \textcolor{keywordtype}{int}\ battery);}
+\DoxyCodeLine{00051\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{graph_8h_aca328b139d1ca792593b76b04ee365cc}{FindPathForLowBattery}}(\mbox{\hyperlink{struct_graph}{Graph}}*\ graph,\ \mbox{\hyperlink{struct_city}{City}}*\ cities,\ \mbox{\hyperlink{struct_vehicle}{Vehicle}}*\ vehicles,\ \textcolor{keywordtype}{int}\ startCity,\ \textcolor{keywordtype}{int}\ battery);}
+\DoxyCodeLine{00052\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

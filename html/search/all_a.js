@@ -1,4 +1,8 @@
 var searchData=
 [
-  ['unrentvehicle_0',['UnrentVehicle',['../vehicle_8c.html#a8119f7a51b7c0c76b9c8614aba4cfffd',1,'UnrentVehicle(Vehicle *vehicles, int id):&#160;vehicle.c'],['../vehicle_8h.html#a8119f7a51b7c0c76b9c8614aba4cfffd',1,'UnrentVehicle(Vehicle *vehicles, int id):&#160;vehicle.c']]]
+  ['name_0',['name',['../struct_city.html#a7b69c7b27377848227f2f94f8b836eb5',1,'City::name()'],['../struct_client.html#ab1e5ef3175387799900f1b1c147aeae1',1,'Client::name()'],['../struct_manager.html#aa57cd9c23d687a4cf43b9dc6ad097beb',1,'Manager::name()']]],
+  ['namesyze_1',['nameSyze',['../client_8h.html#a49fac7fe3ba584c953a60c609c3a6118',1,'nameSyze():&#160;client.h'],['../manager_8h.html#a49fac7fe3ba584c953a60c609c3a6118',1,'nameSyze():&#160;manager.h']]],
+  ['nearestneighbor_2',['NearestNeighbor',['../graph_8c.html#a0da946701f5e08642e474a5f1bfeb904',1,'NearestNeighbor(Graph *graph, int startCity):&#160;graph.c'],['../graph_8h.html#a0da946701f5e08642e474a5f1bfeb904',1,'NearestNeighbor(Graph *graph, int startCity):&#160;graph.c']]],
+  ['nearestneighborlowbattery_3',['NearestNeighborLowBattery',['../graph_8c.html#a4b32a22d0b6c835ffa9c9fc089a48160',1,'NearestNeighborLowBattery(Graph *graph, City *cities, Vehicle *vehicles, int startCity):&#160;graph.c'],['../graph_8h.html#a4b32a22d0b6c835ffa9c9fc089a48160',1,'NearestNeighborLowBattery(Graph *graph, City *cities, Vehicle *vehicles, int startCity):&#160;graph.c']]],
+  ['next_4',['next',['../struct_city.html#ade1df0899bc9c3534f3debce939a2e98',1,'City::next()'],['../struct_edge_node.html#abf130d69a3db0ad6ea3201cfe21e0651',1,'EdgeNode::next()'],['../struct_client.html#aa6f9fae53c3cef86d88c0bce02eed80e',1,'Client::next()'],['../struct_manager.html#a1a40b37eb485e140307fcfcca68306a0',1,'Manager::next()'],['../struct_rental.html#ab215b95717367d4eddbbc07ccb752e0b',1,'Rental::next()'],['../struct_vehicle.html#ac98cbd43f2d0186f9a14c8146bbba5d4',1,'Vehicle::next()']]]
 ];

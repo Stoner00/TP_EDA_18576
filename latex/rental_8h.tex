@@ -1,0 +1,278 @@
+\hypertarget{rental_8h}{}\doxysection{rental.\+h File Reference}
+\label{rental_8h}\index{rental.h@{rental.h}}
+
+
+Header file containing the structure and function declarations for rentals.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}vehicle.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}client.\+h\char`\"{}}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_rental}{Rental}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{struct_rental}{Rental}} structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{rental_8h_aca6100338e0d63ddb854ea78a232375d}{date\+Size}}~11
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{struct_rental}{Rental}} \mbox{\hyperlink{rental_8h_a8b397ec1ad8d05a1379dfb506be2bf42}{Rental}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{struct_rental}{Rental}} structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_rental}{Rental}} $\ast$ \mbox{\hyperlink{rental_8h_a9ece47a39520286e931b3fb4d9dc9418}{Create\+Rental}} (int rental\+ID, int vehicle\+ID, int client\+VAT, float total\+Kilometers, \mbox{\hyperlink{struct_vehicle}{Vehicle}} $\ast$vehicle, \mbox{\hyperlink{struct_client}{Client}} $\ast$client)
+\begin{DoxyCompactList}\small\item\em Create a rental with specified parameters. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_rental}{Rental}} $\ast$ \mbox{\hyperlink{rental_8h_a4ea8820390c12d15ddb92b09096f50a5}{Insert\+Rental\+Ordered}} (\mbox{\hyperlink{struct_rental}{Rental}} $\ast$rentals, \mbox{\hyperlink{struct_rental}{Rental}} $\ast$new\+Rental)
+\begin{DoxyCompactList}\small\item\em Insert a rental into the list in an ordered manner by date. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{rental_8h_a12223f2b2408cf4b6ea12827b0195c73}{Rental\+Exists}} (\mbox{\hyperlink{struct_rental}{Rental}} $\ast$rentals, int rental\+ID)
+\begin{DoxyCompactList}\small\item\em Check if a rental with the given ID exists in the list. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_rental}{Rental}} $\ast$ \mbox{\hyperlink{rental_8h_ad0ea74a1e0cfbef2ed2150902bd662df}{Remove\+Rental}} (\mbox{\hyperlink{struct_rental}{Rental}} $\ast$rentals, int rental\+ID)
+\begin{DoxyCompactList}\small\item\em Remove a rental from the list. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_rental}{Rental}} $\ast$ \mbox{\hyperlink{rental_8h_a0c5c5f44b742914b5e55d0f177c908e8}{Search\+Rental}} (\mbox{\hyperlink{struct_rental}{Rental}} $\ast$rentals, int rental\+ID)
+\begin{DoxyCompactList}\small\item\em Search a rental by rental ID. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{rental_8h_ab5f1bc56c5b61e0bb637b6b63ef8497c}{Destroy\+Rentals\+List}} (\mbox{\hyperlink{struct_rental}{Rental}} $\ast$$\ast$rentals)
+\begin{DoxyCompactList}\small\item\em Free rentals list from memory. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{rental_8h_a7031847ced24768f6d2c02da5d2069cf}{Save\+Rentals\+To\+Bin}} (char $\ast$file\+Name, \mbox{\hyperlink{struct_rental}{Rental}} $\ast$rentals)
+\begin{DoxyCompactList}\small\item\em Save rentals list to a .bin file. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_rental}{Rental}} $\ast$ \mbox{\hyperlink{rental_8h_ac2f65f37e60090d51dd976e14bbab0f8}{Read\+Rentals\+From\+Bin}} (char $\ast$file\+Name)
+\begin{DoxyCompactList}\small\item\em Read rentals from a .bin file into a list. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{rental_8h_aaa947bf18f027c80edf33756cfa52880}{Show\+Rental}} (\mbox{\hyperlink{struct_rental}{Rental}} $\ast$rental)
+\begin{DoxyCompactList}\small\item\em Print data from a rental. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{rental_8h_a69eb6586a136bdf44dec1747221f8f54}{Show\+Rentals\+List}} (\mbox{\hyperlink{struct_rental}{Rental}} $\ast$rentals)
+\begin{DoxyCompactList}\small\item\em Show the list of rentals in memory. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header file containing the structure and function declarations for rentals. 
+
+\begin{DoxyAuthor}{Author}
+Bruno Fernandes -\/ \href{mailto:a18576@alunos.ipca.pt}{\texttt{ a18576@alunos.\+ipca.\+pt}} 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{rental_8h_aca6100338e0d63ddb854ea78a232375d}\label{rental_8h_aca6100338e0d63ddb854ea78a232375d}} 
+\index{rental.h@{rental.h}!dateSize@{dateSize}}
+\index{dateSize@{dateSize}!rental.h@{rental.h}}
+\doxysubsubsection{\texorpdfstring{dateSize}{dateSize}}
+{\footnotesize\ttfamily \#define date\+Size~11}
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{rental_8h_a8b397ec1ad8d05a1379dfb506be2bf42}\label{rental_8h_a8b397ec1ad8d05a1379dfb506be2bf42}} 
+\index{rental.h@{rental.h}!Rental@{Rental}}
+\index{Rental@{Rental}!rental.h@{rental.h}}
+\doxysubsubsection{\texorpdfstring{Rental}{Rental}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_rental}{Rental}} \mbox{\hyperlink{struct_rental}{Rental}}}
+
+
+
+\mbox{\hyperlink{struct_rental}{Rental}} structure. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{rental_8h_a9ece47a39520286e931b3fb4d9dc9418}\label{rental_8h_a9ece47a39520286e931b3fb4d9dc9418}} 
+\index{rental.h@{rental.h}!CreateRental@{CreateRental}}
+\index{CreateRental@{CreateRental}!rental.h@{rental.h}}
+\doxysubsubsection{\texorpdfstring{CreateRental()}{CreateRental()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_rental}{Rental}} $\ast$ Create\+Rental (\begin{DoxyParamCaption}\item[{int}]{rental\+ID,  }\item[{int}]{vehicle\+ID,  }\item[{int}]{client\+VAT,  }\item[{float}]{total\+Kilometers,  }\item[{\mbox{\hyperlink{struct_vehicle}{Vehicle}} $\ast$}]{vehicle,  }\item[{\mbox{\hyperlink{struct_client}{Client}} $\ast$}]{client }\end{DoxyParamCaption})}
+
+
+
+Create a rental with specified parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rental\+ID} & The unique identifier for this rental \\
+\hline
+{\em vehicle\+ID} & The id of the rented vehicle \\
+\hline
+{\em client\+VAT} & The vat of the client who rents the vehicle \\
+\hline
+{\em total\+Kilometers} & The total kilometers that are planned to be driven with the vehicle \\
+\hline
+{\em vehicle} & \mbox{\hyperlink{struct_vehicle}{Vehicle}} to rent \\
+\hline
+{\em client} & \mbox{\hyperlink{struct_client}{Client}} requesting the rental \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Rental$\ast$ Pointer to the new rental, or NULL if failed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{rental_8h_ab5f1bc56c5b61e0bb637b6b63ef8497c}\label{rental_8h_ab5f1bc56c5b61e0bb637b6b63ef8497c}} 
+\index{rental.h@{rental.h}!DestroyRentalsList@{DestroyRentalsList}}
+\index{DestroyRentalsList@{DestroyRentalsList}!rental.h@{rental.h}}
+\doxysubsubsection{\texorpdfstring{DestroyRentalsList()}{DestroyRentalsList()}}
+{\footnotesize\ttfamily bool Destroy\+Rentals\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_rental}{Rental}} $\ast$$\ast$}]{rentals }\end{DoxyParamCaption})}
+
+
+
+Free rentals list from memory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rentals} & A pointer to the pointer to the list of rentals \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if successful, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{rental_8h_a4ea8820390c12d15ddb92b09096f50a5}\label{rental_8h_a4ea8820390c12d15ddb92b09096f50a5}} 
+\index{rental.h@{rental.h}!InsertRentalOrdered@{InsertRentalOrdered}}
+\index{InsertRentalOrdered@{InsertRentalOrdered}!rental.h@{rental.h}}
+\doxysubsubsection{\texorpdfstring{InsertRentalOrdered()}{InsertRentalOrdered()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_rental}{Rental}} $\ast$ Insert\+Rental\+Ordered (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_rental}{Rental}} $\ast$}]{rentals,  }\item[{\mbox{\hyperlink{struct_rental}{Rental}} $\ast$}]{new\+Rental }\end{DoxyParamCaption})}
+
+
+
+Insert a rental into the list in an ordered manner by date. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rentals} & A pointer to the list of rentals \\
+\hline
+{\em new\+Rental} & A pointer to the new rental to insert \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the updated list of rentals 
+\end{DoxyReturn}
+\mbox{\Hypertarget{rental_8h_ac2f65f37e60090d51dd976e14bbab0f8}\label{rental_8h_ac2f65f37e60090d51dd976e14bbab0f8}} 
+\index{rental.h@{rental.h}!ReadRentalsFromBin@{ReadRentalsFromBin}}
+\index{ReadRentalsFromBin@{ReadRentalsFromBin}!rental.h@{rental.h}}
+\doxysubsubsection{\texorpdfstring{ReadRentalsFromBin()}{ReadRentalsFromBin()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_rental}{Rental}} $\ast$ Read\+Rentals\+From\+Bin (\begin{DoxyParamCaption}\item[{char $\ast$}]{file\+Name }\end{DoxyParamCaption})}
+
+
+
+Read rentals from a .bin file into a list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Name} & The name of the .bin file to read from \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the list of rentals read from the file, or NULL if unsuccessful 
+\end{DoxyReturn}
+\mbox{\Hypertarget{rental_8h_ad0ea74a1e0cfbef2ed2150902bd662df}\label{rental_8h_ad0ea74a1e0cfbef2ed2150902bd662df}} 
+\index{rental.h@{rental.h}!RemoveRental@{RemoveRental}}
+\index{RemoveRental@{RemoveRental}!rental.h@{rental.h}}
+\doxysubsubsection{\texorpdfstring{RemoveRental()}{RemoveRental()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_rental}{Rental}} $\ast$ Remove\+Rental (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_rental}{Rental}} $\ast$}]{rentals,  }\item[{int}]{rental\+ID }\end{DoxyParamCaption})}
+
+
+
+Remove a rental from the list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rentals} & A pointer to the list of rentals \\
+\hline
+{\em rental\+ID} & The ID of the rental to remove \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the updated list of rentals 
+\end{DoxyReturn}
+\mbox{\Hypertarget{rental_8h_a12223f2b2408cf4b6ea12827b0195c73}\label{rental_8h_a12223f2b2408cf4b6ea12827b0195c73}} 
+\index{rental.h@{rental.h}!RentalExists@{RentalExists}}
+\index{RentalExists@{RentalExists}!rental.h@{rental.h}}
+\doxysubsubsection{\texorpdfstring{RentalExists()}{RentalExists()}}
+{\footnotesize\ttfamily bool Rental\+Exists (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_rental}{Rental}} $\ast$}]{rentals,  }\item[{int}]{rental\+ID }\end{DoxyParamCaption})}
+
+
+
+Check if a rental with the given ID exists in the list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rentals} & List of rentals \\
+\hline
+{\em rental\+ID} & \mbox{\hyperlink{struct_rental}{Rental}} ID to search \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool True if the rental exists, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{rental_8h_a7031847ced24768f6d2c02da5d2069cf}\label{rental_8h_a7031847ced24768f6d2c02da5d2069cf}} 
+\index{rental.h@{rental.h}!SaveRentalsToBin@{SaveRentalsToBin}}
+\index{SaveRentalsToBin@{SaveRentalsToBin}!rental.h@{rental.h}}
+\doxysubsubsection{\texorpdfstring{SaveRentalsToBin()}{SaveRentalsToBin()}}
+{\footnotesize\ttfamily bool Save\+Rentals\+To\+Bin (\begin{DoxyParamCaption}\item[{char $\ast$}]{file\+Name,  }\item[{\mbox{\hyperlink{struct_rental}{Rental}} $\ast$}]{rentals }\end{DoxyParamCaption})}
+
+
+
+Save rentals list to a .bin file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Name} & The name of the .bin file to save to \\
+\hline
+{\em rentals} & A pointer to the list of rentals \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if successful, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{rental_8h_a0c5c5f44b742914b5e55d0f177c908e8}\label{rental_8h_a0c5c5f44b742914b5e55d0f177c908e8}} 
+\index{rental.h@{rental.h}!SearchRental@{SearchRental}}
+\index{SearchRental@{SearchRental}!rental.h@{rental.h}}
+\doxysubsubsection{\texorpdfstring{SearchRental()}{SearchRental()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_rental}{Rental}} $\ast$ Search\+Rental (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_rental}{Rental}} $\ast$}]{rentals,  }\item[{int}]{rental\+ID }\end{DoxyParamCaption})}
+
+
+
+Search a rental by rental ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rentals} & A pointer to the list of rentals \\
+\hline
+{\em rental\+ID} & The ID of the rental to search for \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the found rental, or NULL if not found 
+\end{DoxyReturn}
+\mbox{\Hypertarget{rental_8h_aaa947bf18f027c80edf33756cfa52880}\label{rental_8h_aaa947bf18f027c80edf33756cfa52880}} 
+\index{rental.h@{rental.h}!ShowRental@{ShowRental}}
+\index{ShowRental@{ShowRental}!rental.h@{rental.h}}
+\doxysubsubsection{\texorpdfstring{ShowRental()}{ShowRental()}}
+{\footnotesize\ttfamily void Show\+Rental (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_rental}{Rental}} $\ast$}]{rental }\end{DoxyParamCaption})}
+
+
+
+Print data from a rental. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rental} & A pointer to the rental to show \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{rental_8h_a69eb6586a136bdf44dec1747221f8f54}\label{rental_8h_a69eb6586a136bdf44dec1747221f8f54}} 
+\index{rental.h@{rental.h}!ShowRentalsList@{ShowRentalsList}}
+\index{ShowRentalsList@{ShowRentalsList}!rental.h@{rental.h}}
+\doxysubsubsection{\texorpdfstring{ShowRentalsList()}{ShowRentalsList()}}
+{\footnotesize\ttfamily void Show\+Rentals\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_rental}{Rental}} $\ast$}]{rentals }\end{DoxyParamCaption})}
+
+
+
+Show the list of rentals in memory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rentals} & A pointer to the list of rentals \\
+\hline
+\end{DoxyParams}
