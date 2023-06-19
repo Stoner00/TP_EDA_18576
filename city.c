@@ -2,9 +2,10 @@
 #include <stdlib.h>
 #include <string.h>
 
-City* CreateCity(char* code, char* name) {
+City* CreateCity(int id, char* code, char* name) {
     City* city = (City *)malloc(sizeof(City));
     if (city != NULL) {
+        city->id = id;
         strncpy(city->code, code, 3);
         city->code[3] = '\0';
         strncpy(city->name, name, 30);
@@ -42,21 +43,6 @@ City* InsertCityOrdered(City* cities, City* newCity) {
     return cities;
 }
 
-EdgeNode* InsertEdgeNodeOrdered(EdgeNode* edges, EdgeNode* newEdge) {
-    if (edges == NULL || edges->distance > newEdge->distance) {
-        newEdge->next = edges;
-        edges = newEdge;
-    } else {
-        EdgeNode* current = edges;
-        while (current->next != NULL && current->next->distance < newEdge->distance) {
-            current = current->next;
-        }
-        newEdge->next = current->next;
-        current->next = newEdge;
-    }
-    return edges;
-}
-
 int CityExists(City* cities, char* code) {
     City* current = cities;
     while (current != NULL) {
@@ -74,13 +60,22 @@ void ShowCities(City* cities) {
     }
 }
 
-void ShowCityEdges(EdgeNode* edges, City* city) {
-    EdgeNode* current = edges;
-    while (current != NULL) {
-        if (current->origin == city) {
-            printf("Edge: %s -> %s, Distance: %d\n", current->origin->code, current->destination->code, current->distance);
+void ShowCityEdges(Graph* graph, City* city, City* cities) {
+    printf("Edges for city: %s\n", city->code);
+    for(int i = 0; i < graph->size; i++) {
+        if(graph->matrix[city->id][i] != 0) {
+
+            City* auxCity = GetCityById(cities, i);
+
+            if(graph->matrix[city->id][i] < 50000) {  // Check if there's a path
+                City* auxCity = GetCityById(cities, i);
+                printf("Connected to city: %s, Distance: %d\n", auxCity->code, graph->matrix[city->id][i]);
+            }
+            else {
+                printf("No direct path to city: %s\n", auxCity->code);
+            }
+//            printf("Connected to city: %s, Distance: %d\n", auxCity->code, graph->matrix[city->id][i]);
         }
-        current = current->next;
     }
 }
 
@@ -104,48 +99,39 @@ City* GetCity(City* cities, char* code) {
     return NULL;
 }
 
-void ShowAllCityInfo(City* cities, EdgeNode* edges, Vehicle* vehicles) {
+City* GetCityById(City* cities, int id) {
+    City* current = cities;
+    while (current != NULL) {
+        if (current->id == id) return current;
+        current = current->next;
+    }
+    return NULL;
+}
+
+void ShowAllCityInfo(City* cities, Graph* graph, Vehicle* vehicles) {
     City* currentCity = cities;
     while (currentCity != NULL) {
         printf("City: %s\n", currentCity->code);
-        ShowCityEdges(edges, currentCity);
+        ShowCityEdges(graph, currentCity, cities);
         ShowVehiclesInCity(vehicles, currentCity);
         currentCity = currentCity->next;
         printf("\n");
     }
 }
 
-City** GetNearbyCities(City* cities, EdgeNode* edges, char* code, int range) {
-    City** nearbyCities = NULL;
-    int count = 0;
-
-    EdgeNode* currentEdge = edges;
-    while (currentEdge != NULL) {
-        if (strcmp(currentEdge->origin->code, code) == 0 && currentEdge->distance <= range) {
-            nearbyCities = (City**)realloc(nearbyCities, sizeof(City*) * (count + 1));
-            nearbyCities[count] = currentEdge->destination;
-            count++;
-        }
-        currentEdge = currentEdge->next;
+void ShowNearbyVehiclesFromGraph(City* cities, Graph* graph, Vehicle* vehicles, char* startCityCode, int range) {
+    City* startCity = GetCity(cities, startCityCode);
+    if(startCity == NULL) {
+        printf("City not found: %s\n", startCityCode);
+        return;
     }
 
-    return nearbyCities;
-}
-
-void ShowNearbyVehicles(Vehicle* vehicles, City** nearbyCities) {
-    Vehicle* currentVehicle = vehicles;
-
-    while (currentVehicle != NULL) {
-        City** currentCity = nearbyCities;
-        while (*currentCity != NULL) {
-            if (strcmp(currentVehicle->location, (*currentCity)->code) == 0) {
-                printf("Vehicle ID: %d, Type: %s, Battery: %.2f%%, Cost: %.2f, City: %s\n",
-                       currentVehicle->id, currentVehicle->type, currentVehicle->battery, currentVehicle->cost, currentVehicle->location);
-                break;
-            }
-            currentCity++;
+    for(int i = 0; i < graph->size; i++) {
+        if(graph->matrix[startCity->id][i] <= range) {
+            City* currentCity = GetCityById(cities, i);
+            printf("City: %s, Distance: %d\n", currentCity->code, graph->matrix[startCity->id][i]);
+            ShowVehiclesInCity(vehicles, currentCity);
         }
-        currentVehicle = currentVehicle->next;
     }
 }
 

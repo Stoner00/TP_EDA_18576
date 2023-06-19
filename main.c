@@ -6,6 +6,7 @@
 #include "manager.h"
 #include "rental.h"
 #include "city.h"
+#include "graph.h"
 
 int main() {
 #pragma region TestClients
@@ -246,57 +247,88 @@ int main() {
 #pragma region TestCities
     City* cities = NULL;
     EdgeNode* edges = NULL;
+    int cityCount = 0;
+
 
     // Create cities
-    cities = InsertCityOrdered(cities, CreateCity("GMR", "Guimaraes"));
-    cities = InsertCityOrdered(cities, CreateCity("BRG", "Braga"));
-    cities = InsertCityOrdered(cities, CreateCity("BCL", "Barcelos"));
-    cities = InsertCityOrdered(cities, CreateCity("FML", "Famalicao"));
-    cities = InsertCityOrdered(cities, CreateCity("PRT", "Porto"));
-    cities = InsertCityOrdered(cities, CreateCity("VDC", "Viana do Castelo"));
-
+    cities = InsertCityOrdered(cities, CreateCity(0, "GMR", "Guimaraes"));
+    cities = InsertCityOrdered(cities, CreateCity(1, "BRG", "Braga"));
+    cities = InsertCityOrdered(cities, CreateCity(2, "BCL", "Barcelos"));
+    cities = InsertCityOrdered(cities, CreateCity(3, "FML", "Famalicao"));
+    cities = InsertCityOrdered(cities, CreateCity(4, "PRT", "Porto"));
+    cities = InsertCityOrdered(cities, CreateCity(5, "VDC", "Viana do Castelo"));
+    cityCount = 6;
     // Show cities
     ShowCities(cities);
-    printf("_____________________________________/n");
+    printf("\n__________________END SHOW CITIES___________________\n");
+
+
+    Graph* graph = CreateGraph(cityCount);
+
+    // Add edges to the graph
+    AddEdge(graph, GetCity(cities, "GMR"), GetCity(cities, "BRG"), 24);
+    AddEdge(graph, GetCity(cities, "BRG"), GetCity(cities, "BCL"), 21);
+    AddEdge(graph, GetCity(cities, "BRG"), GetCity(cities, "FML"), 25);
+    AddEdge(graph, GetCity(cities, "GMR"), GetCity(cities, "FML"), 23);
+    AddEdge(graph, GetCity(cities, "FML"), GetCity(cities, "PRT"), 33);
+    AddEdge(graph, GetCity(cities, "BRG"), GetCity(cities, "VDC"), 47);
+    AddEdge(graph, GetCity(cities, "BCL"), GetCity(cities, "VDC"), 36);
+    AddEdge(graph, GetCity(cities, "GMR"), GetCity(cities, "BCL"), 40);
+    AddEdge(graph, GetCity(cities, "GMR"), GetCity(cities, "PRT"), 60);
+    AddEdge(graph, GetCity(cities, "GMR"), GetCity(cities, "VDC"), 65);
+    AddEdge(graph, GetCity(cities, "BRG"), GetCity(cities, "PRT"), 58);
+    AddEdge(graph, GetCity(cities, "BCL"), GetCity(cities, "FML"), 30);
+    AddEdge(graph, GetCity(cities, "BCL"), GetCity(cities, "PRT"), 40);
+    AddEdge(graph, GetCity(cities, "FML"), GetCity(cities, "VDC"), 42);
+    AddEdge(graph, GetCity(cities, "PRT"), GetCity(cities, "VDC"), 52);
 
 
     // Create edges
-    edges = InsertEdgeNodeOrdered(edges, CreateEdgeNode(20, GetCity(cities, "GMR"), GetCity(cities, "BRG")));
-    edges = InsertEdgeNodeOrdered(edges, CreateEdgeNode(20, GetCity(cities, "BRG"), GetCity(cities, "GMR")));
-
-    edges = InsertEdgeNodeOrdered(edges, CreateEdgeNode(35, GetCity(cities, "GMR"), GetCity(cities, "FML")));
-    edges = InsertEdgeNodeOrdered(edges, CreateEdgeNode(35, GetCity(cities, "FML"), GetCity(cities, "GMR")));
-
-    edges = InsertEdgeNodeOrdered(edges, CreateEdgeNode(40, GetCity(cities, "BRG"), GetCity(cities, "VDC")));
-    edges = InsertEdgeNodeOrdered(edges, CreateEdgeNode(40, GetCity(cities, "VDC"), GetCity(cities, "BRG")));
-
-    edges = InsertEdgeNodeOrdered(edges, CreateEdgeNode(20, GetCity(cities, "BRG"), GetCity(cities, "BCL")));
-    edges = InsertEdgeNodeOrdered(edges, CreateEdgeNode(20, GetCity(cities, "BCL"), GetCity(cities, "BRG")));
-
-    edges = InsertEdgeNodeOrdered(edges, CreateEdgeNode(18, GetCity(cities, "BRG"), GetCity(cities, "FML")));
-    edges = InsertEdgeNodeOrdered(edges, CreateEdgeNode(18, GetCity(cities, "FML"), GetCity(cities, "BRG")));
-
-    edges = InsertEdgeNodeOrdered(edges, CreateEdgeNode(30, GetCity(cities, "BCL"), GetCity(cities, "VDC")));
-    edges = InsertEdgeNodeOrdered(edges, CreateEdgeNode(30, GetCity(cities, "VDC"), GetCity(cities, "BCL")));
-
-    edges = InsertEdgeNodeOrdered(edges, CreateEdgeNode(30, GetCity(cities, "BCL"), GetCity(cities, "PRT")));
-    edges = InsertEdgeNodeOrdered(edges, CreateEdgeNode(30, GetCity(cities, "PRT"), GetCity(cities, "BCL")));
-
-    edges = InsertEdgeNodeOrdered(edges, CreateEdgeNode(20, GetCity(cities, "FML"), GetCity(cities, "PRT")));
-    edges = InsertEdgeNodeOrdered(edges, CreateEdgeNode(20, GetCity(cities, "PRT"), GetCity(cities, "FML")));
-
-    edges = InsertEdgeNodeOrdered(edges, CreateEdgeNode(25, GetCity(cities, "BCL"), GetCity(cities, "FML")));
-    edges = InsertEdgeNodeOrdered(edges, CreateEdgeNode(25, GetCity(cities, "FML"), GetCity(cities, "BCL")));
+//    edges = InsertEdgeNodeOrdered(edges, CreateEdgeNode(20, GetCity(cities, "GMR"), GetCity(cities, "BRG")));
+//    edges = InsertEdgeNodeOrdered(edges, CreateEdgeNode(20, GetCity(cities, "BRG"), GetCity(cities, "GMR")));
+//
+//    edges = InsertEdgeNodeOrdered(edges, CreateEdgeNode(35, GetCity(cities, "GMR"), GetCity(cities, "FML")));
+//    edges = InsertEdgeNodeOrdered(edges, CreateEdgeNode(35, GetCity(cities, "FML"), GetCity(cities, "GMR")));
+//
+//    edges = InsertEdgeNodeOrdered(edges, CreateEdgeNode(40, GetCity(cities, "BRG"), GetCity(cities, "VDC")));
+//    edges = InsertEdgeNodeOrdered(edges, CreateEdgeNode(40, GetCity(cities, "VDC"), GetCity(cities, "BRG")));
+//
+//    edges = InsertEdgeNodeOrdered(edges, CreateEdgeNode(20, GetCity(cities, "BRG"), GetCity(cities, "BCL")));
+//    edges = InsertEdgeNodeOrdered(edges, CreateEdgeNode(20, GetCity(cities, "BCL"), GetCity(cities, "BRG")));
+//
+//    edges = InsertEdgeNodeOrdered(edges, CreateEdgeNode(18, GetCity(cities, "BRG"), GetCity(cities, "FML")));
+//    edges = InsertEdgeNodeOrdered(edges, CreateEdgeNode(18, GetCity(cities, "FML"), GetCity(cities, "BRG")));
+//
+//    edges = InsertEdgeNodeOrdered(edges, CreateEdgeNode(30, GetCity(cities, "BCL"), GetCity(cities, "VDC")));
+//    edges = InsertEdgeNodeOrdered(edges, CreateEdgeNode(30, GetCity(cities, "VDC"), GetCity(cities, "BCL")));
+//
+//    edges = InsertEdgeNodeOrdered(edges, CreateEdgeNode(30, GetCity(cities, "BCL"), GetCity(cities, "PRT")));
+//    edges = InsertEdgeNodeOrdered(edges, CreateEdgeNode(30, GetCity(cities, "PRT"), GetCity(cities, "BCL")));
+//
+//    edges = InsertEdgeNodeOrdered(edges, CreateEdgeNode(20, GetCity(cities, "FML"), GetCity(cities, "PRT")));
+//    edges = InsertEdgeNodeOrdered(edges, CreateEdgeNode(20, GetCity(cities, "PRT"), GetCity(cities, "FML")));
+//
+//    edges = InsertEdgeNodeOrdered(edges, CreateEdgeNode(25, GetCity(cities, "BCL"), GetCity(cities, "FML")));
+//    edges = InsertEdgeNodeOrdered(edges, CreateEdgeNode(25, GetCity(cities, "FML"), GetCity(cities, "BCL")));
 
 
     // Show edges for each city
-    ShowAllCityInfo(cities, edges, vehicles);
+    ShowAllCityInfo(cities, graph, vehicles);
 
-    printf("_____________________________________\n");
-    City** nearbyCities = GetNearbyCities(cities, edges, "GMR", 40);
-    ShowNearbyVehicles(vehicles, nearbyCities);
+    printf("\n__________________END SHOW ALL CITY INFO___________________\n");
+//    City** nearbyCities = GetNearbyCities(cities, edges, "GMR", 40);
+//    ShowNearbyVehicles(vehicles, nearbyCities);
 
-    printf("_____________________________________\n");
+    printf("\n__________________START SHOW NEARBY VEHICLES___________________\n");
+
+    ShowNearbyVehiclesFromGraph(cities, graph, vehicles, "BRG", 50);
+
+    printf("\n___________________END SHOW NEARBY VEHICLES___________________\n");
+
+    printf("\n___________________START SHORTEST PATH___________________\n");
+    NearestNeighbor(graph, GetCity(cities, "BRG")->id);
+
+    printf("\n___________________END SHORTEST PATH___________________\n");
 
 
 

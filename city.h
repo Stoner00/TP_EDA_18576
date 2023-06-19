@@ -2,8 +2,10 @@
 #define CITY_H
 
 #include "vehicle.h"
+#include "graph.h"
 
 typedef struct City {
+    int id;
     char code[4];
     char name[30];
     struct City* next;
@@ -25,10 +27,12 @@ typedef struct {
 /**
  * @brief Creates a city with the specified code
  *
+ * @param id - City ID
  * @param code - City code
+ * @param name - City name
  * @return City* - Pointer to the new city
  */
-City* CreateCity(char* code, char* name);
+City* CreateCity(int id, char* code, char* name);
 
 /**
  * @brief Creates an edge node with the specified distance, origin, and destination
@@ -48,15 +52,6 @@ EdgeNode* CreateEdgeNode(int distance, City* origin, City* destination);
  * @return City* - Pointer to the head of the modified city list
  */
 City* InsertCityOrdered(City* cities, City* newCity);
-
-/**
- * @brief Inserts an edge node into the edge list in ascending order based on distance
- *
- * @param edges - Pointer to the head of the edge list
- * @param newEdge - Edge node to insert
- * @return EdgeNode* - Pointer to the head of the modified edge list
- */
-EdgeNode* InsertEdgeNodeOrdered(EdgeNode* edges, EdgeNode* newEdge);
 
 /**
  * @brief Checks if a city with a specific code exists in the city list
@@ -80,7 +75,7 @@ void ShowCities(City* cities);
  * @param edges Pointer to the head of the edge list
  * @param city Pointer to the city
  */
-void ShowCityEdges(EdgeNode* edges, City* city);
+void ShowCityEdges(Graph* graph, City* city, City* cities);
 
 /**
  * @brief Display all vehicles in a specific city
@@ -99,15 +94,21 @@ void ShowVehiclesInCity(Vehicle* vehicles, City* city);
 City* GetCity(City* cities, char* code);
 
 /**
+ * @brief Get a city by it's id
+ *
+ * @param cities Pointer to the head of the city list
+ * @param id City id
+ */
+City* GetCityById(City* cities, int id);
+
+/**
  * @brief Shows a city and it's connections and vehicles
  *
  * @param cities Pointer to the head of the city list
- * @param edges Pointer to the head of the edges list
+ * @param graph Pointer to the graph of edged
  * @param vehicles Pointer to the head of the vehicles list
  */
-void ShowAllCityInfo(City* cities, EdgeNode* edges, Vehicle* vehicles);
+void ShowAllCityInfo(City* cities, Graph* graph, Vehicle* vehicles);
 
-City** GetNearbyCities(City* cities, EdgeNode* edges, char* code, int range);
-
-void ShowNearbyVehicles(Vehicle* vehicles, City** nearbyCities);
+void ShowNearbyVehiclesFromGraph(City* cities, Graph* graph, Vehicle* vehicles, char* startCityCode, int range);
 #endif // CITY_H
