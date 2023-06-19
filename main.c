@@ -210,11 +210,11 @@ int main() {
     rentals = InsertRentalOrdered(rentals, r1);
     rentals = InsertRentalOrdered(rentals, r2);
 
-    printf(".....Rentals list.....\n");
+    printf("__________________Rentals list__________________\n");
     ShowRentalsList(rentals);
 
     // Save rentals to binary file
-    printf("\n.....Saving rentals to rentals.bin.....\n");
+    printf("\n__________________Saving rentals to rentals.bin__________________\n");
     if (SaveRentalsToBin("rentals.bin", rentals)) {
         printf("Rentals saved successfully.\n");
     } else {
@@ -225,7 +225,7 @@ int main() {
     DestroyRentalsList(&rentals);
 
     // Read rentals from binary file
-    printf("\n.....Reading Rentals from binary file.....\n");
+    printf("\n__________________Reading Rentals from binary file__________________\n");
     Rental *rentalsFromFile = ReadRentalsFromBin("rentals.bin");
     if (rentalsFromFile) {
         printf("Rentals read successfully.\n");
@@ -235,7 +235,7 @@ int main() {
     }
 
     // Remove a rental
-    printf("\n.....Removing rental 1.....\n");
+    printf("\n__________________Removing rental 1__________________\n");
     rentalsFromFile = RemoveRental(rentalsFromFile, 1);
     ShowRentalsList(rentalsFromFile);
 
@@ -313,22 +313,27 @@ int main() {
 
 
     // Show edges for each city
-    ShowAllCityInfo(cities, graph, vehicles);
+//    ShowAllCityInfo(cities, graph, vehicles);
+//
+//    printf("\n__________________END SHOW ALL CITY INFO___________________\n");
+////    City** nearbyCities = GetNearbyCities(cities, edges, "GMR", 40);
+////    ShowNearbyVehicles(vehicles, nearbyCities);
+//
+//    printf("\n__________________START SHOW NEARBY VEHICLES___________________\n");
+//
+//    ShowNearbyVehiclesFromGraph(cities, graph, vehicles, "GMR", 50);
+//
+//    printf("\n___________________END SHOW NEARBY VEHICLES___________________\n");
+//
+//    printf("\n___________________START SHORTEST PATH___________________\n");
+//    NearestNeighbor(graph, GetCity(cities, "BRG")->id);
+//
+//    printf("\n___________________END SHORTEST PATH___________________\n");
 
-    printf("\n__________________END SHOW ALL CITY INFO___________________\n");
-//    City** nearbyCities = GetNearbyCities(cities, edges, "GMR", 40);
-//    ShowNearbyVehicles(vehicles, nearbyCities);
-
-    printf("\n__________________START SHOW NEARBY VEHICLES___________________\n");
-
-    ShowNearbyVehiclesFromGraph(cities, graph, vehicles, "BRG", 50);
-
-    printf("\n___________________END SHOW NEARBY VEHICLES___________________\n");
-
-    printf("\n___________________START SHORTEST PATH___________________\n");
-    NearestNeighbor(graph, GetCity(cities, "BRG")->id);
-
-    printf("\n___________________END SHORTEST PATH___________________\n");
+    printf("\n___________________START FIND PATH FOR LOW BATTERY___________________\n");
+    NearestNeighborLowBattery(graph, cities, vehicles, 1);
+//    FindPathForLowBattery(graph, cities, vehicles, 1, 65);
+    printf("\n___________________END FIND PATH FOR LOW BATTERY___________________\n");
 
 
 

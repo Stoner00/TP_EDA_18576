@@ -1,5 +1,8 @@
-#ifndef CITY_H
-#define CITY_H
+/**
+ * @file city.h
+ * @author Bruno Fernandes - a18576@alunos.ipca.pt
+ * @brief Header file containing the structure and function declarations for city
+ */
 
 #include "vehicle.h"
 #include "graph.h"
@@ -110,5 +113,13 @@ City* GetCityById(City* cities, int id);
  */
 void ShowAllCityInfo(City* cities, Graph* graph, Vehicle* vehicles);
 
+/**
+ * @brief Shows vehicles in a range of a city
+ *
+ * @param cities Pointer to the head of the city list
+ * @param graph Pointer to the graph of edged
+ * @param vehicles Pointer to the head of the vehicles list
+ * @param startCityCode Code of the city to start the range from
+ * @param range Range in kilometers
+ */
 void ShowNearbyVehiclesFromGraph(City* cities, Graph* graph, Vehicle* vehicles, char* startCityCode, int range);
-#endif // CITY_H

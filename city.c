@@ -1,3 +1,9 @@
+/**
+ * @file city.c
+ * @author Bruno Fernandes - a18576@alunos.ipca.pt
+ * @brief City functions implementation from city.h
+ */
+
 #include "city.h"
 #include <stdlib.h>
 #include <string.h>

@@ -1,4 +1,9 @@
-// graph.c
+/**
+ * @file graph.c
+ * @author Bruno Fernandes - a18576@alunos.ipca.pt
+ * @brief Graph functions implementation from graph.h
+ */
+
 #include "graph.h"
 #include "city.h"
 #include <stdlib.h>
@@ -17,11 +22,6 @@ Graph* CreateGraph(int size) {
     return graph;
 }
 
-void AddEdge(Graph* graph, City* city1, City* city2, int distance) {
-    graph->matrix[city1->id][city2->id] = distance;
-    graph->matrix[city2->id][city1->id] = distance;  // If the graph is undirected
-}
-
 void FreeGraph(Graph* graph) {
     for (int i = 0; i < graph->size; i++) {
         free(graph->matrix[i]);
@@ -30,46 +30,112 @@ void FreeGraph(Graph* graph) {
     free(graph);
 }
 
-void NearestNeighbor(Graph* graph, int start_city) {
+
+Graph* AddEdge(Graph* graph, City* city1, City* city2, int distance) {
+    graph->matrix[city1->id][city2->id] = distance;
+    graph->matrix[city2->id][city1->id] = distance;
+
+    return graph;
+}
+
+void NearestNeighbor(Graph* graph, int startCity) {
     int* visited = (int*)calloc(graph->size, sizeof(int));
-    int* path = (int*)malloc(graph->size * sizeof(int));
-    int total_dist = 0;
-    int num_visited = 0;
+    int* path = (int*)malloc((graph->size + 1) * sizeof(int));
+    int totalDist = 0;
+    int numVisited = 0;
 
-    // Start at the start city
-    int current_city = start_city;
-    visited[start_city] = 1;
-    path[num_visited++] = start_city;
+    int currentCity = startCity;
+    visited[startCity] = 1;
+    path[numVisited++] = startCity;
 
-    while(num_visited < graph->size) {
-        int min_dist = INT_MAX;
-        int min_city;
+    while(numVisited < graph->size) {
+        int minDist = INT_MAX;
+        int minCity;
 
-        // Find the closest city
         for(int i = 0; i < graph->size; i++) {
-            if(visited[i] == 0 && graph->matrix[current_city][i] < min_dist) {
-                min_dist = graph->matrix[current_city][i];
-                min_city = i;
+            if(visited[i] == 0 && graph->matrix[currentCity][i] < minDist) {
+                minDist = graph->matrix[currentCity][i];
+                minCity = i;
             }
         }
 
-        // Go to the closest city
-        current_city = min_city;
-        visited[min_city] = 1;
-        path[num_visited++] = min_city;
-        total_dist += min_dist;
+        currentCity = minCity;
+        visited[minCity] = 1;
+        path[numVisited++] = minCity;
+        totalDist += minDist;
     }
 
-    // Return to the start city
-    total_dist += graph->matrix[current_city][start_city];
-    path[num_visited] = start_city;
+    totalDist += graph->matrix[currentCity][startCity];
+    path[numVisited] = startCity;
 
     printf("Path: ");
     for(int i = 0; i <= graph->size; i++) {
         printf("%d ", path[i]);
     }
-    printf("\nTotal distance: %d\n", total_dist);
+
+    printf("\nTotal distance: %d\n", totalDist);
 
     free(visited);
     free(path);
+
+}
+
+void NearestNeighborLowBattery(Graph* graph, City* cities, Vehicle* vehicles,int startCity) {
+    int* visited = (int*)calloc(graph->size, sizeof(int));
+    int* path = (int*)malloc((graph->size + 1) * sizeof(int));
+    int totalDist = 0;
+    int numVisited = 0;
+
+    int currentCity = startCity;
+    visited[startCity] = 1;
+    path[numVisited++] = startCity;
+
+    while(numVisited < graph->size) {
+        int minDist = INT_MAX;
+        int minCity;
+
+        for(int i = 0; i < graph->size; i++) {
+                if(visited[i] == 0 && graph->matrix[currentCity][i] < minDist) {
+                minDist = graph->matrix[currentCity][i];
+                minCity = i;
+            }
+        }
+
+        City* aux = GetCityById(cities, currentCity);
+        currentCity = minCity;
+        visited[minCity] = 1;
+        if(CityHasVehicleBelowBattery(aux, vehicles, 65))
+        {
+            path[numVisited++] = minCity;
+            totalDist += minDist;
+        }
+
+    }
+
+    totalDist += graph->matrix[currentCity][startCity];
+    path[numVisited] = startCity;
+
+    printf("Path: ");
+    for(int i = 0; i <= graph->size; i++) {
+        printf("%d ", path[i]);
+    }
+
+    printf("\nTotal distance: %d\n", totalDist);
+
+    free(visited);
+    free(path);
+
+}
+
+
+
+bool CityHasVehicleBelowBattery(City* city, Vehicle* vehicles, int battery) {
+    Vehicle* current = vehicles;
+    while (current != NULL) {
+        if (current->location == city->code && current->battery < battery) {
+            return true;
+        }
+        current = current->next;
+    }
+    return false;
 }
